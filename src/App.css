@@ -1,75 +1,93 @@
 @font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('./assets/fonts/helvetica/HelveticaNowDisplay-Regular.eot'); 
-  src: url('./assets/fonts/helvetica/HelveticaNowDisplay-Regular.eot?#iefix') format('embedded-opentype'),
-       url('./assets/fonts/helvetica/HelveticaNowDisplay-Regular.woff2') format('woff2'), 
-       url('./assets/fonts/helvetica/HelveticaNowDisplay-Regular.woff') format('woff'), 
-       url('./assets/fonts/helvetica/HelveticaNowDisplay-Regular.ttf') format('truetype');
-  font-weight: 400; 
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('./assets/fonts/helvetica/HelveticaNowDisplay-Medium.eot');
-  src: url('./assets/fonts/helvetica/HelveticaNowDisplay-Medium.eot?#iefix') format('embedded-opentype'),
-       url('./assets/fonts/helvetica/HelveticaNowDisplay-Medium.woff2') format('woff2'),
-       url('./assets/fonts/helvetica/HelveticaNowDisplay-Medium.woff') format('woff'),
-       url('./assets/fonts/helvetica/HelveticaNowDisplay-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Helvetica Now Display';
-  src: url('./assets/fonts/helvetica/HelveticaNowDisplay-Bold.eot');
-  src: url('./assets/fonts/helvetica/HelveticaNowDisplay-Bold.eot?#iefix') format('embedded-opentype'),
-       url('./assets/fonts/helvetica/HelveticaNowDisplay-Bold.woff2') format('woff2'),
-       url('./assets/fonts/helvetica/HelveticaNowDisplay-Bold.woff') format('woff'),
-       url('./assets/fonts/helvetica/HelveticaNowDisplay-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Merchant';
-  src: url('./assets/fonts/merchant/Merchant-Regular.eot'); 
-  src: url('./assets/fonts/merchant/Merchant-Regular.eot?#iefix') format('embedded-opentype'),
-       url('./assets/fonts/merchant/Merchant-Regular.woff2') format('woff2'),
-       url('./assets/fonts/merchant/Merchant-Regular.woff') format('woff'),
-       url('./assets/fonts/merchant/Merchant-Regular.ttf') format('truetype'); 
+  font-family: "Helvetica Now Display";
+  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.eot");
+  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.woff2")
+      format("woff2"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.woff")
+      format("woff"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.ttf")
+      format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Merchant';
-  src: url('./assets/fonts/merchant/Merchant-Medium.eot');
-  src: url('./assets/fonts/merchant/Merchant-Medium.eot?#iefix') format('embedded-opentype'),
-       url('./assets/fonts/merchant/Merchant-Medium.woff2') format('woff2'),
-       url('./assets/fonts/merchant/Merchant-Medium.woff') format('woff'),
-       url('./assets/fonts/merchant/Merchant-Medium.ttf') format('truetype');
-  font-weight: 500; 
+  font-family: "Helvetica Now Display";
+  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Medium.eot");
+  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Medium.woff2")
+      format("woff2"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Medium.woff")
+      format("woff"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Medium.ttf")
+      format("truetype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Merchant';
-  src: url('./assets/fonts/merchant/Merchant-Bold.eot');
-  src: url('./assets/fonts/merchant/Merchant-Bold.eot?#iefix') format('embedded-opentype'),
-       url('./assets/fonts/merchant/Merchant-Bold.woff2') format('woff2'),
-       url('./assets/fonts/merchant/Merchant-Bold.woff') format('woff'),
-       url('./assets/fonts/merchant/Merchant-Bold.ttf') format('truetype');
+  font-family: "Helvetica Now Display";
+  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Bold.eot");
+  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Bold.woff2")
+      format("woff2"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Bold.woff") format("woff"),
+    url("./assets/fonts/helvetica/HelveticaNowDisplay-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merchant";
+  src: url("./assets/fonts/merchant/Merchant-Regular.eot");
+  src: url("./assets/fonts/merchant/Merchant-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/merchant/Merchant-Regular.woff2") format("woff2"),
+    url("./assets/fonts/merchant/Merchant-Regular.woff") format("woff"),
+    url("./assets/fonts/merchant/Merchant-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merchant";
+  src: url("./assets/fonts/merchant/Merchant-Medium.eot");
+  src: url("./assets/fonts/merchant/Merchant-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/merchant/Merchant-Medium.woff2") format("woff2"),
+    url("./assets/fonts/merchant/Merchant-Medium.woff") format("woff"),
+    url("./assets/fonts/merchant/Merchant-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merchant";
+  src: url("./assets/fonts/merchant/Merchant-Bold.eot");
+  src: url("./assets/fonts/merchant/Merchant-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./assets/fonts/merchant/Merchant-Bold.woff2") format("woff2"),
+    url("./assets/fonts/merchant/Merchant-Bold.woff") format("woff"),
+    url("./assets/fonts/merchant/Merchant-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: "Helvetica Now Display", sans-serif;
+}
+
+.font-merchant {
+  font-family: "Merchant", sans-serif;
 }

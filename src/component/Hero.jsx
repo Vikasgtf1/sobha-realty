@@ -110,7 +110,7 @@ const Hero = () => {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div
-        className="bg-image absolute w-full h-full bg-cover bg-center bg-no-repeat"
+        className="bg-image absolute w-full bg-top h-full bg-cover  bg-no-repeat"
         style={{
           backgroundImage: `url('hero.png')`,
         }}
@@ -121,11 +121,9 @@ const Hero = () => {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 flex justify-between items-center px-8 py-6">
-        <div className="header-element">
-          <h1 className="text-white text-2xl font-light tracking-[0.2em] uppercase">
-            SOBHA
-          </h1>
+      <header className="relative z-10 flex justify-between flex-wrap items-center px-[60px] py-6">
+        <div className="header-element ">
+          <img src="logo.svg" alt="logo" />
         </div>
 
         <div className="flex items-center gap-6">
@@ -137,56 +135,66 @@ const Hero = () => {
             <Menu size={24} />
           </button>
         </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="2"
+          viewBox="0 0 1428 2"
+          fill="none"
+          className="basis-[100%] mt-[17px]"
+        >
+          <path d="M0 1L1428 1" stroke="white" stroke-opacity="0.3" />
+        </svg>
       </header>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-8 -mt-20">
         {/* Main Title */}
-        <div className="text-center mb-16">
-          <h1 className="main-title text-white text-6xl md:text-7xl lg:text-8xl font-light tracking-[0.1em] uppercase mb-8">
+        <div className="text-center mb-16 font-merchant">
+          <h1 className="main-title text-white  text-6xl md:text-7xl lg:text-8xl font-light tracking-[0.1em] uppercase mb-8">
             SOBHA REALTY
           </h1>
-          <p className="location-text text-white text-xl md:text-2xl font-light tracking-[0.15em] opacity-90">
+          <p className="location-text text-white text-xl md:text-2xl font-[300] tracking-[0.15em] opacity-90">
             Gurugram
           </p>
         </div>
-
-        {/* Info Cards */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-5xl">
-          {/* Status Card */}
-          <div className="info-card bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 text-center min-w-[140px]">
-            <p className="text-gray-600 text-xs uppercase tracking-wide font-medium mb-1">
+      </div>
+      {/* Info Cards */}
+      <div className="flex justify-center w-full absolute bottom-[10px]">
+        {" "}
+        <div className="flex   font-merchant text-white flex-wrap justify-center gap-4 md:gap-0 max-w-8xl">
+          {/* Status Card */}{" "}
+          <div className="info-card   rounded-full px-6 py-3 text-center min-w-[140px]">
+            <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
               STATUS
             </p>
-            <p className="text-gray-900 text-sm font-medium">New Launch</p>
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white/80 backdrop-blur-[20px] tracking-[1.2px] text-sm font-medium">
+              New Launch
+            </p>
           </div>
-
-          {/* Pricing Card */}
-          <div className="info-card bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 text-center min-w-[140px]">
-            <p className="text-gray-600 text-xs uppercase tracking-wide font-medium mb-1">
+          <div className="info-card   rounded-full px-6 py-3 text-center min-w-[140px]">
+            <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
               PRICING
             </p>
-            <p className="text-gray-900 text-sm font-medium">
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white/80 backdrop-blur-[20px] tracking-[1.2px] text-sm font-medium">
               ₹ 5.99 <span className="text-xs">Cr* Onwards</span>
             </p>
           </div>
-
-          {/* Typology Card */}
-          <div className="info-card bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 text-center min-w-[140px]">
-            <p className="text-gray-600 text-xs uppercase tracking-wide font-medium mb-1">
+          <div className="info-card   rounded-full px-6 py-3 text-center min-w-[140px]">
+            <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
               TYPOLOGY
             </p>
-            <p className="text-gray-900 text-sm font-medium">
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white/80 backdrop-blur-[20px] tracking-[1.2px] text-sm font-medium">
               1, 2 & 3 BHK Apartments
             </p>
           </div>
-
-          {/* Payment Plan Card */}
-          <div className="info-card bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 text-center min-w-[140px]">
-            <p className="text-gray-600 text-xs uppercase tracking-wide font-medium mb-1">
+          <div className="info-card   rounded-full px-6 py-3 text-center min-w-[140px]">
+            <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
               PAYMENT PLAN
             </p>
-            <p className="text-gray-900 text-sm font-medium">25:25:25:25</p>
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white/80 backdrop-blur-[20px] tracking-[1.2px] text-sm font-medium">
+              25:25:25:25
+            </p>
           </div>
         </div>
       </div>
