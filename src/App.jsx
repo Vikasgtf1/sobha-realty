@@ -7,7 +7,7 @@ function App() {
     <>
       <Hero />
       <VisualJourney/>
-            <Hero />
+            {/* <Hero /> */}
     </>
   );
 }
