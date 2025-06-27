@@ -71,5 +71,14 @@
 }
 
 body {
-  font-family: 'Helvetica Now Display', sans-serif;
+  font-family: 'Merchant', sans-serif;
+  color:#fff
+}
+.heading_border_white{border: 1px solid;width: 30px;
+border-image-source: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #FFFFFF 48.56%, rgba(0, 0, 0, 0) 100%);}
+.heading_border_black{border: 1px solid;
+
+border-image-source: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #FFFFFF 48.56%, rgba(0, 0, 0, 0) 100%);
+
+
 }
