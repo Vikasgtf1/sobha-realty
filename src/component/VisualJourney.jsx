@@ -52,7 +52,7 @@ export default function VisualJourney() {
     
     if (cards.length === 0) return;   
 
-  let stickDistance = 20;
+  let stickDistance = 0;
     let topOffset = window.innerWidth > 1200 ? 540 : 600;
     
     let firstCardST = ScrollTrigger.create({
