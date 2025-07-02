@@ -80,8 +80,8 @@ const OurHighlightsSection = () => {
         </div>
 
         <div className="flex  flex-wrap justify-evenly ">
-          <div className="flex flex-col basis-[26%]  mb-[100px]">
-            <div className="text-7xl lg:text-6xl font-light">
+          <div className="flex flex-col xl:basis-[26%] basis-[100%] mb-[60px]  xl:mb-[100px]">
+            <div className="text-5xl lg:text-6xl font-light">
               150k
               <span className="text-4xl lg:text-5xl font-light ml-2">sqft</span>
             </div>
@@ -93,8 +93,8 @@ const OurHighlightsSection = () => {
           </div>
 
           {/* 60% Stat */}
-          <div className="flex flex-col basis-[26%]  mb-[100px]">
-            <div className="text-7xl lg:text-6xl font-light">
+          <div className="flex flex-col xl:basis-[26%] basis-[100%] mb-[60px]  xl:mb-[100px]">
+            <div className="text-5xl lg:text-6xl font-light">
               60<span className="text-3xl lg:text-4xl">%</span>
             </div>
             <p className="text-gray-300 font-helvetica text-sm leading-relaxed text-left">
@@ -105,8 +105,8 @@ const OurHighlightsSection = () => {
           </div>
 
           {/* 60% Stat */}
-          <div className="flex flex-col basis-[26%]  mb-[100px]">
-            <div className="text-7xl lg:text-6xl font-light">
+          <div className="flex flex-col xl:basis-[26%] basis-[100%] mb-[60px]  xl:mb-[100px]">
+            <div className="text-5xl lg:text-6xl font-light">
               60<span className="text-3xl lg:text-4xl">%</span>
             </div>
             <p className="text-gray-300 font-helvetica text-sm leading-relaxed text-left">
@@ -117,7 +117,7 @@ const OurHighlightsSection = () => {
           </div>
 
           {/* 30 Stat */}
-          <div className="flex flex-col basis-[26%] ">
+          <div className="flex flex-col xl:basis-[26%] basis-[100%] mb-[60px]  xl:mb-[100px]">
             <div className="text-6xl lg:text-7xl font-light">30</div>
             <p className="text-gray-300 font-helvetica text-sm leading-relaxed max-w-xs ">
               Exclusive residence
@@ -128,7 +128,7 @@ const OurHighlightsSection = () => {
             </p>
           </div>
           {/* 30 Stat */}
-          <div className="flex flex-col basis-[26%] ">
+          <div className="flex flex-col xl:basis-[26%] basis-[100%] mb-[60px]  xl:mb-[100px]">
             <div className="text-6xl lg:text-7xl font-light">30</div>
             <p className="text-gray-300 font-helvetica text-sm leading-relaxed max-w-xs ">
               Exclusive residence
@@ -139,7 +139,7 @@ const OurHighlightsSection = () => {
             </p>
           </div>
           {/* View More Button */}
-          <div className="flex flex-col basis-[26%]">
+          <div className="flex flex-col xl:basis-[26%] basis-[100%] xl:mb-[100px]">
             <button className="flex items-center space-x-2 text-white hover:text-gray-300 transition-colors duration-300">
               <span className="text-sm font-light">View More</span>
               <svg

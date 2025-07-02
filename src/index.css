@@ -3,7 +3,6 @@
 body {
   overflow-x: hidden;
 }
-.card-item{
-      transform-origin: 50% -160%;
-
+.card-item {
+  transform-origin: 50% -160%;
 }
