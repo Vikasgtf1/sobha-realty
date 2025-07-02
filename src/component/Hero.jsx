@@ -107,34 +107,42 @@ const Hero = () => {
   // }, []);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative min-h-screen w-full xl:h-screen xl:overflow-hidden">
       {/* Background Image */}
       <div
-        className="bg-image absolute w-full bg-top h-full bg-cover  bg-no-repeat"
+        className="bg-image absolute w-full bg-top xl:h-screen h-[50vh] bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url('hero.png')`,
         }}
       >
         {/* Overlay */}
-        <div className="absolute  bg-black bg-opacity-20"></div>
-        <div className="absolute  bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+        <div className="absolute inset-0  bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
       </div>
 
       {/* Header */}
-      <header className="relative z-10 flex justify-between flex-wrap items-center px-[60px] py-6">
-        <div className="header-element ">
-          <img src="logo.svg" alt="logo" />
+      <header className="relative z-10 flex justify-between flex-wrap items-center px-[20px] xl:px-[60px] py-6">
+        <div className="header-element">
+          <img
+            src="logo.svg"
+            alt="logo"
+            className="xl:h-[full] xl:w-full h-[22px]"
+          />
         </div>
 
         <div className="flex items-center gap-6">
           <button className="header-element flex items-center gap-2 text-white hover:text-gray-200 transition-colors">
             <p className="border-[0.5px] border-solid rounded-[50%] p-[7px] border-[#fff]">
-              <Phone size={15} />{" "}
+              <Phone className="block md:hidden" size={12} /> {/* Mobile */}
+              <Phone className="hidden md:block sm:hidden" size={15} />
             </p>
-            <span className="text-sm font-light tracking-[2px]">Call Now</span>
+            <span className="text-[14px] xl:text-sm font-light tracking-[2px]">
+              Call Now
+            </span>
           </button>
           <button className="header-element text-white hover:text-gray-200 transition-colors">
-            <Menu size={24} />
+            <Menu className="block md:hidden" size={18} /> {/* Mobile */}
+            <Menu className="hidden md:block sm:hidden" size={24} />
           </button>
         </div>
         <svg
@@ -145,63 +153,76 @@ const Hero = () => {
           fill="none"
           className="basis-[100%] mt-[17px]"
         >
-          <path d="M0 1L1428 1" stroke="white" stroke-opacity="0.3" />
+          <path d="M0 1L1428 1" stroke="white" strokeOpacity="0.3" />
         </svg>
       </header>
 
-      {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-8 -mt-20">
-        {/* Main Title */}
-        <div className="text-center mb-16 font-merchant">
-          <h1 className="main-title text-white  text-6xl md:text-7xl lg:text-8xl font-light tracking-[0.1em] uppercase mb-8">
+      {/* Main Content - Desktop: centered in viewport, Mobile: starts after 50vh banner */}
+      <div className="relative z-10 flex flex-col items-center justify-center xl:h-full xl:-mt-20 px-8">
+        {/* Mobile: Content starts after banner (50vh) */}
+        <div className="xl:hidden" style={{ marginTop: "calc(52vh - 80px)" }}>
+          <div className="text-center mb-4 xl:mb-8 font-merchant">
+            <h1 className="main-title xl:text-white text-2xl font-light tracking-[0.1em] uppercase mb-4">
+              SOBHA REALTY
+            </h1>
+            <p className="location-text xl:text-white text-[18px] font-[300] tracking-[0.15em] opacity-90">
+              Gurugram
+            </p>
+          </div>
+        </div>
+
+        {/* Desktop: Centered title */}
+        <div className="hidden xl:block text-center mb-16 font-merchant">
+          <h1 className="main-title text-white text-7xl lg:text-8xl font-light tracking-[0.1em] uppercase mb-8">
             SOBHA REALTY
           </h1>
-          <p className="location-text text-white text-xl md:text-2xl font-[300] tracking-[0.15em] opacity-90">
+          <p className="location-text text-white text-2xl font-[300] tracking-[0.15em] opacity-90">
             Gurugram
           </p>
         </div>
       </div>
-      {/* Info Cards */}
-      <div className="flex justify-center w-full absolute bottom-[10px]">
-        <div className="flex   font-merchant text-white flex-wrap justify-center gap-4 md:gap-0 max-w-8xl">
+
+      {/* Info Cards - Mobile: vertical stack after content, Desktop: horizontal at bottom */}
+      <div className="flex justify-center w-full xl:absolute xl:bottom-[10px] mt-4 xl:mt-0 pb-8 xl:pb-0">
+        <div className="flex font-merchant text-black xl:text-white flex-col xl:flex-row justify-center items-center gap-4 xl:gap-0 max-w-8xl w-full px-4">
           {/* Status Card */}
-          <div className="info-card   rounded-full px-6 py-3 text-center min-w-[140px]">
-            <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
+          <div className="info-card xl:block justify-between xl:justify-center flex rounded-full xl:px-6 py-3 text-center min-w-[140px] w-full xl:w-auto max-w-sm xl:max-w-none">
+            <p className="text-black xl:text-white text-[17px] tracking-[1.5px] uppercase font-medium xl:mb-1">
               STATUS
             </p>
-            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch pl-[20px] xl:px-[50px] xl:py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
               New Launch
             </p>
           </div>
-          <div className="info-card   rounded-full px-6 py-3 text-center min-w-[140px]">
-            <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
+
+          <div className="info-card xl:block justify-between xl:justify-center flex rounded-full xl:px-6 py-3 text-center min-w-[140px] w-full xl:w-auto max-w-sm xl:max-w-none">
+            <p className="text-black xl:text-white text-[17px] tracking-[1.5px] uppercase font-medium xl:mb-1">
               PRICING
             </p>
-            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch pl-[20px] xl:px-[50px] xl:py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
               ₹ 5.99 <span className="text-xs">Cr* Onwards</span>
             </p>
           </div>
-          <div className="info-card   rounded-full px-6 py-3 text-center min-w-[140px]">
-            <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
+
+          <div className="info-card xl:block  justify-between xl:justify-center flex rounded-full xl:px-6 py-3 text-center min-w-[140px] w-full xl:w-auto max-w-sm xl:max-w-none">
+            <p className="text-black xl:text-white text-[17px] tracking-[1.5px] uppercase font-medium xl:mb-1">
               TYPOLOGY
             </p>
-            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch pl-[20px] xl:px-[50px] xl:py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
               1, 2 & 3 BHK Apartments
             </p>
           </div>
-          <div className="info-card   rounded-full px-6 py-3 text-center min-w-[140px]">
-            <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
+
+          <div className="info-card xl:block justify-between xl:justify-center flex rounded-full xl:px-6 py-3 text-center min-w-[140px] w-full xl:w-auto max-w-sm xl:max-w-none">
+            <p className="text-black xl:text-white text-[17px] tracking-[1.5px] uppercase font-medium xl:mb-1">
               PAYMENT PLAN
             </p>
-            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch pl-[20px] xl:px-[50px] xl:py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
               25:25:25:25
             </p>
           </div>
         </div>
       </div>
-
-      {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
     </div>
   );
 };

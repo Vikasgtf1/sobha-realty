@@ -5,7 +5,7 @@ const Amenities = () => {
     <div className="pt-16 pb-8 overflow-hidden">
       {/* Header */}
 
-      <div className="text-center  mb-16">
+      <div className="text-center  mb-8 xl:mb-16">
         <CommonHeading heading={"Amenities"} />
       </div>
 
