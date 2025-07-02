@@ -1,118 +1,5 @@
 @font-face {
   font-family: "Helvetica Now Display";
-  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.eot");
-  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.woff2")
-      format("woff2"),
-    url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.woff")
-      format("woff"),
-    url("./assets/fonts/helvetica/HelveticaNowDisplay-Regular.ttf")
-      format("truetype");
-}
-
-@font-face {
-  font-family: "Helvetica Now Display";
-  src: url("HelveticaNowDisplay-ExtLt.eot");
-  src: local("Helvetica Now Display ExtLt"), local("HelveticaNowDisplay-ExtLt"),
-    url("HelveticaNowDisplay-ExtLt.eot?#iefix") format("embedded-opentype"),
-    url("HelveticaNowDisplay-ExtLt.woff2") format("woff2"),
-    url("HelveticaNowDisplay-ExtLt.woff") format("woff"),
-    url("HelveticaNowDisplay-ExtLt.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Helvetica Now Display";
-  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Medium.eot");
-  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/helvetica/HelveticaNowDisplay-Medium.woff2")
-      format("woff2"),
-    url("./assets/fonts/helvetica/HelveticaNowDisplay-Medium.woff")
-      format("woff"),
-    url("./assets/fonts/helvetica/HelveticaNowDisplay-Medium.ttf")
-      format("truetype");
-}
-
-@font-face {
-  font-family: "Helvetica Now Display";
-  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Bold.eot");
-  src: url("./assets/fonts/helvetica/HelveticaNowDisplay-Bold.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/helvetica/HelveticaNowDisplay-Bold.woff2")
-      format("woff2"),
-    url("./assets/fonts/helvetica/HelveticaNowDisplay-Bold.woff") format("woff"),
-    url("./assets/fonts/helvetica/HelveticaNowDisplay-Bold.ttf")
-      format("truetype");
-}
-
-@font-face {
-  font-family: "Merchant";
-  src: url("./assets/fonts/merchant/Merchant-Light.eot");
-  src: url("./assets/fonts/merchant/Merchant-Light.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/merchant/Merchant-Light.woff2") format("woff2"),
-    url("./assets/fonts/merchant/Merchant-Light.woff") format("woff"),
-    url("./assets/fonts/merchant/Merchant-Light.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Merchant";
-  src: url("./assets/fonts/merchant/Merchant-ExtraLight.eot");
-  src: url("./assets/fonts/merchant/Merchant-ExtraLight.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/merchant/Merchant-ExtraLight.woff2") format("woff2"),
-    url("./assets/fonts/merchant/Merchant-ExtraLight.woff") format("woff"),
-    url("./assets/fonts/merchant/Merchant-ExtraLight.ttf") format("truetype");
-  font-weight: 100; /* <-- important */
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Merchant";
-  src: url("./assets/fonts/merchant/Merchant-Regular.eot");
-  src: url("./assets/fonts/merchant/Merchant-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/merchant/Merchant-Regular.woff2") format("woff2"),
-    url("./assets/fonts/merchant/Merchant-Regular.woff") format("woff"),
-    url("./assets/fonts/merchant/Merchant-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Merchant";
-  src: url("./assets/fonts/merchant/Merchant-Medium.eot");
-  src: url("./assets/fonts/merchant/Merchant-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/merchant/Merchant-Medium.woff2") format("woff2"),
-    url("./assets/fonts/merchant/Merchant-Medium.woff") format("woff"),
-    url("./assets/fonts/merchant/Merchant-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Merchant";
-  src: url("./assets/fonts/merchant/Merchant-Bold.eot");
-  src: url("./assets/fonts/merchant/Merchant-Bold.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/merchant/Merchant-Bold.woff2") format("woff2"),
-    url("./assets/fonts/merchant/Merchant-Bold.woff") format("woff"),
-    url("./assets/fonts/merchant/Merchant-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Helvetica Now Display";
   src: url("HelveticaNowDisplay-ThinIta.eot");
   src: local("Helvetica Now Display Thin Ita"),
     local("HelveticaNowDisplay-ThinIta"),
@@ -120,6 +7,8 @@
     url("HelveticaNowDisplay-ThinIta.woff2") format("woff2"),
     url("HelveticaNowDisplay-ThinIta.woff") format("woff"),
     url("HelveticaNowDisplay-ThinIta.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
 }
 
 @font-face {
@@ -130,6 +19,8 @@
     url("HelveticaNowDisplay-Light.woff2") format("woff2"),
     url("HelveticaNowDisplay-Light.woff") format("woff"),
     url("HelveticaNowDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
@@ -141,6 +32,8 @@
     url("HelveticaNowDisplay-BoldIta.woff2") format("woff2"),
     url("HelveticaNowDisplay-BoldIta.woff") format("woff"),
     url("HelveticaNowDisplay-BoldIta.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
 }
 
 @font-face {
@@ -152,6 +45,8 @@
     url("HelveticaNowDisplay-RegIta.woff2") format("woff2"),
     url("HelveticaNowDisplay-RegIta.woff") format("woff"),
     url("HelveticaNowDisplay-RegIta.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -163,6 +58,8 @@
     url("HelveticaNowDisplay-ExtLtIta.woff2") format("woff2"),
     url("HelveticaNowDisplay-ExtLtIta.woff") format("woff"),
     url("HelveticaNowDisplay-ExtLtIta.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
 }
 
 @font-face {
@@ -174,6 +71,8 @@
     url("HelveticaNowDisplay-MedIta.woff2") format("woff2"),
     url("HelveticaNowDisplay-MedIta.woff") format("woff"),
     url("HelveticaNowDisplay-MedIta.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
 }
 
 @font-face {
@@ -184,6 +83,8 @@
     url("HelveticaNowDisplay-ExtLt.woff2") format("woff2"),
     url("HelveticaNowDisplay-ExtLt.woff") format("woff"),
     url("HelveticaNowDisplay-ExtLt.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
@@ -195,6 +96,8 @@
     url("HelveticaNowDisplay-ExtBlk.woff2") format("woff2"),
     url("HelveticaNowDisplay-ExtBlk.woff") format("woff"),
     url("HelveticaNowDisplay-ExtBlk.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -205,6 +108,8 @@
     url("HelveticaNowDisplay-Bold.woff2") format("woff2"),
     url("HelveticaNowDisplay-Bold.woff") format("woff"),
     url("HelveticaNowDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
@@ -216,6 +121,8 @@
     url("HelveticaNowDisplay-ExtBdIta.woff2") format("woff2"),
     url("HelveticaNowDisplay-ExtBdIta.woff") format("woff"),
     url("HelveticaNowDisplay-ExtBdIta.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
 }
 
 @font-face {
@@ -227,6 +134,8 @@
     url("HelveticaNowDisplay-Regular.woff2") format("woff2"),
     url("HelveticaNowDisplay-Regular.woff") format("woff"),
     url("HelveticaNowDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -238,6 +147,8 @@
     url("HelveticaNowDisplay-ExtBlkIta.woff2") format("woff2"),
     url("HelveticaNowDisplay-ExtBlkIta.woff") format("woff"),
     url("HelveticaNowDisplay-ExtBlkIta.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -248,6 +159,8 @@
     url("HelveticaNowDisplay-Thin.woff2") format("woff2"),
     url("HelveticaNowDisplay-Thin.woff") format("woff"),
     url("HelveticaNowDisplay-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
 }
 
 @font-face {
@@ -259,6 +172,8 @@
     url("HelveticaNowDisplay-LightIta.woff2") format("woff2"),
     url("HelveticaNowDisplay-LightIta.woff") format("woff"),
     url("HelveticaNowDisplay-LightIta.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
 }
 
 @font-face {
@@ -270,6 +185,8 @@
     url("HelveticaNowDisplay-ExtraBold.woff2") format("woff2"),
     url("HelveticaNowDisplay-ExtraBold.woff") format("woff"),
     url("HelveticaNowDisplay-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
 }
 
 @font-face {
@@ -281,6 +198,8 @@
     url("HelveticaNowDisplay-Medium.woff2") format("woff2"),
     url("HelveticaNowDisplay-Medium.woff") format("woff"),
     url("HelveticaNowDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
@@ -292,6 +211,8 @@
     url("HelveticaNowDisplay-HairlineI.woff2") format("woff2"),
     url("HelveticaNowDisplay-HairlineI.woff") format("woff"),
     url("HelveticaNowDisplay-HairlineI.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
 }
 
 @font-face {
@@ -303,6 +224,8 @@
     url("HelveticaNowDisplay-BlackIta.woff2") format("woff2"),
     url("HelveticaNowDisplay-BlackIta.woff") format("woff"),
     url("HelveticaNowDisplay-BlackIta.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
 }
 
 @font-face {
@@ -313,6 +236,8 @@
     url("HelveticaNowDisplay-Black.woff2") format("woff2"),
     url("HelveticaNowDisplay-Black.woff") format("woff"),
     url("HelveticaNowDisplay-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
@@ -324,36 +249,20 @@
     url("HelveticaNowDisplay-Hairline.woff2") format("woff2"),
     url("HelveticaNowDisplay-Hairline.woff") format("woff"),
     url("HelveticaNowDisplay-Hairline.ttf") format("truetype");
-}
-
-body {
-  font-family: "Merchant", sans-serif;
-}
-
-.font-merchant {
-  font-family: "Merchant", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
 .font-helvetica {
   font-family: "Helvetica Now Display", sans-serif;
 }
 
-.heading_border_white {
-  border: 1px solid;
-  width: 30px;
-  border-image-source: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 0%,
-    #ffffff 48.56%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-.heading_border_black {
+.heading_border {
   border: 1px solid;
   border-image-source: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0) 0%,
-    #ffffff 48.56%,
+    #000000 48.56%,
     rgba(0, 0, 0, 0) 100%
   );
 }

@@ -2,109 +2,109 @@ import { useEffect, useRef } from "react";
 import { Phone, Menu } from "lucide-react";
 
 const Hero = () => {
-  const heroRef = useRef(null);
+  // const heroRef = useRef(null);
 
-  useEffect(() => {
-    // Import GSAP from CDN
-    const script = document.createElement("script");
-    script.src =
-      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js";
-    script.onload = () => {
-      const { gsap } = window;
+  // useEffect(() => {
+  //   // Import GSAP from CDN
+  //   const script = document.createElement("script");
+  //   script.src =
+  //     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js";
+  //   script.onload = () => {
+  //     const { gsap } = window;
 
-      // Animate main title
-      gsap.fromTo(
-        ".main-title",
-        {
-          opacity: 0,
-          y: 50,
-          scale: 0.9,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 1.5,
-          ease: "power2.out",
-          delay: 0.5,
-        }
-      );
+  //     // Animate main title
+  //     gsap.fromTo(
+  //       ".main-title",
+  //       {
+  //         opacity: 0,
+  //         y: 50,
+  //         scale: 0.9,
+  //       },
+  //       {
+  //         opacity: 1,
+  //         y: 0,
+  //         scale: 1,
+  //         duration: 1.5,
+  //         ease: "power2.out",
+  //         delay: 0.5,
+  //       }
+  //     );
 
-      // Animate location
-      gsap.fromTo(
-        ".location-text",
-        {
-          opacity: 0,
-          y: 30,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          ease: "power2.out",
-          delay: 1,
-        }
-      );
+  //     // Animate location
+  //     gsap.fromTo(
+  //       ".location-text",
+  //       {
+  //         opacity: 0,
+  //         y: 30,
+  //       },
+  //       {
+  //         opacity: 1,
+  //         y: 0,
+  //         duration: 1,
+  //         ease: "power2.out",
+  //         delay: 1,
+  //       }
+  //     );
 
-      // Animate info cards with stagger
-      gsap.fromTo(
-        ".info-card",
-        {
-          opacity: 0,
-          y: 40,
-          scale: 0.95,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: "power2.out",
-          delay: 1.5,
-        }
-      );
+  //     // Animate info cards with stagger
+  //     gsap.fromTo(
+  //       ".info-card",
+  //       {
+  //         opacity: 0,
+  //         y: 40,
+  //         scale: 0.95,
+  //       },
+  //       {
+  //         opacity: 1,
+  //         y: 0,
+  //         scale: 1,
+  //         duration: 0.8,
+  //         stagger: 0.15,
+  //         ease: "power2.out",
+  //         delay: 1.5,
+  //       }
+  //     );
 
-      // Animate header elements
-      gsap.fromTo(
-        ".header-element",
-        {
-          opacity: 0,
-          y: -20,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: "power2.out",
-        }
-      );
+  //     // Animate header elements
+  //     gsap.fromTo(
+  //       ".header-element",
+  //       {
+  //         opacity: 0,
+  //         y: -20,
+  //       },
+  //       {
+  //         opacity: 1,
+  //         y: 0,
+  //         duration: 0.8,
+  //         stagger: 0.1,
+  //         ease: "power2.out",
+  //       }
+  //     );
 
-      // Parallax effect on scroll
-      const handleScroll = () => {
-        const scrolled = window.pageYOffset;
-        gsap.to(".bg-image", {
-          y: scrolled * 0.5,
-          duration: 0.1,
-        });
-      };
+  //     // Parallax effect on scroll
+  //     const handleScroll = () => {
+  //       const scrolled = window.pageYOffset;
+  //       gsap.to(".bg-image", {
+  //         y: scrolled * 0.5,
+  //         duration: 0.1,
+  //       });
+  //     };
 
-      window.addEventListener("scroll", handleScroll);
+  //     window.addEventListener("scroll", handleScroll);
 
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    };
+  //     return () => {
+  //       window.removeEventListener("scroll", handleScroll);
+  //     };
+  //   };
 
-    document.head.appendChild(script);
+  //   document.head.appendChild(script);
 
-    return () => {
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (document.head.contains(script)) {
+  //       document.head.removeChild(script);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
@@ -128,8 +128,10 @@ const Hero = () => {
 
         <div className="flex items-center gap-6">
           <button className="header-element flex items-center gap-2 text-white hover:text-gray-200 transition-colors">
-            <Phone size={20} />
-            <span className="text-sm font-light tracking-wide">Call Now</span>
+            <p className="border-[0.5px] border-solid rounded-[50%] p-[7px] border-[#fff]">
+              <Phone size={15} />{" "}
+            </p>
+            <span className="text-sm font-light tracking-[2px]">Call Now</span>
           </button>
           <button className="header-element text-white hover:text-gray-200 transition-colors">
             <Menu size={24} />
@@ -161,9 +163,8 @@ const Hero = () => {
       </div>
       {/* Info Cards */}
       <div className="flex justify-center w-full absolute bottom-[10px]">
-        {" "}
         <div className="flex   font-merchant text-white flex-wrap justify-center gap-4 md:gap-0 max-w-8xl">
-          {/* Status Card */}{" "}
+          {/* Status Card */}
           <div className="info-card   rounded-full px-6 py-3 text-center min-w-[140px]">
             <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
               STATUS
