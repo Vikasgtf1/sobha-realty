@@ -75,7 +75,6 @@ export default function VisualJourney() {
           start: "center center",
       end: () => lastCardST.start + stickDistance,
       pin: true,
-      // markers: true,
       pinSpacing: false,
       ease: "none",
       animation: scaleDown,
