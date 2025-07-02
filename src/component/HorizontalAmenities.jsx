@@ -456,39 +456,48 @@ const HorizontalAmenities = () => {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative overflow-hidden w-full h-[800px]"
-    >
+    <div>
       <div
-        ref={scrollContainerRef}
-        className="flex flex-nowrap my-[60px]"
-        style={{ width: "max-content" }} // Ensure proper width calculation
+        ref={containerRef}
+        className="relative overflow-hidden w-full h-[650px]"
       >
-        {amenities.map((amenity, index) => {
-          const config = getCardConfig(index);
+        <div
+          ref={scrollContainerRef}
+          className="flex flex-nowrap my-[60px]"
+          style={{ width: "max-content" }} // Ensure proper width calculation
+        >
+          {amenities.map((amenity, index) => {
+            const config = getCardConfig(index);
 
-          return (
-            <div key={index} className={config.containerClasses}>
-              {/* Label and Icon */}
-              <div className={config.labelClasses}>
-                <span className="inline-block font-[300]">{amenity.title}</span>
-                <span className="bg-black mt-[6px] inline-flex justify-center items-center h-[40px] w-[40px] rounded-full">
-                  {amenity.icon}
-                </span>
-              </div>
+            return (
+              <div key={index} className={config.containerClasses}>
+                {/* Label and Icon */}
+                <div className={config.labelClasses}>
+                  <span className="inline-block font-[300]">
+                    {amenity.title}
+                  </span>
+                  <span className="bg-black mt-[6px] inline-flex justify-center items-center h-[40px] w-[40px] rounded-full">
+                    {amenity.icon}
+                  </span>
+                </div>
 
-              {/* Image */}
-              <div className={config.imageContainerClasses}>
-                <img
-                  src={amenity.image}
-                  className="h-[170px] w-[260px]"
-                  alt={amenity.title}
-                />
+                {/* Image */}
+                <div className={config.imageContainerClasses}>
+                  <img
+                    src={amenity.image}
+                    className="h-[170px] w-[260px]"
+                    alt={amenity.title}
+                  />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+      </div>
+      <div className="flex justify-center mb-[40px]">
+        <button className="bg-black text-center my-[20px]  text-white px-8 py-4 text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
+          View All Amenities
+        </button>
       </div>
     </div>
   );
