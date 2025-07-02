@@ -72,8 +72,8 @@ export default function VisualJourney() {
 
       ScrollTrigger.create({
       trigger: card,
-          start:window.innerHeight<600? "center center+=30px": "center center",
-      end: () => lastCardST.start + stickDistance,
+          start:window.innerHeight<600? "center center+=30px": "center center-=50px",
+      end: () => lastCardST.start + stickDistance+50,
       pin: true,
       pinSpacing: false,
       ease: "none",
