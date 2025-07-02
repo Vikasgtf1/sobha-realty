@@ -17,9 +17,9 @@ function App() {
       <Aboutus />
       <OurHighlightsSection />
       <Amenities />
-      {/* <HorizontalAmenities />
-      <Pricing />
-      <FloorPlans />
+      <HorizontalAmenities />
+    <Pricing />
+       {/*  <FloorPlans />
       <VisualJourney />
       <Contact />
       <Footer /> */}
