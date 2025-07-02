@@ -11,7 +11,7 @@ const Pricing = () => {
   return (
     <div className="min-h-screen  bg-black text-white relative overflow-hidden">
       <img
-        className="absolute top-0 left-[2%] h-[1300px]"
+        className="absolute top-0 left-[2%] w-[100%] h-[1300px]"
         src="/assets/images/pricing-bg.png"
         alt="bg-pattern"
       />

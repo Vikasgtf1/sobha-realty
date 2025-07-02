@@ -1,9 +1,15 @@
 import CommonHeading from "../utils/CommonHeading";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 export default function VisualJourney() {
   const cardsRef = useRef(null);
   const cardRefs = useRef([]);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const cardsData = [
     {
@@ -40,8 +46,50 @@ export default function VisualJourney() {
     },
   ];
 
+  useEffect(() => {
+
+    let cards = gsap.utils.toArray(".card-item");
+    
+    if (cards.length === 0) return;   
+
+  let stickDistance = 20;
+    let topOffset = window.innerWidth > 1200 ? 540 : 600;
+    
+    let firstCardST = ScrollTrigger.create({
+      trigger: cards[0],
+    start: "center center"
+    });
+    
+      let lastCardST = ScrollTrigger.create({
+        trigger: cards[cards.length - 1],
+        start: "center center"
+      });
+
+    cards.forEach((card, index) => {
+      var scale = 1 - (cards.length - index) * 0.04;
+      
+    let scaleDown = gsap.to(card, {scale: scale, 'transform-origin': '"50% '+ (lastCardST.start - stickDistance ) +'"' });
+
+      ScrollTrigger.create({
+      trigger: card,
+          start: "center center-=50",
+      end: () => lastCardST.start + stickDistance,
+      pin: true,
+      // markers: true,
+      pinSpacing: false,
+      ease: "none",
+      animation: scaleDown,
+      toggleActions: "restart none none reverse"
+    });
+ 
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []); 
   return (
-    <section className="py-[100px] text-center bg-[#000] relative  no-[repeat] bg-[contain]">
+    <section className="py-[100px] text-center bg-[#000] relative no-[repeat] bg-[contain]">
       <img
         src="/assets/images/pattern.png"
         className="absolute top-[0] h-[100%] object-cover opacity-[0.4]"
@@ -67,9 +115,9 @@ export default function VisualJourney() {
               y2="1.5"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-opacity="0" />
-              <stop offset="0.485577" stop-color="white" />
-              <stop offset="1" stop-opacity="0" />
+              <stop stopOpacity="0" />
+              <stop offset="0.485577" stopColor="white" />
+              <stop offset="1" stopOpacity="0" />
             </linearGradient>
           </defs>
         </svg>
@@ -82,34 +130,20 @@ export default function VisualJourney() {
         visionary design.
       </p>
 
-      {/* Main Content */}
       <main className="w-4/5 mx-auto">
         <ul
           ref={cardsRef}
-          className="list-none text-center relative"
-          style={{
-            height: "120vw", // 4 cards * 40vw each
-            marginBottom: "4vw",
-          }}
+          className="list-none text-center relative cards"
+         
         >
           {cardsData.map((card, index) => (
             <li
               key={card.id}
               ref={(el) => (cardRefs.current[index] = el)}
-              className="absolute "
-              style={{
-                position: "sticky",
-                top: "100px", // All cards stick to the top
-                height: "30vw",
-                zIndex: index + 1, // Later cards have higher z-index
-              }}
+              className="card-item"
             >
               <div
-                className="card-content bg-orange-50 text-gray-900 rounded-xl overflow-hidden grid grid-cols-2 items-stretch p-6 shadow-2xl transition-transform duration-75 ease-out"
-                style={{
-                  height: "100%",
-                  transformOrigin: "50% 0%",
-                }}
+                className="card-content bg-orange-50 border-[1px] border-[#00000029] text-gray-900 rounded-xl overflow-hidden grid grid-cols-2 items-stretch p-6 shadow-2xl transition-transform duration-300 ease-out"
               >
                 <div className="flex flex-col justify-center text-left space-y-4 pr-4">
                   <h2 className="font-bold text-4xl font-serif mb-0">

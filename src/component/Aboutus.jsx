@@ -1,10 +1,15 @@
-import React from "react";
 import CommonHeading from "../utils/CommonHeading";
 
 const Aboutus = () => {
   return (
-    <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-gray-50 py-16 relative px-4 sm:px-6 lg:px-8">
+      <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
+        <img src="/assets/images/about_pattern.png" className="w-[100%]" alt="pattern image"/>
+        <div className=""></div>
+      </div>
+      <div class="absolute top-[0]   w-[100%] h-[100%] left-[0] bg-[linear-gradient(180deg,#FFF_0%,rgba(255,255,255,0.20)_48.08%,#FFF_100%)]">
+</div>
+      <div className="max-w-7xl relative z-[1]  mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <CommonHeading heading={"About Project"} />
@@ -50,14 +55,14 @@ const Aboutus = () => {
           {/* Right Side - Content Card */}
           <div className="lg:w-100  self-center ">
             <div className=" p-6 space-y-4  tracking-[0.4px]">
-              <p className="text-[#202020] font-[100] font-helvetica text-sm leading-relaxed">
+              <p className="text-[#202020] font-[100] font-helvetica  text-[12px] leading-relaxed">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
               </p>
 
-              <p className="text-[#202020] font-helvetica text-sm leading-relaxed pb-4">
+              <p className="text-[#202020] font-helvetica text-[12px] leading-relaxed pb-4">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard.
               </p>
