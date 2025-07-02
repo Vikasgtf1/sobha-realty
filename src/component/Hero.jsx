@@ -169,7 +169,7 @@ const Hero = () => {
             <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
               STATUS
             </p>
-            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white/80 backdrop-blur-[20px] tracking-[1.2px] text-sm font-medium">
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
               New Launch
             </p>
           </div>
@@ -177,7 +177,7 @@ const Hero = () => {
             <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
               PRICING
             </p>
-            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white/80 backdrop-blur-[20px] tracking-[1.2px] text-sm font-medium">
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
               ₹ 5.99 <span className="text-xs">Cr* Onwards</span>
             </p>
           </div>
@@ -185,7 +185,7 @@ const Hero = () => {
             <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
               TYPOLOGY
             </p>
-            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white/80 backdrop-blur-[20px] tracking-[1.2px] text-sm font-medium">
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
               1, 2 & 3 BHK Apartments
             </p>
           </div>
@@ -193,7 +193,7 @@ const Hero = () => {
             <p className="text-white text-[17px] tracking-[1.5px] uppercase  font-medium mb-1">
               PAYMENT PLAN
             </p>
-            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white/80 backdrop-blur-[20px] tracking-[1.2px] text-sm font-medium">
+            <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch px-[50px] py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
               25:25:25:25
             </p>
           </div>
