@@ -13,16 +13,16 @@ import HorizontalAmenities from "./component/HorizontalAmenities";
 function App() {
   return (
     <>
-      {/* <Hero /> */}
+      <Hero />
       <Aboutus />
-      {/* <OurHighlightsSection />
+      <OurHighlightsSection />
       <Amenities />
       <HorizontalAmenities />
-      <Pricing /> */}
+      <Pricing />
       <FloorPlans />
-      {/* <VisualJourney /> */}
-      {/* <Contact />
-      <Footer /> */}
+      <VisualJourney />
+      <Contact />
+      <Footer />
     </>
   );
 }

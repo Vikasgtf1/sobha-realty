@@ -15,16 +15,17 @@ const Aboutus = () => {
       <div className="max-w-7xl relative z-[1]  mx-auto">
         {/* Header */}
         <div className="text-center mb-12 xl:mb-16">
-          <CommonHeading heading={"About Project"} />
+          <CommonHeading heading={"About Group 108"} />
         </div>
 
         {/* Description */}
         <div className="text-center mb-12 xl:mb-16">
           <p className="text-[#000] font-merchant tracking-[1px] font-[100] max-w-4xl mx-auto leading-relaxed text-[14px] xl:text-lg">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Group 108 specializes in crafting real estate properties that cater
+            to individuals who prioritize exquisite design, exceptional
+            artistry, and the most luxurious features. At the heart of Group 108
+            is the belief that every project should embody principles of
+            wholeness, transparency, and trust.
           </p>
         </div>
 
@@ -59,18 +60,19 @@ const Aboutus = () => {
           <div className="lg:w-100  self-center ">
             <div className=" xl:p-6 space-y-4  tracking-[0.4px]">
               <p className="text-[#202020] font-[100] font-helvetica  text-[12px] leading-relaxed">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+                With a legacy spanning over three decades in the real estate
+                sector, our management team has been the driving force behind
+                some of the most notable projects. The expertise is further
+                exemplified in the ongoing development of Group 108 Sector 108
+                West, a testament to our unwavering commitment to excellence.
               </p>
 
-              <p className="text-[#202020] font-helvetica text-[12px] leading-relaxed pb-4">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard.
-              </p>
+              {/* <p className="text-[#202020] font-helvetica text-[12px] leading-relaxed pb-4"> */}
+              {/* Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard. */}
+              {/* </p> */}
 
-              <button className="bg-black text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
+              <button className="bg-black text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
                 Enquire Now
               </button>
             </div>
