@@ -1,113 +1,8 @@
-import { useEffect, useRef } from "react";
 import { Phone, Menu } from "lucide-react";
 
 const Hero = () => {
-  // const heroRef = useRef(null);
-
-  // useEffect(() => {
-  //   // Import GSAP from CDN
-  //   const script = document.createElement("script");
-  //   script.src =
-  //     "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js";
-  //   script.onload = () => {
-  //     const { gsap } = window;
-
-  //     // Animate main title
-  //     gsap.fromTo(
-  //       ".main-title",
-  //       {
-  //         opacity: 0,
-  //         y: 50,
-  //         scale: 0.9,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         y: 0,
-  //         scale: 1,
-  //         duration: 1.5,
-  //         ease: "power2.out",
-  //         delay: 0.5,
-  //       }
-  //     );
-
-  //     // Animate location
-  //     gsap.fromTo(
-  //       ".location-text",
-  //       {
-  //         opacity: 0,
-  //         y: 30,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         y: 0,
-  //         duration: 1,
-  //         ease: "power2.out",
-  //         delay: 1,
-  //       }
-  //     );
-
-  //     // Animate info cards with stagger
-  //     gsap.fromTo(
-  //       ".info-card",
-  //       {
-  //         opacity: 0,
-  //         y: 40,
-  //         scale: 0.95,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         y: 0,
-  //         scale: 1,
-  //         duration: 0.8,
-  //         stagger: 0.15,
-  //         ease: "power2.out",
-  //         delay: 1.5,
-  //       }
-  //     );
-
-  //     // Animate header elements
-  //     gsap.fromTo(
-  //       ".header-element",
-  //       {
-  //         opacity: 0,
-  //         y: -20,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         y: 0,
-  //         duration: 0.8,
-  //         stagger: 0.1,
-  //         ease: "power2.out",
-  //       }
-  //     );
-
-  //     // Parallax effect on scroll
-  //     const handleScroll = () => {
-  //       const scrolled = window.pageYOffset;
-  //       gsap.to(".bg-image", {
-  //         y: scrolled * 0.5,
-  //         duration: 0.1,
-  //       });
-  //     };
-
-  //     window.addEventListener("scroll", handleScroll);
-
-  //     return () => {
-  //       window.removeEventListener("scroll", handleScroll);
-  //     };
-  //   };
-
-  //   document.head.appendChild(script);
-
-  //   return () => {
-  //     if (document.head.contains(script)) {
-  //       document.head.removeChild(script);
-  //     }
-  //   };
-  // }, []);
-
   return (
-    <div className="relative min-h-screen w-full xl:h-screen xl:overflow-hidden">
+    <div className="relative xl:min-h-screen w-full xl:h-screen xl:overflow-hidden">
       {/* Background Image */}
       <div
         className="bg-image absolute w-full bg-top xl:h-screen h-[50vh] bg-cover bg-no-repeat"
@@ -126,7 +21,7 @@ const Hero = () => {
           <img
             src="logo-header.png"
             alt="logo"
-            className="h-[46px] xl:w-full "
+            className="h-[46px] xl:w-full"
           />
         </div>
 
@@ -163,10 +58,10 @@ const Hero = () => {
         <div className="xl:hidden" style={{ marginTop: "calc(52vh - 80px)" }}>
           <div className="text-center mb-4 xl:mb-8 font-merchant">
             <h1 className="main-title xl:text-white text-2xl font-light tracking-[0.1em] uppercase mb-4">
-              SOBHA REALTY
+              GROUP 108
             </h1>
             <p className="location-text xl:text-white text-[18px] font-[300] tracking-[0.15em] opacity-90">
-              Gurugram
+              Greater Noida West
             </p>
           </div>
         </div>
@@ -191,21 +86,21 @@ const Hero = () => {
       <div className="flex justify-center w-full xl:absolute xl:bottom-[10px] mt-4 xl:mt-0 pb-8 xl:pb-0">
         <div className="flex font-merchant text-black xl:text-white flex-col xl:flex-row justify-center items-center gap-4 xl:gap-0 max-w-8xl w-full px-4">
           {/* Status Card */}
-          <div className="info-card xl:block justify-between xl:justify-center flex rounded-full xl:px-6 py-3 text-center min-w-[140px] w-full xl:w-auto max-w-sm xl:max-w-none">
+          {/* <div className="info-card xl:block justify-between xl:justify-center flex rounded-full xl:px-6 py-3 text-center min-w-[140px] w-full xl:w-auto max-w-sm xl:max-w-none">
             <p className="text-black xl:text-white text-[17px] tracking-[1.5px] uppercase font-medium xl:mb-1">
               STATUS
             </p>
             <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch pl-[20px] xl:px-[50px] xl:py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
               New Launch
             </p>
-          </div>
+          </div> */}
 
           <div className="info-card xl:block justify-between xl:justify-center flex rounded-full xl:px-6 py-3 text-center min-w-[140px] w-full xl:w-auto max-w-sm xl:max-w-none">
             <p className="text-black xl:text-white text-[17px] tracking-[1.5px] uppercase font-medium xl:mb-1">
               PRICING
             </p>
             <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch pl-[20px] xl:px-[50px] xl:py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
-              ₹ 54 <span className="text-xs">Lakhs* Onwards</span>
+              ₹ 61.47 <span className="text-xs">Lakhs* Onwards</span>
             </p>
           </div>
 
@@ -214,7 +109,7 @@ const Hero = () => {
               TYPOLOGY
             </p>
             <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch pl-[20px] xl:px-[50px] xl:py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
-              1, 2 & 3 BHK Apartments
+              Office Spaces , Retail Stores
             </p>
           </div>
 
@@ -223,7 +118,7 @@ const Hero = () => {
               PAYMENT PLAN
             </p>
             <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch pl-[20px] xl:px-[50px] xl:py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
-              60:40
+              90:10
             </p>
           </div>
         </div>

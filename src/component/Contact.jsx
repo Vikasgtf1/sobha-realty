@@ -28,7 +28,7 @@ const Contact = () => {
         {/* About Developer Section */}
         <div className="text-center mb-16 relative">
           <div className="text-center mb-12 xl:mb-16">
-            <CommonHeading heading={"About Developer"} />
+            <CommonHeading heading={"About Group 108"} />
           </div>
 
           <img
@@ -38,28 +38,36 @@ const Contact = () => {
           />
           {/* </div> */}
 
-          <div className="flex justify-center items-center">
+          {/* <div className="flex justify-center items-center">
             <img
               src="assets/images/logo_white.png"
               className="h-[40px]"
               alt="white logo"
             />
-          </div>
+          </div> */}
 
           <h3 className="font-merchant text-[17px] xl:text-[20px] tracking-[1px] mt-[30px] xl:mt-16 mb-[20px] xl:mb-[40px] font-light text-gray-800 ">
             One Of The Fastest-Growing Real Estate
           </h3>
 
           <p className="leading-[24px] xl:leading-[30px] font-helvetica font-[500] text-[13.5px] max-w-4xl mx-auto  mb-8">
-            India's Fastest Growing Real Estate Conglomerate With A Reputation
-            For Identifying Emerging Real Estate Markets,
-            <br />
+            Group 108 specializes in crafting real estate properties that cater
+            to individuals who prioritize exquisite design, exceptional
+            artistry, and the most luxurious features. At the heart of Group 108
+            is the belief that every project should embody principles of
+            wholeness, transparency, and trust. With a legacy spanning over
+            three decades in the real estate sector, our management team has
+            been the driving force behind some of the most notable projects. The
+            expertise is further exemplified in the ongoing development of Group
+            108 Sector 108 West, a testament to our unwavering commitment to
+            excellence.
+            {/* <br />
             Recognizing Aspirations In Lifestyle Evolution, Perfecting The
             Modulations Of Luxury
             <br />
             And Responding With Projects That Capture The Unique
             <br />
-            Spirit Of Changing India.
+            Spirit Of Changing India. */}
           </p>
 
           <button
@@ -149,7 +157,7 @@ const Contact = () => {
                   Starting Price
                 </p>
                 <p className="text-xl xl:text-2xl  font-light text-black">
-                  ₹5.68 Cr* Onwards
+                  ₹61.47 Lakhs* Onwards
                 </p>
               </div>
 
@@ -184,7 +192,7 @@ const Contact = () => {
                     Call Now
                   </p>
                   <p className="text-xl xl:text-2xl  font-light text-black">
-                    91 9999-999-999
+                    7700-007-700
                   </p>
                 </div>
               </div>
@@ -249,7 +257,7 @@ const Contact = () => {
                     htmlFor="consent"
                     className="text-xs text-[#333] font-helvetica leading-relaxed"
                   >
-                    I hereby consent to Sobha Limited & its authorized partners
+                    I hereby consent to Grandthum & its authorized partners
                     contacting me via Call/SMS/Email/WhatsApp. This will
                     override the DND/NDNC settings. T&C Apply.
                   </label>

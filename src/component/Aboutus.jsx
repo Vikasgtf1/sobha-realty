@@ -2,30 +2,28 @@ import CommonHeading from "../utils/CommonHeading";
 
 const Aboutus = () => {
   return (
-    <section className="bg-gray-50 py-16 relative px-4 sm:px-6 lg:px-8">
+    <section className="bg-gray-50 pb-16 xl:py-16 relative px-4 sm:px-6 lg:px-8">
       <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
         <img
           src="/assets/images/about_pattern.png"
           className="w-[100%]"
           alt="pattern image"
         />
-        <div className=""></div>
       </div>
       <div class="absolute top-[0] w-[100%] h-[100%] left-[0] bg-[linear-gradient(180deg,#FFF_0%,rgba(255,255,255,0.20)_48.08%,#FFF_100%)]"></div>
       <div className="max-w-7xl relative z-[1]  mx-auto">
         {/* Header */}
         <div className="text-center mb-12 xl:mb-16">
-          <CommonHeading heading={"About Group 108"} />
+          <CommonHeading heading={"About Project"} />
         </div>
 
         {/* Description */}
         <div className="text-center mb-12 xl:mb-16">
           <p className="text-[#000] font-merchant tracking-[1px] font-[100] max-w-4xl mx-auto leading-relaxed text-[14px] xl:text-lg">
-            Group 108 specializes in crafting real estate properties that cater
-            to individuals who prioritize exquisite design, exceptional
-            artistry, and the most luxurious features. At the heart of Group 108
-            is the belief that every project should embody principles of
-            wholeness, transparency, and trust.
+            Project offers an interesting mix of work, leisure, fine dining,
+            entertainment and interactive spaces with smooth connectivity,
+            extravagant services, excellent framework, eco-friendly construction
+            (honored with Pre-Certified Platinum Rating by IGBC).
           </p>
         </div>
 
@@ -60,11 +58,13 @@ const Aboutus = () => {
           <div className="lg:w-100  self-center ">
             <div className=" xl:p-6 space-y-4  tracking-[0.4px]">
               <p className="text-[#202020] font-[100] font-helvetica  text-[12px] leading-relaxed">
-                With a legacy spanning over three decades in the real estate
-                sector, our management team has been the driving force behind
-                some of the most notable projects. The expertise is further
-                exemplified in the ongoing development of Group 108 Sector 108
-                West, a testament to our unwavering commitment to excellence.
+                Grandthum continuously pursues to provide enlarged spaces
+                according to the lifestyle demand. We give commitment on our
+                project to make sure that you have an enhancing experience and
+                to achieve that we have joined hands with leading experts in the
+                field of architecture, landscaping, design, solar energy,
+                construction and quality control.We strive to be your go-to name
+                for every CRE aspirations you nurture.
               </p>
 
               {/* <p className="text-[#202020] font-helvetica text-[12px] leading-relaxed pb-4"> */}

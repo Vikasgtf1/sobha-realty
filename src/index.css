@@ -6,3 +6,25 @@ body {
 .card-item {
   transform-origin: 50% -160%;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #000 !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: #000;
+  opacity: 1;
+
+  padding: 10px;
+  font-size: 20px !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  height: 35px !important;
+  width: 35px !important;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}

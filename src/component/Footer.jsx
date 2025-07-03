@@ -7,7 +7,7 @@ const Footer = () => {
         {/* RERA Information */}
         <div className="text-center mb-4 xl:mb-8">
           <h3 className="text-lg font-merchant font-light mb-4 tracking-wider">
-            RERA NUMBER: XXXXXXXXXXXXXX
+            RERA NUMBER: UPRERAPRJ585534-605316-103135-957104
           </h3>
           <p className="text-sm font-helvetica mb-[25px] text-gray-400">
             RERA Website: Https://Up-Rera.In
@@ -63,8 +63,8 @@ const Footer = () => {
         {/* Copyright Information */}
         <div className=" font-helvetica  pt-6">
           <p className="text-[12px] leading-[20px] xl:text-xs text-gray-400 text-center">
-            Disclaimer & Privacy Policy | Copyright ©DN Kingsland 2025. All
-            Rights Reserved | Crafted By GTF Technologies
+            Disclaimer & Privacy Policy | Copyright © GRANDTHUM 2025. All Rights
+            Reserved | Crafted By GTF Technologies
           </p>
         </div>
       </div>

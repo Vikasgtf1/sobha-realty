@@ -7,8 +7,7 @@ import Contact from "./component/Contact";
 import Footer from "./component/Footer";
 import FloorPlans from "./component/FloorPlans";
 import Pricing from "./component/Pricing";
-import Amenities from "./component/Amenties";
-import HorizontalAmenities from "./component/HorizontalAmenities";
+
 import Features from "./component/Features";
 
 function App() {
@@ -17,10 +16,10 @@ function App() {
       <Hero />
       <Aboutus />
       <OurHighlightsSection />
-      <Features/>
-      <HorizontalAmenities />
+      <Features />
+
       <Pricing />
-      <FloorPlans />
+
       <VisualJourney />
       <Contact />
       <Footer />

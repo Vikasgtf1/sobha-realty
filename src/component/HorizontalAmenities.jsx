@@ -461,7 +461,7 @@ const HorizontalAmenities = () => {
     <div>
       <div
         ref={containerRef}
-        className="relative overflow-hidden w-full md:h-[650px]"
+        className="relative overflow-hidden w-full md:h-[600px]"
       >
         <div
           ref={scrollContainerRef}
