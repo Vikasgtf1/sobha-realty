@@ -75,7 +75,7 @@ export default function VisualJourney() {
         start:
           window.innerHeight < 600
             ? "center center+=30px"
-            : "center center-=50px",
+            :"center center-=50px",
         end: () => lastCardST.start + stickDistance + 50,
         pin: true,
         pinSpacing: false,
@@ -93,7 +93,7 @@ export default function VisualJourney() {
     <section className="py-16 px-6 xl:py-[100px] text-center bg-[#000] relative no-[repeat] bg-[contain]">
       <img
         src="/assets/images/pattern.png"
-        className="absolute top-[0] h-[100%] object-cover opacity-[0.4]"
+        className="absolute top-[0] h-[100%] w-[100%] object-cover opacity-[0.4] left-[0]"
         alt="pattern"
       />
 
@@ -142,7 +142,7 @@ export default function VisualJourney() {
               <img
                 src={card.image}
                 alt={card.alt}
-                className=" card-content items-stretch w-full h-[400px] object-cover rounded-lg"
+                className=" card-content items-stretch w-full md:h-[400px] h-[280px] object-cover rounded-lg"
               />
             </li>
           ))}

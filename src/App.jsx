@@ -15,14 +15,14 @@ function App() {
     <>
       {/* <Hero /> */}
       <Aboutus />
-      {/* <OurHighlightsSection />
+      <OurHighlightsSection />
       <Amenities />
       <HorizontalAmenities />
-      <Pricing /> */}
+      <Pricing />
       <FloorPlans />
-      {/* <VisualJourney /> */}
-      {/* <Contact />
-      <Footer /> */}
+      <VisualJourney /> 
+     <Contact />
+      <Footer />
     </>
   );
 }
