@@ -11,7 +11,7 @@ const cardsData = [
     title: "Card One",
     content:
       "This is the content of card one. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: "https://assets.codepen.io/210284/flower-9.jpg",
+    image: "",
     alt: "card-one",
   },
   {
@@ -19,7 +19,7 @@ const cardsData = [
     title: "Card Two",
     content:
       "This is the content of card two. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: "https://assets.codepen.io/210284/flower-8.jpg",
+    image: "",
     alt: "card two",
   },
   {
@@ -27,7 +27,7 @@ const cardsData = [
     title: "Card Three",
     content:
       "This is the content of card three. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: "https://assets.codepen.io/210284/flower-7.jpg",
+    image: "",
     alt: "card three",
   },
   {
@@ -35,10 +35,11 @@ const cardsData = [
     title: "Card Four",
     content:
       "This is the content of card four. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: "https://assets.codepen.io/210284/flower-6.jpg",
+    image: "",
     alt: "card four",
   },
 ];
+
 export default function VisualJourney() {
   const cardsRef = useRef(null);
   const cardRefs = useRef([]);
@@ -93,7 +94,7 @@ export default function VisualJourney() {
     <section className="py-16 px-6 xl:py-[100px] text-center bg-[#000] relative no-[repeat] bg-[contain]">
       <img
         src="/assets/images/pattern.png"
-        className="absolute top-[0] h-[100%] object-cover opacity-[0.4]"
+        className="absolute top-[0] h-[100%] w-[100%] object-cover opacity-[0.4] left-[0]"
         alt="pattern"
       />
 
@@ -133,16 +134,16 @@ export default function VisualJourney() {
 
       <main className="xl:w-4/5 xl:mx-auto">
         <ul ref={cardsRef} className="list-none text-center relative cards">
-          {cardsData.map((card, index) => (
+          {[1, 2, 3, 4, 5, 6].map((card, index) => (
             <li
-              key={card.id}
+              key={index}
               ref={(el) => (cardRefs.current[index] = el)}
               className="card-item"
             >
               <img
-                src={card.image}
-                alt={card.alt}
-                className=" card-content items-stretch w-full h-[400px] object-cover rounded-lg"
+                src={"assets/images/journey/" + card + ".jpg"}
+                alt={index}
+                className="card-content items-stretch w-full md:h-[400px] h-[280px] object-cover rounded-lg"
               />
             </li>
           ))}

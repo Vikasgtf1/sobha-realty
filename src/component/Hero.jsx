@@ -112,7 +112,7 @@ const Hero = () => {
       <div
         className="bg-image absolute w-full bg-top xl:h-screen h-[50vh] bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `url('hero.png')`,
+          backgroundImage: `linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.45) 100%), url('hero.png')`,
         }}
       >
         {/* Overlay */}
@@ -126,7 +126,7 @@ const Hero = () => {
           <img
             src="logo-header.png"
             alt="logo"
-            className="xl:h-[46px] xl:w-full "
+            className="h-[46px] xl:w-full "
           />
         </div>
 
@@ -172,10 +172,10 @@ const Hero = () => {
         </div>
 
         {/* Desktop: Centered title */}
-        <div className="hidden xl:block text-center mb-16 font-merchant">
+        <div className="hidden xl:flex xl:flex-col text-center mb-16 font-merchant">
           <img
             src="grandthum-logo.png"
-            className="h-[135px]"
+            className="h-[100px] object-contain"
             alt="grandthum-logo"
           />
           {/* <h1 className="main-title text-white text-7xl lg:text-8xl font-light tracking-[0.1em] uppercase mb-8">
