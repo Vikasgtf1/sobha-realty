@@ -121,12 +121,12 @@ const Hero = () => {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 flex justify-between flex-wrap items-center px-[20px] xl:px-[60px] py-6">
+      <header className="relative z-10 flex justify-between flex-wrap items-center px-[20px] xl:px-[40px] py-3 xl:py-4">
         <div className="header-element">
           <img
-            src="logo.svg"
+            src="logo-header.png"
             alt="logo"
-            className="xl:h-[full] xl:w-full h-[22px]"
+            className="xl:h-[46px] xl:w-full "
           />
         </div>
 
@@ -173,11 +173,16 @@ const Hero = () => {
 
         {/* Desktop: Centered title */}
         <div className="hidden xl:block text-center mb-16 font-merchant">
-          <h1 className="main-title text-white text-7xl lg:text-8xl font-light tracking-[0.1em] uppercase mb-8">
+          <img
+            src="grandthum-logo.png"
+            className="h-[135px]"
+            alt="grandthum-logo"
+          />
+          {/* <h1 className="main-title text-white text-7xl lg:text-8xl font-light tracking-[0.1em] uppercase mb-8">
             SOBHA REALTY
-          </h1>
-          <p className="location-text text-white text-2xl font-[300] tracking-[0.15em] opacity-90">
-            Gurugram
+          </h1> */}
+          <p className="location-text text-white text-2xl font-[300] tracking-[0.15em] mt-[25px] opacity-90">
+            Greater Noida West
           </p>
         </div>
       </div>
@@ -200,7 +205,7 @@ const Hero = () => {
               PRICING
             </p>
             <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch pl-[20px] xl:px-[50px] xl:py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
-              ₹ 5.99 <span className="text-xs">Cr* Onwards</span>
+              ₹ 54 <span className="text-xs">Lakhs* Onwards</span>
             </p>
           </div>
 
@@ -218,7 +223,7 @@ const Hero = () => {
               PAYMENT PLAN
             </p>
             <p className="text-gray-900 flex justify-center items-center gap-[10px] self-stretch pl-[20px] xl:px-[50px] xl:py-[12px] rounded-[90px] bg-white tracking-[1.2px] text-sm font-medium">
-              25:25:25:25
+              60:40
             </p>
           </div>
         </div>

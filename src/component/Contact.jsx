@@ -112,7 +112,7 @@ const Contact = () => {
               <p className="tracking-[1.5px] text-sm font-light mb-2">
                 WE'D LOVE TO
               </p>
-              <h2 className="text-4xl mt-[20px] font-light text-black relative">
+              <h2 className="text-3xl xl:text-4xl mt-[20px] font-light text-black relative">
                 Hear From You
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -145,10 +145,10 @@ const Contact = () => {
 
             <div className="space-y-6 !text-[#333] mt-[60px]">
               <div>
-                <p className="tracking-[1px] text-[17px] mb-1 ">
+                <p className="tracking-[1px] text-[14px] xl:text-[17px] mb-1 ">
                   Starting Price
                 </p>
-                <p className="text-2xl font-light text-black">
+                <p className="text-xl xl:text-2xl  font-light text-black">
                   ₹5.68 Cr* Onwards
                 </p>
               </div>
@@ -180,8 +180,10 @@ const Contact = () => {
                   </defs>
                 </svg>
                 <div className="mt-[50px]">
-                  <p className="tracking-[1px] text-[17px] mb-1">Call Now</p>
-                  <p className="text-lg font-light text-black">
+                  <p className="tracking-[1px]  text-[14px] xl:text-[17px]  mb-1">
+                    Call Now
+                  </p>
+                  <p className="text-xl xl:text-2xl  font-light text-black">
                     91 9999-999-999
                   </p>
                 </div>
@@ -255,7 +257,8 @@ const Contact = () => {
 
                 <button
                   onClick={handleSubmit}
-                  className=" bg-black rounded-[30px] max-w-fit tracking-[1px] text-white py-2 px-7 font-[300] hover:bg-gray-800 transition-colors duration-300"
+                  className="bg-black text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+                  // className=" bg-black rounded-[30px] max-w-fit tracking-[1px] text-white py-2 px-7 font-[300] hover:bg-gray-800 transition-colors duration-300"
                 >
                   Submit Now
                 </button>

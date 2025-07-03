@@ -49,7 +49,7 @@ export default function VisualJourney() {
 
     if (cards.length === 0) return;
 
-    let stickDistance = 20;
+    let stickDistance = 0;
     let topOffset = window.innerWidth > 1200 ? 540 : 600;
 
     let firstCardST = ScrollTrigger.create({
@@ -90,7 +90,7 @@ export default function VisualJourney() {
     };
   }, []);
   return (
-    <section className="py-[100px] text-center bg-[#000] relative no-[repeat] bg-[contain]">
+    <section className="py-16 px-6 xl:py-[100px] text-center bg-[#000] relative no-[repeat] bg-[contain]">
       <img
         src="/assets/images/pattern.png"
         className="absolute top-[0] h-[100%] object-cover opacity-[0.4]"
@@ -131,7 +131,7 @@ export default function VisualJourney() {
         visionary design.
       </p>
 
-      <main className="w-4/5 mx-auto">
+      <main className="xl:w-4/5 xl:mx-auto">
         <ul ref={cardsRef} className="list-none text-center relative cards">
           {cardsData.map((card, index) => (
             <li
@@ -139,23 +139,11 @@ export default function VisualJourney() {
               ref={(el) => (cardRefs.current[index] = el)}
               className="card-item"
             >
-              <div className="card-content bg-orange-50 border-[1px] border-[#00000029] text-gray-900 rounded-xl overflow-hidden grid grid-cols-2 items-stretch p-6 shadow-2xl transition-transform duration-300 ease-out">
-                <div className="flex flex-col justify-center text-left space-y-4 pr-4">
-                  <h2 className="font-bold text-4xl font-serif mb-0">
-                    {card.title}
-                  </h2>
-                  <p className="font-light leading-relaxed text-lg">
-                    {card.content}
-                  </p>
-                </div>
-                <figure className="overflow-hidden">
-                  <img
-                    src={card.image}
-                    alt={card.alt}
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                </figure>
-              </div>
+              <img
+                src={card.image}
+                alt={card.alt}
+                className=" card-content items-stretch w-full h-[400px] object-cover rounded-lg"
+              />
             </li>
           ))}
         </ul>

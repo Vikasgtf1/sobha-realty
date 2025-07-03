@@ -387,28 +387,31 @@ const amenities = [
   },
 ];
 
-// Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalAmenities = () => {
   const containerRef = useRef(null);
   const scrollContainerRef = useRef(null);
 
-  // Function to determine the card configuration based on index
   const getCardConfig = (index) => {
     const isEven = index % 2 === 0;
     return {
-      containerClasses: `amenity-card h-[300px] relative flex justify-end ${
-        isEven ? "items-center border-t-[0.5px]" : "items-end border-b-[0.5px]"
-      } border-r-[0.5px] border-[#ddd] border-solid w-[350px] flex-shrink-0`,
-      labelClasses: `flex flex-col items-center ${
-        isEven ? "top-[-17%]" : "bottom-[-7%]"
-      } w-full absolute`,
-      imageContainerClasses: `mr-[-100px] ${isEven ? "" : "mb-[-210px]"}`,
+      containerClasses: `amenity-card md:mb-[0] mb-[30px] md:h-[300px] md:basis-[auto] basis-[100%] relative  md:flex-row flex-row-reverse  flex  md:justify-end ${
+        isEven
+          ? "items-center md:border-t-[0.5px]"
+          : "md:items-end md:border-b-[0.5px]"
+      } md:border-r-[0.5px] md:border-[#ddd] border-solid md:w-[350px] flex-shrink-0`,
+      labelClasses: `flex md:flex-col flex-col-reverse md:justify-end justify-center  basis-[40%]  text-center md:text-start flex-col items-center ${
+        isEven ? "md:top-[-17%]" : "md:bottom-[-7%]"
+      } md:w-full md:absolute`,
+      imageContainerClasses: `md:mr-[-100px] ${isEven ? "" : "md:mb-[-210px]"}`,
     };
   };
 
   useEffect(() => {
+    if (window.innerWidth < 768) {
+      return;
+    }
     const container = containerRef.current;
     const scrollContent = scrollContainerRef.current;
 
@@ -445,7 +448,6 @@ const HorizontalAmenities = () => {
     };
   }, []);
 
-  // Handle window resize
   useEffect(() => {
     const handleResize = () => {
       ScrollTrigger.refresh();
@@ -459,12 +461,11 @@ const HorizontalAmenities = () => {
     <div>
       <div
         ref={containerRef}
-        className="relative overflow-hidden w-full h-[650px]"
+        className="relative overflow-hidden w-full md:h-[650px]"
       >
         <div
           ref={scrollContainerRef}
-          className="flex flex-nowrap my-[60px]"
-          style={{ width: "max-content" }} // Ensure proper width calculation
+          className="flex md:flex-nowrap flex-wrap md:my-[60px] md:px-[0] px-[15px]"
         >
           {amenities.map((amenity, index) => {
             const config = getCardConfig(index);
@@ -473,10 +474,10 @@ const HorizontalAmenities = () => {
               <div key={index} className={config.containerClasses}>
                 {/* Label and Icon */}
                 <div className={config.labelClasses}>
-                  <span className="inline-block font-[300]">
+                  <span className="inline-block md:text-[16px] text-[12px] font-[300]">
                     {amenity.title}
                   </span>
-                  <span className="bg-black mt-[6px] inline-flex justify-center items-center h-[40px] w-[40px] rounded-full">
+                  <span className="bg-black mt-[6px]   md:mb-[0] mb-[8px] inline-flex justify-center items-center h-[40px] w-[40px] rounded-full">
                     {amenity.icon}
                   </span>
                 </div>
@@ -485,7 +486,7 @@ const HorizontalAmenities = () => {
                 <div className={config.imageContainerClasses}>
                   <img
                     src={amenity.image}
-                    className="h-[170px] w-[260px]"
+                    className="md:h-[170px] w-[100%] md:w-[260px]"
                     alt={amenity.title}
                   />
                 </div>
@@ -495,7 +496,10 @@ const HorizontalAmenities = () => {
         </div>
       </div>
       <div className="flex justify-center mb-[40px]">
-        <button className="bg-black text-center my-[20px]  text-white px-8 py-4 text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
+        <button
+          // className="bg-black text-center my-[20px]  text-white px-8 py-4 text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+          className="bg-black text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+        >
           View All Amenities
         </button>
       </div>
