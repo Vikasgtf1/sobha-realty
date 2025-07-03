@@ -2,7 +2,7 @@ import React from "react";
 import CommonHeading from "../utils/CommonHeading";
 import { useState } from "react";
 
-const OurHighlightsSection = () => {
+const Features = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
 
@@ -51,14 +51,15 @@ const OurHighlightsSection = () => {
 
 
   const highlights = [
-    "With mesmerising views of the skylines, the iconic twin tower has signature work spaces on floor G+34 and G+30 with a Sky Deck, enabling you to bring your dream office space to life.",
-    "Fulfilling your fashionista-fantasies with high street retail with over 100 renowned names to choose your pick and enjoy a view of waterscape as you engulf in an unparalleled experience.",
-    "2 Acres’ water body with a Yacht Garden: an ultra luxurious open air Fine dining experience surrounded by water and modelled like a yacht.",
-    "Dedicated Entertainment zones: for a thrilling and exhilarating experience.",
-    "5 Screen Multiplex with a capacity of over 900 people, equipped with cutting edge technology.",
-    "Multi cuisine food court and fine dining spaces overlooking water bodies, giving it a great ambience for spending quality time.",
-    "Fancied as one of the tallest commercial complexes in Greater Noida West.",
-    "Anchor stores with enormous space."
+    "Lush green landscaped promenade with exotic water bodies and sit-outs.",
+    "Catchment comprising of over a few lakh families which is increasing multifold every year.",
+    "Wide boulevards, schematic lights, open landscaped areas with 350-metre wide frontage for maximum visibility.",
+    "High-speed elevators to ensure easy movement.",
+    "Contemporary architecture and intricate design.",
+    "Integrated world class entertainment zone.",
+    "24 hrs power backup.",
+    "Multilevel car parking.",
+    "3 tier security."
   ]
   return (
     <section
@@ -87,18 +88,10 @@ const OurHighlightsSection = () => {
           <CommonHeading
             // className=""
             // headingInCenter={true}
-            heading={"Our Highlights"}
+            heading={"Our Features"}
           />
           
         </div><div className="grid grid-cols-12 gap-6 items-start">
-  {/* Left - Image */}
-  <div className="col-span-12 md:col-span-6">
-    <img
-      src="/highlights.webp"
-      alt="Descriptive Alt"
-      className="rounded-[10px] w-full h-auto object-cover"
-    />
-  </div>
 
   {/* Right - List and Button */}
   <div className="col-span-12 md:col-span-6 flex flex-col justify-between h-full">
@@ -125,6 +118,14 @@ const OurHighlightsSection = () => {
               </button>
 
   </div>
+  {/* Left - Image */}
+  <div className="col-span-12 md:col-span-6">
+    <img
+      src="/highlights.webp"
+      alt="Descriptive Alt"
+      className="rounded-[10px] w-full h-auto object-cover"
+    />
+  </div>
 </div>
 
 
@@ -134,4 +135,4 @@ const OurHighlightsSection = () => {
   );
 };
 
-export default OurHighlightsSection;
+export default Features;

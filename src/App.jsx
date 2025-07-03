@@ -9,6 +9,7 @@ import FloorPlans from "./component/FloorPlans";
 import Pricing from "./component/Pricing";
 import Amenities from "./component/Amenties";
 import HorizontalAmenities from "./component/HorizontalAmenities";
+import Features from "./component/Features";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Hero />
       <Aboutus />
       <OurHighlightsSection />
-      <Amenities />
+      <Features/>
       <HorizontalAmenities />
       <Pricing />
       <FloorPlans />
