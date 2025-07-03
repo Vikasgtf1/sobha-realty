@@ -11,7 +11,7 @@ const cardsData = [
     title: "Card One",
     content:
       "This is the content of card one. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: "",
+    image: "https://assets.codepen.io/210284/flower-9.jpg",
     alt: "card-one",
   },
   {
@@ -19,7 +19,7 @@ const cardsData = [
     title: "Card Two",
     content:
       "This is the content of card two. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: "",
+    image: "https://assets.codepen.io/210284/flower-8.jpg",
     alt: "card two",
   },
   {
@@ -27,7 +27,7 @@ const cardsData = [
     title: "Card Three",
     content:
       "This is the content of card three. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: "",
+    image: "https://assets.codepen.io/210284/flower-7.jpg",
     alt: "card three",
   },
   {
@@ -35,7 +35,7 @@ const cardsData = [
     title: "Card Four",
     content:
       "This is the content of card four. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    image: "",
+    image: "https://assets.codepen.io/210284/flower-6.jpg",
     alt: "card four",
   },
 ];
@@ -134,16 +134,16 @@ export default function VisualJourney() {
 
       <main className="xl:w-4/5 xl:mx-auto">
         <ul ref={cardsRef} className="list-none text-center relative cards">
-          {[1, 2, 3, 4, 5, 6].map((card, index) => (
+          {cardsData.map((card, index) => (
             <li
-              key={index}
+              key={card.id}
               ref={(el) => (cardRefs.current[index] = el)}
               className="card-item"
             >
               <img
-                src={"assets/images/journey/" + card + ".jpg"}
-                alt={index}
-                className="card-content items-stretch w-full md:h-[400px] h-[280px] object-cover rounded-lg"
+                src={card.image}
+                alt={card.alt}
+                className=" card-content items-stretch w-full md:h-[400px] h-[280px] object-cover rounded-lg"
               />
             </li>
           ))}
