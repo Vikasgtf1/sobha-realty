@@ -5,88 +5,90 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
-
+const cardsData = [
+  {
+    id: 1,
+    title: "Card One",
+    content:
+      "This is the content of card one. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: "https://assets.codepen.io/210284/flower-9.jpg",
+    alt: "card-one",
+  },
+  {
+    id: 2,
+    title: "Card Two",
+    content:
+      "This is the content of card two. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: "https://assets.codepen.io/210284/flower-8.jpg",
+    alt: "card two",
+  },
+  {
+    id: 3,
+    title: "Card Three",
+    content:
+      "This is the content of card three. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: "https://assets.codepen.io/210284/flower-7.jpg",
+    alt: "card three",
+  },
+  {
+    id: 4,
+    title: "Card Four",
+    content:
+      "This is the content of card four. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    image: "https://assets.codepen.io/210284/flower-6.jpg",
+    alt: "card four",
+  },
+];
 export default function VisualJourney() {
   const cardsRef = useRef(null);
   const cardRefs = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const cardsData = [
-    {
-      id: 1,
-      title: "Card One",
-      content:
-        "This is the content of card one. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: "https://assets.codepen.io/210284/flower-9.jpg",
-      alt: "card-one",
-    },
-    {
-      id: 2,
-      title: "Card Two",
-      content:
-        "This is the content of card two. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: "https://assets.codepen.io/210284/flower-8.jpg",
-      alt: "card two",
-    },
-    {
-      id: 3,
-      title: "Card Three",
-      content:
-        "This is the content of card three. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: "https://assets.codepen.io/210284/flower-7.jpg",
-      alt: "card three",
-    },
-    {
-      id: 4,
-      title: "Card Four",
-      content:
-        "This is the content of card four. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      image: "https://assets.codepen.io/210284/flower-6.jpg",
-      alt: "card four",
-    },
-  ];
-
   useEffect(() => {
-
     let cards = gsap.utils.toArray(".card-item");
-    
-    if (cards.length === 0) return;   
 
-  let stickDistance = 20;
+    if (cards.length === 0) return;
+
+    let stickDistance = 20;
     let topOffset = window.innerWidth > 1200 ? 540 : 600;
-    
+
     let firstCardST = ScrollTrigger.create({
       trigger: cards[0],
-    start: "center center"
+      start: "center center",
     });
-    
-      let lastCardST = ScrollTrigger.create({
-        trigger: cards[cards.length - 1],
-        start: "center center"
-      });
+
+    let lastCardST = ScrollTrigger.create({
+      trigger: cards[cards.length - 1],
+      start: "center center",
+    });
 
     cards.forEach((card, index) => {
       var scale = 1 - (cards.length - index) * 0.04;
-      
-    let scaleDown = gsap.to(card, {scale: scale, 'transform-origin': '"50% '+ (lastCardST.start - stickDistance ) +'"' });
+
+      let scaleDown = gsap.to(card, {
+        scale: scale,
+        "transform-origin": '"50% ' + (lastCardST.start - stickDistance) + '"',
+      });
 
       ScrollTrigger.create({
-      trigger: card,
-          start:window.innerHeight<600? "center center+=30px": "center center-=50px",
-      end: () => lastCardST.start + stickDistance+50,
-      pin: true,
-      pinSpacing: false,
-      ease: "none",
-      animation: scaleDown,
-      toggleActions: "restart none none reverse"
-    });
- 
+        trigger: card,
+        start:
+          window.innerHeight < 600
+            ? "center center+=30px"
+            : "center center-=50px",
+        end: () => lastCardST.start + stickDistance + 50,
+        pin: true,
+        pinSpacing: false,
+        ease: "none",
+        animation: scaleDown,
+        toggleActions: "restart none none reverse",
+      });
     });
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, []); 
+  }, []);
   return (
     <section className="py-[100px] text-center bg-[#000] relative no-[repeat] bg-[contain]">
       <img
@@ -130,20 +132,14 @@ export default function VisualJourney() {
       </p>
 
       <main className="w-4/5 mx-auto">
-        <ul
-          ref={cardsRef}
-          className="list-none text-center relative cards"
-         
-        >
+        <ul ref={cardsRef} className="list-none text-center relative cards">
           {cardsData.map((card, index) => (
             <li
               key={card.id}
               ref={(el) => (cardRefs.current[index] = el)}
               className="card-item"
             >
-              <div
-                className="card-content bg-orange-50 border-[1px] border-[#00000029] text-gray-900 rounded-xl overflow-hidden grid grid-cols-2 items-stretch p-6 shadow-2xl transition-transform duration-300 ease-out"
-              >
+              <div className="card-content bg-orange-50 border-[1px] border-[#00000029] text-gray-900 rounded-xl overflow-hidden grid grid-cols-2 items-stretch p-6 shadow-2xl transition-transform duration-300 ease-out">
                 <div className="flex flex-col justify-center text-left space-y-4 pr-4">
                   <h2 className="font-bold text-4xl font-serif mb-0">
                     {card.title}

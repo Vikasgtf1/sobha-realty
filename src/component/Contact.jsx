@@ -22,31 +22,12 @@ const Contact = () => {
     console.log("Form submitted:", formData);
   };
 
-  //   element.style {
-  //     object-fit: cover;
-  //     left: 35%;
-  //     /* opacity: 0; */
-  //     text-align: center;
-  // }
-  // <style>
-  // .w-\[200px\] {
-  //     width: 400px;
-  // }
-  // <style>
-  // .h-\[400px\] {
-  //     height: 450px;
-  // }
-  // <style>
-  // .top-\[0px\] {
-  //     top: -71px;
-  // }
-
   return (
-    <section className="   py-16 px-4 sm:px-6 lg:px-8">
+    <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* About Developer Section */}
         <div className="text-center mb-16 relative">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 xl:mb-16">
             <CommonHeading heading={"About Developer"} />
           </div>
 
@@ -58,14 +39,18 @@ const Contact = () => {
           {/* </div> */}
 
           <div className="flex justify-center items-center">
-            <img src="assets/images/logo_white.png" alt="white logo" />
+            <img
+              src="assets/images/logo_white.png"
+              className="h-[40px]"
+              alt="white logo"
+            />
           </div>
 
-          <h3 className="font-merchant text-[20px] tracking-[1px] mt-16 mb-[40px] font-light text-gray-800 ">
+          <h3 className="font-merchant text-[17px] xl:text-[20px] tracking-[1px] mt-[30px] xl:mt-16 mb-[20px] xl:mb-[40px] font-light text-gray-800 ">
             One Of The Fastest-Growing Real Estate
           </h3>
 
-          <p className="leading-[30px] font-helvetica font-[500] text-[13.5px] max-w-4xl mx-auto  mb-8">
+          <p className="leading-[24px] xl:leading-[30px] font-helvetica font-[500] text-[13.5px] max-w-4xl mx-auto  mb-8">
             India's Fastest Growing Real Estate Conglomerate With A Reputation
             For Identifying Emerging Real Estate Markets,
             <br />
@@ -77,7 +62,10 @@ const Contact = () => {
             Spirit Of Changing India.
           </p>
 
-          <button className="bg-black tracking-[1.5px] font-[200] font-merchant rounded-[25px] text-white px-8 py-2 ">
+          <button
+            className="bg-black text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+            // className="bg-black tracking-[1.5px] font-[200] font-merchant rounded-[25px] text-white px-8 py-2 "
+          >
             View Details
           </button>
 

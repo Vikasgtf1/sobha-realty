@@ -17,12 +17,12 @@ function App() {
       <Aboutus />
       <OurHighlightsSection />
       <Amenities />
-      {/* <HorizontalAmenities />
+      <HorizontalAmenities />
       <Pricing />
       <FloorPlans />
       <VisualJourney />
       <Contact />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }
