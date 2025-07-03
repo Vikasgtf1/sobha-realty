@@ -82,17 +82,16 @@ const OurHighlightsSection = () => {
         </div>
       )}
 
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-16">
+        <div className="mb-8 md:mb-16">
           <CommonHeading
             // className=""
             // headingInCenter={true}
             heading={"Our Highlights"}
           />
           
-        </div><div className="grid grid-cols-12 gap-6 items-start">
+        </div><div className="grid grid-cols-1 md:grid-cols-12 gap-[50px] md:gap-[80px] items-start">
   {/* Left - Image */}
-  <div className="col-span-12 md:col-span-6">
+  <div className=" md:col-span-6">
     <img
       src="/highlights.webp"
       alt="Descriptive Alt"
@@ -101,7 +100,7 @@ const OurHighlightsSection = () => {
   </div>
 
   {/* Right - List and Button */}
-  <div className="col-span-12 md:col-span-6 flex flex-col justify-between h-full">
+  <div className=" md:col-span-6 flex flex-col gap-[10px] h-full">
     {/* List */}
     <ul className="space-y-3 mb-4">
       {highlights.map((item, index) => (
@@ -120,7 +119,7 @@ const OurHighlightsSection = () => {
       ))}
     </ul>
     
-              <button className="bg-black border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
+              <button className="bg-black w-fit border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
                 Enquire Now
               </button>
 
@@ -128,8 +127,6 @@ const OurHighlightsSection = () => {
 </div>
 
 
-
-      </div>
     </section>
   );
 };
