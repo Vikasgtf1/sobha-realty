@@ -498,7 +498,7 @@ const HorizontalAmenities = () => {
       <div className="flex justify-center mb-[40px]">
         <button
           // className="bg-black text-center my-[20px]  text-white px-8 py-4 text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
-          className="bg-black text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+          className="bg-black text-white px-4 py-3 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
         >
           View All Amenities
         </button>

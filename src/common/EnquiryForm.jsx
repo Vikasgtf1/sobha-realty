@@ -252,7 +252,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
 
               <button
                 onClick={handleSubmit}
-                className="bg-black cursor-pointer text-white px-4 py-2 xl:px-6 xl:py-3 text-xs xl:text-[14px] xl:tracking-[2px] font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+                className="bg-black cursor-pointer text-white px-4 py-3 xl:px-6 xl:py-3 text-xs xl:text-[14px] xl:tracking-[2px] font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
                 // className=" bg-black rounded-[30px] max-w-fit tracking-[1px] text-white py-2 px-7 font-[300] hover:bg-gray-800 transition-colors duration-300"
               >
                 Submit Now

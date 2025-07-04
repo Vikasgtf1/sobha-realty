@@ -70,7 +70,7 @@ const Contact = () => {
 
           <button
             onClick={openForm}
-            className="z-[9999] cursor-pointer bg-black text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+            className="z-[9999] cursor-pointer bg-black text-white px-4 py-3 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
           >
             View Details
           </button>
@@ -263,7 +263,7 @@ const Contact = () => {
 
                 <button
                   onClick={handleSubmit}
-                  className="bg-black text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+                  className="bg-black text-white px-4 py-3 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
                   // className=" bg-black rounded-[30px] max-w-fit tracking-[1px] text-white py-2 px-7 font-[300] hover:bg-gray-800 transition-colors duration-300"
                 >
                   Submit Now

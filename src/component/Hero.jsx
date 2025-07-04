@@ -34,9 +34,9 @@ const Hero = () => {
       <SideMenu setShowMenu={setShowMenu} showMenu={showMenu} />
       {/* Background Image */}
       <div
-        className="bg-image absolute w-full bg-top xl:h-screen h-[50vh] bg-cover bg-no-repeat"
+        className="bg-image absolute w-full bg-top xl:h-screen h-[55vh] bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.45) 100%), url('hero-banner.webp')`,
+          backgroundImage: `linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.45) 100%), url('hero2.webp')`,
         }}
       >
         {/* Overlay */}
@@ -48,11 +48,7 @@ const Hero = () => {
         className={`flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 ${
           isScrolled ? "bg-[#3265A6] shadow-lg" : "bg-transparent"
         }`}
-        // className="xl:flex-wrap flex fixed w-full top-[0] left-[0] z-[99999]  justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px]"
-
-        // className="relative z-[9999] flex justify-between flex-wrap items-center px-[20px] xl:px-[40px] py-3 xl:py-4"
       >
-        {" "}
         <div className="header-element">
           <img
             src="logo-header.png"
@@ -60,7 +56,7 @@ const Hero = () => {
             className="h-[35px] object-contain xl:h-[46px] xl:w-full"
           />
         </div>
-        <div className="flex items-center  gap-6">
+        <div className="flex items-center gap-6">
           <button className="header-element cursor-pointer flex items-center gap-2 text-white hover:text-gray-200 transition-colors">
             <p className="border-[0.5px] border-solid rounded-[50%] p-[7px] border-[#fff]">
               <Phone className="block md:hidden" size={12} /> {/* Mobile */}
@@ -142,7 +138,7 @@ const Hero = () => {
         </div>
       </div>
       {/* mobile */}
-      <div className="min-h-[50vh] my-[30px] bg-gradient-to-br mt-[50vh] flex items-center justify-center p-5">
+      <div className="min-h-[50vh] my-[30px] bg-gradient-to-br mt-[55vh] flex items-center justify-center p-5">
         <div className="bg-gradient-to-br  overflow-hidden w-full max-w-sm relative">
           <div className="flex justify-center flex-col items-center">
             <img
@@ -157,9 +153,10 @@ const Hero = () => {
           <div className="pt-[10px] space-y-6 relative z-10">
             {/* Typology */}
             <div className="bg-[#3265A6]  text-white p-6 text-center">
-              <div className="text-xs  tracking-widest mb-3 font-medium">
+              <div className="text-xs  pb-[15px] border-b-[1px] tracking-widest mb-3 font-medium">
                 TYPOLOGY
               </div>
+
               <div className="text-base font-bold tracking-wide leading-relaxed">
                 Office Spaces , Retail Stores
               </div>
@@ -170,6 +167,7 @@ const Hero = () => {
               <div className="text-xs text-black tracking-widest mb-2 ">
                 STARTING PRICE
               </div>
+
               <div className="text-black text-[16px] font-[300] tracking-wide">
                 ₹ 61.47 CR* Lakhs* Onwards
               </div>
@@ -177,9 +175,10 @@ const Hero = () => {
 
             {/* Payment Plan */}
             <div className="bg-[#3265A6]  text-white p-6 text-center">
-              <div className="text-xs text-white tracking-widest mb-3 font-medium">
+              <div className="text-xs pb-[15px] border-b-[1px] text-white tracking-widest mb-3 font-medium">
                 PAYMENT PLAN
               </div>
+
               <div className=" text-xl font-bold tracking-wider">90:10</div>
             </div>
           </div>

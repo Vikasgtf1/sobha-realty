@@ -102,7 +102,7 @@ const Pricing = () => {
         </div>
 
         {/* Right side - Pricing */}
-        <div className="basis-[100%] xl:basis-[60%] flex flex-col justify-center space-y-2 xl:space-y-8 xl:px-0 px-6 xl:ml-[60px]">
+        <div className="basis-[100%] xl:basis-[60%] flex flex-col justify-center space-y-2 xl:space-y-8 xl:px-0  xl:ml-[60px]">
           {pricingData.map((item, index) => (
             <div key={index} className="flex items-center py-6 flex-wrap">
               {/* Original Desktop Layout - Exactly as before */}
@@ -175,9 +175,37 @@ const Pricing = () => {
               {/* Mobile Layout */}
               <div className="lg:hidden w-full">
                 <div className="bg-gray-900/20 border border-gray-700 rounded-lg p-6 mb-4">
-                  <div className="text-center space-y-3">
+                  <div className="text-center">
                     <div className="text-2xl font-light tracking-[1px] text-[#C4C4C4]">
                       {item.bhk}
+                    </div>
+                    <div className="flex my-[20px] justify-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="250"
+                        height="2"
+                        viewBox="0 0 439 2"
+                        fill="none"
+                      >
+                        <path
+                          d="M0 1H439"
+                          stroke="url(#paint0_linear_3627_1103)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_3627_1103"
+                            x1="0"
+                            y1="1.5"
+                            x2="439"
+                            y2="1.5"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stopOpacity="0" />
+                            <stop offset="0.485577" stopColor="white" />
+                            <stop offset="1" stopOpacity="0" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
                     </div>
                     <div className="text-xl tracking-[1px] font-light text-[#C4C4C4]">
                       {item.price}
@@ -196,12 +224,11 @@ const Pricing = () => {
               >
                 Enquire Now
               </button>
-
               <div className="flex justify-center w-full">
                 {/* Mobile Button */}
                 <button
                   onClick={openForm}
-                  className="lg:hidden cursor-pointer bg-[#C4C4C4] tracking-[1px] hover:bg-gray-300 text-black text-[14px] xl:text-[15px] px-4 py-2 xl:px-8 xl:py-4 rounded-full transition-colors duration-200"
+                  className="lg:hidden cursor-pointer bg-[#C4C4C4] tracking-[1px] hover:bg-gray-300 text-black text-[14px] xl:text-[15px] px-4 py-3 xl:px-8 xl:py-4 rounded-full transition-colors duration-200"
                 >
                   Enquire Now
                 </button>

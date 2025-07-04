@@ -92,7 +92,7 @@ function FloorPlans() {
             </div>
 
             {/* Button */}
-            <button className="bg-black max-w-fit text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
+            <button className="bg-black max-w-fit text-white px-4 py-3 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
               View Details
             </button>
           </div>

@@ -12,7 +12,7 @@ const Aboutus = () => {
     >
       <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
         <img
-          src="/assets/images/about_pattern.png"
+          src="assets/images/about_pattern.png"
           className="w-[100%]"
           alt="pattern image"
         />
@@ -81,7 +81,7 @@ const Aboutus = () => {
 
               <button
                 onClick={openForm}
-                className="bg-black cursor-pointer text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+                className="bg-black cursor-pointer text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
               >
                 Enquire Now
               </button>
