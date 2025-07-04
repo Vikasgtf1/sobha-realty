@@ -19,11 +19,11 @@ const Aboutus = () => {
 
         {/* Description */}
         <div className="text-center mb-12 xl:mb-16">
-          <p className="text-[#000] font-merchant tracking-[1px] font-[100] max-w-4xl mx-auto leading-relaxed text-[14px] xl:text-lg">
+          <p className="text-black my-[50px] font-merchant tracking-[1px] font-light max-w-4xl mx-auto leading-relaxed text-lg">
             Project offers an interesting mix of work, leisure, fine dining,
             entertainment and interactive spaces with smooth connectivity,
             extravagant services, excellent framework, eco-friendly construction
-            (honored with Pre-Certified Platinum Rating by IGBC).
+            honored with Pre-Certified Platinum Rating by IGBC.
           </p>
         </div>
 

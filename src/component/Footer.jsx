@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,9 +10,10 @@ const Footer = () => {
           <h3 className="text-lg font-merchant font-light mb-4 tracking-wider">
             RERA NUMBER: UPRERAPRJ585534-605316-103135-957104
           </h3>
-          <p className="text-sm font-helvetica mb-[25px] text-gray-400">
-            RERA Website: Https://Up-Rera.In
-          </p>
+          {/* <p className="text-sm font-helvetica mb-[25px] text-gray-400">
+            RERA Website:{" "}
+            <Link to="https://Up-Rera.In">https://Up-Rera.In</Link>
+          </p> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"

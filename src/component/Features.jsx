@@ -113,7 +113,7 @@ const Features = () => {
             ))}
           </ul>
 
-          <button className="bg-black w-fit  border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
+          <button className="bg-black w-fit  border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px]  transition-colors duration-300">
             Enquire Now
           </button>
         </div>
