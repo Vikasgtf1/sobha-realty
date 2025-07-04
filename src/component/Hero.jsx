@@ -4,6 +4,7 @@ import EnquiryForm from "../common/EnquiryForm";
 import { useEnquiryForm } from "../hooks/useEnquiryForm";
 import { useFormSubmit } from "../hooks/useFormSubmit";
 import SideMenu from "./SideMenu";
+import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -49,14 +50,18 @@ const Hero = () => {
           isScrolled ? "bg-[#3265A6] shadow-lg" : "bg-transparent"
         }`}
       >
-        <div className="header-element">
-          <img
-            src="logo-header.png"
-            alt="logo"
-            className="h-[35px] object-contain xl:h-[46px] xl:w-full"
-          />
-        </div>
-        <div className="flex items-center gap-6">
+        {" "}
+        <NavLink to="/grandthum/">
+          {" "}
+          <div className="header-element">
+            <img
+              src="logo-header.png"
+              alt="logo"
+              className="h-[35px] object-contain xl:h-[46px] xl:w-full"
+            />
+          </div>
+        </NavLink>
+        <div className="flex items-center  gap-6">
           <button className="header-element cursor-pointer flex items-center gap-2 text-white hover:text-gray-200 transition-colors">
             <p className="border-[0.5px] border-solid rounded-[50%] p-[7px] border-[#fff]">
               <Phone className="block md:hidden" size={12} /> {/* Mobile */}

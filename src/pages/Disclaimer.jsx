@@ -1,20 +1,80 @@
-import { useEffect, useRef } from "react";
-
+import { useEffect, useState } from "react";
+import { Phone, Menu } from "lucide-react";
+import SideMenu from "../component/SideMenu";
+import Footer from "../component/Footer";
+import { NavLink } from "react-router-dom";
 const Disclaimer = () => {
-  useEffect(() => {
-    const scrollContainer = document.querySelector(".scroll-container");
-    if (scrollContainer) {
-      scrollContainer.scrollTo(0, 0);
-    }
-  }, []);
+    const [showMenu, setShowMenu] = useState(false);
+
+//     const [isScrolled, setIsScrolled] = useState(false);
+//  useEffect(() => {
+//     const handleScroll = () => {
+//       const scrollTop =
+//         window.pageYOffset || document.documentElement.scrollTop;
+//       setIsScrolled(scrollTop > 50);
+//     };
+
+//     // Add scroll event listener
+//     window.addEventListener("scroll", handleScroll);
+
+//     // Cleanup function to remove event listener
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, []);
   return (
+    <>
+     <SideMenu setShowMenu={setShowMenu} showMenu={showMenu} />
+         <header
+        className={`flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 bg-[#3265A6]`}
+       >
+        {" "}
+       <NavLink to="/grandthum/"><div className="header-element">
+          <img
+            src="logo-header.png"
+            alt="logo"
+            className="h-[35px] object-contain xl:h-[46px] xl:w-full"
+          />
+        </div>
+        </NavLink> 
+        <div className="flex items-center  gap-6">
+         <a  href="tel:+91 7700-007-700">  <button className="header-element cursor-pointer flex items-center gap-2 text-white hover:text-gray-200 transition-colors">
+            <p className="border-[0.5px] border-solid rounded-[50%] p-[7px] border-[#fff]">
+              <Phone className="block md:hidden" size={12} /> {/* Mobile */}
+              <Phone className="hidden md:block sm:hidden" size={15} />
+            </p>
+            <span className="text-[14px] xl:text-sm font-light tracking-[2px]">
+              Call Now
+            </span>
+          </button></a>
+          <button
+            onClick={() => setShowMenu(true)}
+            className="  header-element cursor-pointer text-white hover:text-gray-200 transition-colors"
+          >
+            <Menu className="block md:hidden" size={18} /> {/* Mobile */}
+            <Menu className="hidden md:block sm:hidden" size={24} />
+          </button>
+        </div>
+        {/* {!isScrolled && (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="2"
+            viewBox="0 0 1428 2"
+            fill="none"
+            className="basis-[100%] mt-[17px]"
+          >
+            <path d="M0 1L1428 1" stroke="white" strokeOpacity="0.3" />
+          </svg>
+        )} */}
+      </header>
     <section>
       <div className="lg:p-[100px] p-[35px]">
-        <h1 className="font-merchant text-[20px] text-center mb-[30px]">
+        <h1 className="font-merchant text-[30px] font-[600] text-[20px] text-center mb-[30px]">
           Disclaimer & Privacy Policy
         </h1>
 
-        <h3 className="font-merchant text-[18px] font-[500] mb-[10px]">
+        <h3 className="font-merchant font-[600] text-[20px] font-[500] mb-[10px]">
           Disclaimer
         </h3>
         <p className="mb-[30px]">
@@ -39,7 +99,7 @@ const Disclaimer = () => {
           should not be treated as the official website.
         </p>
 
-        <h3 className="font-merchant text-[18px] font-[500] mb-[10px]">
+        <h3 className="font-merchant font-[600] text-[20px] font-[500] mb-[10px]">
           Privacy Policy
         </h3>
         <p className="mb-[30px]">
@@ -48,7 +108,7 @@ const Disclaimer = () => {
           is to keep your interests and information safe on our website.
         </p>
 
-        <h3 className="font-merchant text-[18px] font-[500] mb-[10px]">
+        <h3 className="font-merchant font-[600] text-[20px] font-[500] mb-[10px]">
           Updation of privacy policy
         </h3>
         <p className="mb-[30px]">
@@ -58,7 +118,7 @@ const Disclaimer = () => {
           conditions of this privacy policy.
         </p>
 
-        <h3 className="font-merchant text-[18px] font-[500] mb-[10px]">
+        <h3 className="font-merchant font-[600] text-[20px] font-[500] mb-[10px]">
           User information
         </h3>
         <p className="mb-[30px]">
@@ -76,7 +136,7 @@ const Disclaimer = () => {
           information to any third party.
         </p>
 
-        <h3 className="font-merchant text-[18px] font-[500] mb-[10px]">
+        <h3 className="font-merchant font-[600] text-[20px] font-[500] mb-[10px]">
           {" "}
           Security
         </h3>
@@ -94,6 +154,9 @@ const Disclaimer = () => {
         </p>
       </div>
     </section>
+          <Footer/>
+
+    </>
   );
 };
 

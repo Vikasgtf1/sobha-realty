@@ -10,27 +10,153 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    contactNumber: "",
-    comments: "",
+    contact: "",
+    message: "",
+    authorize: true,
   });
 
+  const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
+
+  const { handleSubmit, loading, error, response } = useFormSubmit();
+
+  // Validation rules
+  const validateField = (name, value) => {
+    switch (name) {
+      case "name":
+        if (!value.trim()) return "Name is required";
+        if (value.trim().length < 2)
+          return "Name must be at least 2 characters";
+        if (!/^[a-zA-Z\s]+$/.test(value.trim()))
+          return "Name can only contain letters and spaces";
+        return "";
+
+      case "email":
+        if (!value.trim()) return "Email is required";
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value.trim()))
+          return "Please enter a valid email address";
+        return "";
+
+      case "contact":
+        if (!value.trim()) return "Phone number is required";
+        const phoneRegex = /^\+?[\d\s\-\(\)]{10,15}$/;
+        if (!phoneRegex.test(value.trim()))
+          return "Please enter a valid phone number (10-15 digits)";
+        return "";
+
+      case "message":
+        if (!value.trim()) return "Message is required";
+        if (value.trim().length < 1)
+          return "Message must be at least 1 character";
+        if (value.trim().length > 500)
+          return "Message must not exceed 500 characters";
+        return "";
+
+      case "authorize":
+        if (!value) return "You must authorize us to contact you";
+        return "";
+
+      default:
+        return "";
+    }
+  };
+
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
+    const fieldValue = type === "checkbox" ? checked : value;
+
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: fieldValue,
+    }));
+
+    if (touched[name]) {
+      const error = validateField(name, fieldValue);
+      setErrors((prev) => ({
+        ...prev,
+        [name]: error,
+      }));
+    }
+  };
+
+  const handleInputBlur = (e) => {
+    const { name, value, type, checked } = e.target;
+    const fieldValue = type === "checkbox" ? checked : value;
+
+    setTouched((prev) => ({
+      ...prev,
+      [name]: true,
+    }));
+
+    const error = validateField(name, fieldValue);
+    setErrors((prev) => ({
+      ...prev,
+      [name]: error,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const validateForm = () => {
+    const newErrors = {};
+    Object.keys(formData).forEach((key) => {
+      const error = validateField(key, formData[key]);
+      if (error) newErrors[key] = error;
+    });
+
+    setErrors(newErrors);
+    setTouched({
+      name: true,
+      email: true,
+      contact: true,
+      message: true,
+      authorize: true,
+    });
+
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    if (!validateForm()) {
+      return;
+    }
+
+    try {
+      const result = await handleSubmit(formData);
+      // Reset form on successful submission
+      if (result?.success) {
+        setFormData({
+          name: "",
+          email: "",
+          contact: "",
+          message: "",
+          authorize: true,
+        });
+        setErrors({});
+        setTouched({});
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+    }
+  };
+
+  const handleClose = () => {
+    setFormData({
+      name: "",
+      email: "",
+      contact: "",
+      message: "",
+      authorize: true,
+    });
+    setErrors({});
+    setTouched({});
+    onClose();
   };
 
   return (
     <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto relative overflow-hidden">
-        {/* About Developer Section */}
         <div className="text-center mb-16 relative">
           <div className="text-center mb-12 ">
             <CommonHeading heading={"About Group 108"} />
@@ -189,9 +315,12 @@ const Contact = () => {
                   <p className="tracking-[1px]  text-[14px] xl:text-[17px]  mb-1">
                     Call Now
                   </p>
-                  <p className="text-xl xl:text-2xl  font-light text-black">
+                  <a
+                    href="tel:+91 7700-007-700"
+                    className="text-xl xl:text-2xl  font-light text-black"
+                  >
                     7700-007-700
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -200,7 +329,7 @@ const Contact = () => {
           {/* Right Side - Contact Form */}
           <div className="flex-1 lg:max-w-lg ">
             <div className="bg-white border  bg-[url(assets/images/form-patter.png)] border-black rounded-[12px] p-8 shadow-sm">
-              <div className="space-y-6 z-[99] ">
+              <form onSubmit={onSubmit} className="space-y-6 z-[99]">
                 <div>
                   <input
                     type="text"
@@ -210,6 +339,9 @@ const Contact = () => {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                   />
+                  {errors.name && touched.name && (
+                    <p className="text-red-600 text-xs mt-1">{errors.name}</p>
+                  )}
                 </div>
 
                 <div>
@@ -221,34 +353,52 @@ const Contact = () => {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                   />
+                  {errors.email && touched.email && (
+                    <p className="text-red-600 text-xs mt-1">{errors.email}</p>
+                  )}
                 </div>
 
                 <div>
                   <input
                     type="tel"
-                    name="contactNumber"
+                    name="contact"
                     placeholder="Contact Number"
-                    value={formData.contactNumber}
+                    value={formData.contact}
                     onChange={handleInputChange}
+                    onBlur={handleInputBlur}
                     className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                   />
+                  {errors.contact && touched.contact && (
+                    <p className="text-red-600 text-xs mt-1">
+                      {errors.contact}
+                    </p>
+                  )}
                 </div>
 
                 <div>
                   <textarea
-                    name="comments"
-                    placeholder="Your Comments"
+                    name="message"
+                    placeholder="Your Message"
                     rows="4"
                     value={formData.comments}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors resize-none"
                   />
+                  {errors.message && touched.message && (
+                    <p className="text-red-600 text-xs mt-1">
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
 
                 <div className="flex items-start space-x-3">
                   <input
                     type="checkbox"
-                    id="consent"
+                    id="authorize"
+                    name="authorize"
+                    checked={formData.authorize}
+                    onChange={handleInputChange}
+                    onBlur={handleInputBlur}
                     className="mt-1 w-4 h-4 text-black border-black rounded-[8px] focus:ring-black"
                   />
                   <label
@@ -260,15 +410,20 @@ const Contact = () => {
                     override the DND/NDNC settings. T&C Apply.
                   </label>
                 </div>
+                {errors.authorize && touched.authorize && (
+                  <p className="text-red-600 text-xs mt-1">
+                    {errors.authorize}
+                  </p>
+                )}
 
                 <button
-                  onClick={handleSubmit}
-                  className="bg-black text-white px-4 py-3 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
-                  // className=" bg-black rounded-[30px] max-w-fit tracking-[1px] text-white py-2 px-7 font-[300] hover:bg-gray-800 transition-colors duration-300"
+                  type="submit"
+                  disabled={loading}
+                  className="bg-black cursor-pointer text-white px-4 py-2 xl:px-6 xl:py-3 text-xs xl:text-[14px] xl:tracking-[2px] font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Submit Now
+                  {loading ? "Submitting..." : "Submit Now"}
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
