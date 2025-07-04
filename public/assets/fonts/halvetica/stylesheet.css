@@ -266,3 +266,102 @@
     rgba(0, 0, 0, 0) 100%
   );
 }
+
+/* // */
+
+.banner-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #c2b48e;
+  z-index: 99;
+}
+.banner-details div:not(:last-child) {
+  border-right: 1px solid #c2b48e;
+}
+
+.banner-details .banner-status,
+.banner-details .banner-typology,
+.banner-details .banner-price,
+.banner-details .banner-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 5px;
+  position: relative;
+  transition: 0.4s ease-in;
+}
+
+.banner-details .banner-status h5,
+.banner-details .banner-typology h5,
+.banner-details .banner-price h5,
+.banner-details .banner-plan h5 {
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.banner-details .banner-status h5::after,
+.banner-details .banner-typology h5::after,
+.banner-details .banner-price h5::after,
+.banner-details .banner-plan h5::after {
+  position: absolute;
+  content: "";
+  width: 170px;
+  height: 1px;
+  top: 45%;
+  left: 50%;
+  background: #c2b48e9c;
+  transform: translateX(-50%);
+}
+
+.banner-details .banner-status h4,
+.banner-details .banner-typology h4,
+.banner-details .banner-price h4,
+.banner-details .banner-plan h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.banner-details .banner-status,
+.banner-details .banner-price,
+.banner-details .banner-plan {
+  flex: 1;
+}
+.banner-details .banner-typology {
+  flex: 1.8;
+}
+
+.banner-details .banner-status:hover,
+.banner-details .banner-typology:hover,
+.banner-details .banner-price:hover,
+.banner-details .banner-plan:hover {
+  background: #c2b48e;
+}
+.banner-details .banner-status:hover h5::after,
+.banner-details .banner-typology:hover h5::after,
+.banner-details .banner-price:hover h5::after,
+.banner-details .banner-plan:hover h5::after {
+  background: #181818;
+}
+.banner-details .banner-status:hover h5,
+.banner-details .banner-typology:hover h5,
+.banner-details .banner-price:hover h5,
+.banner-details .banner-plan:hover h5 {
+  color: #000;
+  font-weight: 500;
+}
+.banner-details .banner-status:hover h4,
+.banner-details .banner-typology:hover h4,
+.banner-details .banner-price:hover h4,
+.banner-details .banner-plan:hover h4 {
+  color: #000;
+  font-weight: 500;
+}

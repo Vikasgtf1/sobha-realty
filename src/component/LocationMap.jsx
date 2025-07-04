@@ -1,34 +1,43 @@
-import React from "react";
 import CommonHeading from "../utils/CommonHeading";
 
-const Features = () => {
+const LocationMap = () => {
   const highlights = [
-    "Lush green landscaped promenade with exotic water bodies, sit-outs, and 350-metre wide frontage for maximum visibility.",
-    "Catchment comprising of over a few lakh families which is increasing multifold every year.",
-    "Contemporary architecture with integrated world-class entertainment zone and intricate design features.",
-    "High-speed elevators, 24 hrs power backup, and multilevel car parking for convenience.",
-    "Wide boulevards with schematic lights, open landscaped areas, and 3-tier security system.",
+    "Proposed Metro Connectivity",
+    "Close to Upcoming Jewar International Airport",
+    "Close Proximity to Multinationals and Corporates",
   ];
   return (
     <section
-      id="features"
+      id="map"
       className="relative  text-black overflow-hidden py-16 px-4 sm:px-6 lg:px-8"
     >
-      <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
+      <div className="overlay_gradient absolute top-[0] z-[-99]  w-[100%] left-[0]">
         <img
           src="/assets/images/about_pattern.png"
-          className="w-[100%] opacity-[0.2] z-[-1]"
+          className="w-[100%] opacity-[0.64] z-[-99]"
           alt="pattern image"
         />
       </div>
-      <div className="mb-8 md:mb-16">
-        <CommonHeading className="text-black" heading={"Our Features"} />
+      <div className="mb-8 md:mb-16 ">
+        <CommonHeading className="text-black" heading={"Location Map"} />
       </div>
-      <div className="flex flex-col flex-wrap md:flex-row gap-[50px] md:gap-[70px] justify-center items-start">
+      <div className="flex flex-col  flex-wrap md:flex-row justify-between items-center">
+        {/* Left - Image */}
+        <div className="md:basis-[60%]">
+          <img
+            src="assets/images/location-map.png"
+            alt="location"
+            className="rounded-[10px] w-full h-[450px] object-contain"
+          />
+        </div>
         {/* Right - List and Button */}
-        <div className=" md:basis-[40%] pt-[50px] flex flex-col gap-[10px] h-full">
+        <div className="md:basis-[36%] flex flex-col gap-[10px] h-full">
           {/* List */}
-          <ul className="space-y-4 mb-8">
+          <h2 className="text-[18px] font-[200] tracking-[1.5px]">
+            Strategically Connected : Key Locations Around Your Future
+            Investment
+          </h2>
+          <ul className="space-y-4 my-[20px]">
             {highlights.map((item, index) => (
               <li
                 key={index}
@@ -55,20 +64,12 @@ const Features = () => {
           </ul>
 
           <button className="bg-black w-fit border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300">
-            Enquire Now
+            View Location Map
           </button>
-        </div>{" "}
-        {/* Left - Image */}
-        <div className="md:basis-[38%]">
-          <img
-            src="/features.webp"
-            alt="Descriptive Alt"
-            className="rounded-[10px] w-full h-[500px] object-cover"
-          />
         </div>
       </div>
     </section>
   );
 };
 
-export default Features;
+export default LocationMap;

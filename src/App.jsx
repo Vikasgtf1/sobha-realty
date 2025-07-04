@@ -7,7 +7,7 @@ import Contact from "./component/Contact";
 import Footer from "./component/Footer";
 import FloorPlans from "./component/FloorPlans";
 import Pricing from "./component/Pricing";
-
+import LocationMap from "./component/LocationMap";
 import Features from "./component/Features";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       <Features />
 
       <Pricing />
-
+      <LocationMap />
       <VisualJourney />
       <Contact />
       <Footer />

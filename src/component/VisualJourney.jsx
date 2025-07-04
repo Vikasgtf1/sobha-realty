@@ -70,7 +70,10 @@ export default function VisualJourney() {
     title: card.title,
   }));
   return (
-    <section className="py-16 px-6 xl:py-[100px] text-center bg-[#000] relative no-repeat bg-contain">
+    <section
+      id="gallery"
+      className="py-16 px-6 xl:py-[100px] text-center bg-[#000] relative no-repeat bg-contain"
+    >
       <img
         src="/assets/images/pattern.png"
         className="absolute top-0 h-full w-full object-cover opacity-20 left-0"
@@ -81,7 +84,7 @@ export default function VisualJourney() {
       <div className="flex mt-[-20px] justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="439"
+          width="250"
           height="2"
           viewBox="0 0 439 2"
           fill="none"

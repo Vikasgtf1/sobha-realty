@@ -12,7 +12,7 @@ export default function CommonHeading({
       }`}
     >
       <h2
-        className={`tracking-[1.2px] mb-[8px] text-[17px] font-[200] font-merchant text-black-900 relative inline-block ${className}`}
+        className={`tracking-[2px] mb-[12px] text-[17px] font-[200] font-merchant text-black-900 relative inline-block ${className}`}
       >
         {heading}
       </h2>

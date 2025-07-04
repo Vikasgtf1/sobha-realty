@@ -23,11 +23,11 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto relative overflow-hidden">
         {/* About Developer Section */}
         <div className="text-center mb-16 relative">
-          <div className="text-center mb-12 xl:mb-16">
+          <div className="text-center mb-12 ">
             <CommonHeading heading={"About Group 108"} />
           </div>
 
@@ -38,15 +38,15 @@ const Contact = () => {
           />
           {/* </div> */}
 
-          {/* <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center">
             <img
-              src="assets/images/logo_white.png"
-              className="h-[40px]"
+              src="logo-header-black.png"
+              className="h-[80px] object-contain"
               alt="white logo"
             />
-          </div> */}
+          </div>
 
-          <h3 className="font-merchant text-[17px] xl:text-[20px] tracking-[1px] mt-[30px] xl:mt-16 mb-[20px] xl:mb-[40px] font-light text-gray-800 ">
+          <h3 className="font-merchant text-[17px] xl:text-[20px] tracking-[1px] mt-12 xl:mt-16 mb-[20px] xl:mb-[40px] font-light text-gray-800 ">
             One Of The Fastest-Growing Real Estate
           </h3>
 

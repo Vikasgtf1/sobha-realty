@@ -1,132 +1,99 @@
 import React from "react";
 import CommonHeading from "../utils/CommonHeading";
-import { useState } from "react";
 
 const OurHighlightsSection = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setMousePosition({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  // Generate dots in a circular pattern
-  const generateDots = () => {
-    const dots = [];
-    const radius = 200; // 400px diameter = 200px radius
-    const dotCount = 80; // Number of dots
-
-    for (let i = 0; i < dotCount; i++) {
-      const angle = (i / dotCount) * 2 * Math.PI;
-      const dotRadius = Math.random() * radius;
-      const x = Math.cos(angle) * dotRadius;
-      const y = Math.sin(angle) * dotRadius;
-
-      dots.push(
-        <div
-          key={i}
-          className="absolute w-1 h-1 bg-red rounded-full opacity-30"
-          style={{
-            left: `${200 + x}px`,
-            top: `${200 + y}px`,
-          }}
-        />
-      );
-    }
-
-    return dots;
-  };
-
-
   const highlights = [
-    "With mesmerising views of the skylines, the iconic twin tower has signature work spaces on floor G+34 and G+30 with a Sky Deck, enabling you to bring your dream office space to life.",
-    "Fulfilling your fashionista-fantasies with high street retail with over 100 renowned names to choose your pick and enjoy a view of waterscape as you engulf in an unparalleled experience.",
-    "2 Acres’ water body with a Yacht Garden: an ultra luxurious open air Fine dining experience surrounded by water and modelled like a yacht.",
-    "Dedicated Entertainment zones: for a thrilling and exhilarating experience.",
-    "5 Screen Multiplex with a capacity of over 900 people, equipped with cutting edge technology.",
-    "Multi cuisine food court and fine dining spaces overlooking water bodies, giving it a great ambience for spending quality time.",
-    "Fancied as one of the tallest commercial complexes in Greater Noida West.",
-    "Anchor stores with enormous space."
-  ]
+    "Iconic twin tower with signature workspaces on floors G+34 and G+30, featuring a Sky Deck for your dream office space.",
+    "High street retail with over 100 renowned brands and waterscape views for an unparalleled shopping experience.",
+    "2 Acres water body with Yacht Garden: ultra-luxurious open-air fine dining experience surrounded by water.",
+    "Entertainment zones with 5-screen multiplex (900+ capacity) equipped with cutting-edge technology.",
+    "One of the tallest commercial complexes in Greater Noida West with anchor stores and spacious layouts.",
+  ];
   return (
     <section
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      id="highlights"
       className="relative bg-black text-white overflow-hidden py-16 px-4 sm:px-6 lg:px-8"
     >
-      {/* Dot Pattern */}
-      {isHovered && (
-        <div
-          className="absolute pointer-events-none transition-opacity duration-300"
-          style={{
-            left: `${mousePosition.x - 200}px`,
-            top: `${mousePosition.y - 200}px`,
-            width: "400px",
-            height: "400px",
-          }}
-        >
-          {generateDots()}
-        </div>
-      )}
+      <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
+        <img
+          src="/assets/images/about_pattern.png"
+          className="w-[100%] opacity-[0.15] z-[-1]"
+          alt="pattern image"
+        />
+      </div>
+      <div className="mb-8 md:mb-16">
+        <CommonHeading className="text-white" heading={"Our Highlights"} />
 
-        <div className="mb-8 md:mb-16">
-          <CommonHeading
-            // className=""
-            // headingInCenter={true}
-            heading={"Our Highlights"}
-          />
-          
-        </div><div className="grid grid-cols-1 md:grid-cols-12 gap-[50px] md:gap-[80px] items-start">
-  {/* Left - Image */}
-  <div className=" md:col-span-6">
-    <img
-      src="/highlights.webp"
-      alt="Descriptive Alt"
-      className="rounded-[10px] w-full h-auto object-cover"
-    />
-  </div>
-
-  {/* Right - List and Button */}
-  <div className=" md:col-span-6 flex flex-col gap-[10px] h-full">
-    {/* List */}
-    <ul className="space-y-3 mb-4">
-      {highlights.map((item, index) => (
-        <li key={index} className="flex items-center gap-2 text-white text-[#202020] font-[100] font-helvetica  text-[12px] leading-relaxed">
+        <div className="flex mt-[-20px] justify-center">
           <svg
-            className="w-5 h-5 text-white-500"
+            xmlns="http://www.w3.org/2000/svg"
+            width="250"
+            height="2"
+            viewBox="0 0 439 2"
             fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            <path d="M0 1H439" stroke="url(#paint0_linear_3627_1103)" />
+            <defs>
+              <linearGradient
+                id="paint0_linear_3627_1103"
+                x1="0"
+                y1="1.5"
+                x2="439"
+                y2="1.5"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopOpacity="0" />
+                <stop offset="0.485577" stopColor="white" />
+                <stop offset="1" stopOpacity="0" />
+              </linearGradient>
+            </defs>
           </svg>
-          {item}
-        </li>
-      ))}
-    </ul>
-    
-              <button className="bg-black w-fit border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
-                Enquire Now
-              </button>
+        </div>
+      </div>
+      <div className="flex flex-col flex-wrap md:flex-row gap-[50px] md:gap-[70px] justify-center items-start">
+        {/* Left - Image */}
+        <div className="md:basis-[38%]">
+          <img
+            src="/highlights.webp"
+            alt="Descriptive Alt"
+            className="rounded-[10px] w-full h-[500px] object-cover"
+          />
+        </div>
 
-  </div>
-</div>
+        {/* Right - List and Button */}
+        <div className=" md:basis-[40%] pt-[50px] flex flex-col gap-[10px] h-full">
+          {/* List */}
+          <ul className="space-y-4 mb-8">
+            {highlights.map((item, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-2 text-white text-[#202020] font-[100] font-helvetica text-[12px] leading-relaxed"
+              >
+                <svg
+                  className="w-[20px] h-[20px] text-white-500 flex-shrink-0 mt-[1px]"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span className="flex-1 font-helvetica tracking-[1px]">
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
 
-
+          <button className="bg-black w-fit border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300">
+            Enquire Now
+          </button>
+        </div>
+      </div>
     </section>
   );
 };

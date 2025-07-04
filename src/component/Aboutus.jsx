@@ -1,8 +1,15 @@
 import CommonHeading from "../utils/CommonHeading";
+import { useEnquiryForm } from "../hooks/useEnquiryForm";
+import { useFormSubmit } from "../hooks/useFormSubmit";
+import EnquiryForm from "../common/EnquiryForm";
 
 const Aboutus = () => {
+  const { isOpen, openForm, closeForm } = useEnquiryForm();
   return (
-    <section className="bg-gray-50 pb-16 xl:py-16 relative px-4 sm:px-6 lg:px-8">
+    <section
+      id="aboutus"
+      className="bg-gray-50 pb-16 xl:py-16 relative px-4 sm:px-6 lg:px-8"
+    >
       <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
         <img
           src="/assets/images/about_pattern.png"
@@ -19,7 +26,7 @@ const Aboutus = () => {
 
         {/* Description */}
         <div className="text-center mb-12 xl:mb-16">
-          <p className="text-black my-[50px] font-merchant tracking-[1px] font-light max-w-4xl mx-auto leading-relaxed text-lg">
+          <p className="text-black my-[50px] font-merchant  font-light max-w-4xl mx-auto tracking-[1px] leading-relaxed text-lg">
             Project offers an interesting mix of work, leisure, fine dining,
             entertainment and interactive spaces with smooth connectivity,
             extravagant services, excellent framework, eco-friendly construction
@@ -56,8 +63,8 @@ const Aboutus = () => {
 
           {/* Right Side - Content Card */}
           <div className="lg:w-100  self-center ">
-            <div className=" xl:p-6 space-y-4  tracking-[0.4px]">
-              <p className="text-[#202020] font-[100] font-helvetica  text-[12px] leading-relaxed">
+            <div className=" xl:p-6 space-y-8  tracking-[0.4px]">
+              <p className="text-[#202020] tracking-[1px] font-[100] font-helvetica  text-[12px] leading-relaxed">
                 Grandthum continuously pursues to provide enlarged spaces
                 according to the lifestyle demand. We give commitment on our
                 project to make sure that you have an enhancing experience and
@@ -72,13 +79,17 @@ const Aboutus = () => {
                 industry. Lorem Ipsum has been the industry's standard. */}
               {/* </p> */}
 
-              <button className="bg-black text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300">
+              <button
+                onClick={openForm}
+                className="bg-black text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+              >
                 Enquire Now
               </button>
             </div>
           </div>
         </div>
       </div>
+      <EnquiryForm isOpen={isOpen} onClose={closeForm} />
     </section>
   );
 };
