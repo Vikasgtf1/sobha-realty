@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -65,8 +66,11 @@ const Footer = () => {
         {/* Copyright Information */}
         <div className=" font-helvetica  pt-6">
           <p className="text-[12px] leading-[20px] xl:text-xs text-gray-400 text-center">
-            Disclaimer & Privacy Policy | Copyright © GROUP 108 2025. All Rights
-            Reserved | Crafted By GTF Technologies
+            <NavLink to="/grandthum/disclaimer">
+              Disclaimer & Privacy Policy
+            </NavLink>{" "}
+            | Copyright © GROUP 108 2025. All Rights Reserved | Crafted By GTF
+            Technologies
           </p>
         </div>
       </div>
