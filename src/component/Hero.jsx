@@ -4,6 +4,7 @@ import EnquiryForm from "../common/EnquiryForm";
 import { useEnquiryForm } from "../hooks/useEnquiryForm";
 import { useFormSubmit } from "../hooks/useFormSubmit";
 import SideMenu from "./SideMenu";
+import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -48,18 +49,16 @@ const Hero = () => {
         className={`flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 ${
           isScrolled ? "bg-[#3265A6] shadow-lg" : "bg-transparent"
         }`}
-        // className="xl:flex-wrap flex fixed w-full top-[0] left-[0] z-[99999]  justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px]"
-
-        // className="relative z-[9999] flex justify-between flex-wrap items-center px-[20px] xl:px-[40px] py-3 xl:py-4"
-      >
+       >
         {" "}
-        <div className="header-element">
+      <NavLink to="/grandthum/">  <div className="header-element">
           <img
             src="logo-header.png"
             alt="logo"
             className="h-[35px] object-contain xl:h-[46px] xl:w-full"
           />
         </div>
+        </NavLink>
         <div className="flex items-center  gap-6">
           <button className="header-element cursor-pointer flex items-center gap-2 text-white hover:text-gray-200 transition-colors">
             <p className="border-[0.5px] border-solid rounded-[50%] p-[7px] border-[#fff]">

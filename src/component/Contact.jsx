@@ -311,9 +311,9 @@ const Contact = () => {
                   <p className="tracking-[1px]  text-[14px] xl:text-[17px]  mb-1">
                     Call Now
                   </p>
-                  <p className="text-xl xl:text-2xl  font-light text-black">
+                  <a  href="tel:+91 7700-007-700" className="text-xl xl:text-2xl  font-light text-black">
                     7700-007-700
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
