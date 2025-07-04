@@ -29,24 +29,23 @@ const Hero = () => {
   return (
     <div
       id="home"
-      className="relative xl:min-h-screen w-full xl:h-screen xl:overflow-hidden"
+      className="relative min-h-screen w-full xl:h-screen xl:overflow-hidden"
     >
       <SideMenu setShowMenu={setShowMenu} showMenu={showMenu} />
       {/* Background Image */}
       <div
         className="bg-image absolute w-full bg-top xl:h-screen h-[50vh] bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.45) 100%), url('hero.png')`,
+          backgroundImage: `linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.45) 100%), url('hero-banner.webp')`,
         }}
       >
         {/* Overlay */}
         <div className="absolute inset-0  bg-opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
       </div>
-
       {/* Header */}
       <header
-        className={`xl:flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 ${
+        className={`flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 ${
           isScrolled ? "bg-[#3265A6] shadow-lg" : "bg-transparent"
         }`}
         // className="xl:flex-wrap flex fixed w-full top-[0] left-[0] z-[99999]  justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px]"
@@ -58,7 +57,7 @@ const Hero = () => {
           <img
             src="logo-header.png"
             alt="logo"
-            className="h-[46px] xl:w-full"
+            className="h-[35px] object-contain xl:h-[46px] xl:w-full"
           />
         </div>
         <div className="flex items-center  gap-6">
@@ -92,21 +91,8 @@ const Hero = () => {
           </svg>
         )}
       </header>
-
       {/* Main Content - Desktop: centered in viewport, Mobile: starts after 50vh banner */}
       <div className="relative z-10 flex flex-col items-center justify-center xl:h-full xl:-mt-10 px-8">
-        {/* Mobile: Content starts after banner (50vh) */}
-        <div className="xl:hidden" style={{ marginTop: "calc(52vh - 80px)" }}>
-          <div className="text-center mb-4 xl:mb-8 font-merchant">
-            <h1 className="main-title xl:text-white text-2xl font-light tracking-[0.1em] uppercase mb-4">
-              GROUP 108
-            </h1>
-            <p className="location-text xl:text-white text-[18px] font-[300] tracking-[0.15em] opacity-90">
-              Greater Noida West
-            </p>
-          </div>
-        </div>
-
         {/* Desktop: Centered title */}
         <div className="hidden xl:flex xl:flex-col text-center  font-merchant">
           <img
@@ -120,8 +106,8 @@ const Hero = () => {
           </p>
         </div>
       </div>
-
-      <div className="relative mx-5 -mt-[105px] z-[99] flex justify-between p-2.5 w-[80%] mx-auto border border-white">
+      {/* desktop */}
+      <div className="relative hidden mx-5 -mt-[105px] z-[99] xl:flex justify-between p-2.5 w-[80%] mx-auto border border-white ">
         {/* Typology */}
         <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white hover:bg-[rgba(50,101,166,0.7)] group">
           <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
@@ -154,8 +140,52 @@ const Hero = () => {
             90:10
           </h4>
         </div>
-        <EnquiryForm isOpen={isOpen} onClose={closeForm} />
       </div>
+      {/* mobile */}
+      <div className="min-h-[50vh] my-[30px] bg-gradient-to-br mt-[50vh] flex items-center justify-center p-5">
+        <div className="bg-gradient-to-br  overflow-hidden w-full max-w-sm relative">
+          <div className="flex justify-center flex-col items-center">
+            <img
+              src="assets/images/grandthum-black.png"
+              className="h-[100px] object-contain"
+              alt="white logo"
+            />
+            <p className="mt-[15px] tracking-[1.5px]">Greater Noida West</p>
+          </div>
+
+          {/* Content Section */}
+          <div className="pt-[10px] space-y-6 relative z-10">
+            {/* Typology */}
+            <div className="bg-[#3265A6]  text-white p-6 text-center">
+              <div className="text-xs  tracking-widest mb-3 font-medium">
+                TYPOLOGY
+              </div>
+              <div className="text-base font-bold tracking-wide leading-relaxed">
+                Office Spaces , Retail Stores
+              </div>
+            </div>
+
+            {/* Starting Price */}
+            <div className="text-center ">
+              <div className="text-xs text-black tracking-widest mb-2 ">
+                STARTING PRICE
+              </div>
+              <div className="text-black text-[16px] font-[300] tracking-wide">
+                ₹ 61.47 CR* Lakhs* Onwards
+              </div>
+            </div>
+
+            {/* Payment Plan */}
+            <div className="bg-[#3265A6]  text-white p-6 text-center">
+              <div className="text-xs text-white tracking-widest mb-3 font-medium">
+                PAYMENT PLAN
+              </div>
+              <div className=" text-xl font-bold tracking-wider">90:10</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <EnquiryForm isOpen={isOpen} onClose={closeForm} />
     </div>
   );
 };

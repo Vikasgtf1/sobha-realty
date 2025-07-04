@@ -1,6 +1,11 @@
 import CommonHeading from "../utils/CommonHeading";
+import { useEnquiryForm } from "../hooks/useEnquiryForm";
+import { useFormSubmit } from "../hooks/useFormSubmit";
+import EnquiryForm from "../common/EnquiryForm";
 
 const LocationMap = () => {
+  const { isOpen, openForm, closeForm } = useEnquiryForm();
+
   const highlights = [
     "Proposed Metro Connectivity",
     "Close to Upcoming Jewar International Airport",
@@ -13,8 +18,8 @@ const LocationMap = () => {
     >
       <div className="overlay_gradient absolute top-[0] z-[-99]  w-[100%] left-[0]">
         <img
-          src="/assets/images/about_pattern.png"
-          className="w-[100%] opacity-[0.64] z-[-99]"
+          src="assets/images/about_pattern.png"
+          className="w-[100%]  opacity-[0.64] z-[-99]"
           alt="pattern image"
         />
       </div>
@@ -27,7 +32,7 @@ const LocationMap = () => {
           <img
             src="assets/images/location-map.png"
             alt="location"
-            className="rounded-[10px] w-full h-[450px] object-contain"
+            className="rounded-[10px] w-full h-[200px] xl:mb-0 mb-[35px] xl:h-[450px] object-contain"
           />
         </div>
         {/* Right - List and Button */}
@@ -63,11 +68,15 @@ const LocationMap = () => {
             ))}
           </ul>
 
-          <button className="bg-black w-fit border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300">
+          <button
+            onClick={openForm}
+            className="bg-black cursor-pointer w-fit border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
+          >
             View Location Map
           </button>
         </div>
-      </div>
+      </div>{" "}
+      <EnquiryForm isOpen={isOpen} onClose={closeForm} />
     </section>
   );
 };

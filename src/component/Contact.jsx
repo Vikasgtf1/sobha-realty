@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import CommonHeading from "../utils/CommonHeading";
+import { useEnquiryForm } from "../hooks/useEnquiryForm";
+import { useFormSubmit } from "../hooks/useFormSubmit";
+import EnquiryForm from "../common/EnquiryForm";
 
 const Contact = () => {
+  const { isOpen, openForm, closeForm } = useEnquiryForm();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,7 +38,7 @@ const Contact = () => {
 
           <img
             src="/assets/images/about-developer-patter.svg"
-            className="text-center left-[35%] object-cover z-[-1] scale-[2.5] w-[250px] absolute top-[-71px] h-[200px]"
+            className="text-center z-[-9] left-[35%] object-cover scale-[2.5] w-[250px] absolute top-[-71px] h-[200px]"
             alt="pattern"
           />
           {/* </div> */}
@@ -61,24 +66,17 @@ const Contact = () => {
             expertise is further exemplified in the ongoing development of Group
             108 Sector 108 West, a testament to our unwavering commitment to
             excellence.
-            {/* <br />
-            Recognizing Aspirations In Lifestyle Evolution, Perfecting The
-            Modulations Of Luxury
-            <br />
-            And Responding With Projects That Capture The Unique
-            <br />
-            Spirit Of Changing India. */}
           </p>
 
           <button
-            className="bg-black text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
-            // className="bg-black tracking-[1.5px] font-[200] font-merchant rounded-[25px] text-white px-8 py-2 "
+            onClick={openForm}
+            className="z-[9999] cursor-pointer bg-black text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
           >
             View Details
           </button>
 
           <div
-            className="absolute bottom-[-123px]
+            className="absolute z-[-1] bottom-[-123px]
     opacity-[0.2] w-full"
           >
             <svg
@@ -274,7 +272,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>{" "}
+      <EnquiryForm isOpen={isOpen} onClose={closeForm} />
     </section>
   );
 };

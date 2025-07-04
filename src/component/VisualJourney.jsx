@@ -144,15 +144,18 @@ export default function VisualJourney() {
             </SwiperSlide>
           ))}
         </Swiper>
-        {isOpen && (
-          <Lightbox
-            open={isOpen}
-            close={() => setIsOpen(false)}
-            slides={lightboxSlides}
-            index={index}
-            on={{ view: ({ index: newIndex }) => setIndex(newIndex) }}
-          />
-        )}
+        <div className="z-[999999]">
+          {" "}
+          {isOpen && (
+            <Lightbox
+              open={isOpen}
+              close={() => setIsOpen(false)}
+              slides={lightboxSlides}
+              index={index}
+              on={{ view: ({ index: newIndex }) => setIndex(newIndex) }}
+            />
+          )}
+        </div>
       </main>
     </section>
   );

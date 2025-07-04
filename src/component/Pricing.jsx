@@ -1,7 +1,12 @@
 import React from "react";
 import CommonHeading from "../utils/CommonHeading";
+import { useEnquiryForm } from "../hooks/useEnquiryForm";
+import { useFormSubmit } from "../hooks/useFormSubmit";
+import EnquiryForm from "../common/EnquiryForm";
 
 const Pricing = () => {
+  const { isOpen, openForm, closeForm } = useEnquiryForm();
+
   const pricingData = [
     { bhk: "Retail Stores", price: "₹ 33,108/sqft " },
     { bhk: "Office Spaces", price: "₹ 9,108/sqft " },
@@ -13,13 +18,13 @@ const Pricing = () => {
       className=" bg-black text-white relative overflow-hidden"
     >
       <img
-        className="absolute top-0 left-[2%] w-[100%] h-[1300px]"
-        src="/assets/images/pricing-bg.png"
+        className="absolute z-[-1] top-0 left-[2%] w-[100%] h-[1300px]"
+        src="assets/images/pricing-bg.png"
         alt="bg-pattern"
       />
 
       {/* Background geometric lines */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20 ">
         <svg
           className="w-full h-full"
           viewBox="0 0 800 600"
@@ -54,7 +59,7 @@ const Pricing = () => {
 
       <div className="py-16 xl:px-[32px] px-6 max-w-7xl mx-auto my-0 relative z-10 flex justify-between flex-wrap">
         {/* Header */}
-        <div className="flex justify-center items-center   flex-col basis-[100%]">
+        <div className="flex justify-center items-center mb-[30px]  flex-col basis-[100%]">
           <CommonHeading
             className=""
             headingInCenter={true}
@@ -91,17 +96,17 @@ const Pricing = () => {
           {" "}
           <img
             className="w-[100%] hidden xl:block mt-[100px] h-[400px]"
-            src="/assets/images/pricing-pattern.png"
+            src="assets/images/pricing-pattern.png"
             alt="pricing"
           />
         </div>
 
         {/* Right side - Pricing */}
-        <div className="basis-[100%] xl:basis-[60%] flex flex-col justify-center  space-y-8 xl:px-0 px-6 xl:ml-[60px]">
+        <div className="basis-[100%] xl:basis-[60%] flex flex-col justify-center space-y-2 xl:space-y-8 xl:px-0 px-6 xl:ml-[60px]">
           {pricingData.map((item, index) => (
             <div key={index} className="flex items-center py-6 flex-wrap">
               {/* Original Desktop Layout - Exactly as before */}
-              <div className="flex  items-center flex-wrap  lg:flex">
+              <div className="  items-center flex-wrap hidden  lg:flex">
                 <div className="text-2xl font-light tracking-[1px] text-[#C4C4C4]">
                   {item.bhk}
                 </div>
@@ -185,13 +190,19 @@ const Pricing = () => {
               </div>
 
               {/* Original Desktop Button */}
-              <button className="bg-[#C4C4C4] tracking-[1px]  hover:bg-gray-300 text-black px-10 py-3 rounded-full transition-colors duration-200 hidden lg:block">
+              <button
+                onClick={openForm}
+                className="bg-[#C4C4C4] cursor-pointer tracking-[1px]  hover:bg-gray-300 text-black px-10 py-3 rounded-full transition-colors duration-200 hidden lg:block"
+              >
                 Enquire Now
               </button>
 
               <div className="flex justify-center w-full">
                 {/* Mobile Button */}
-                <button className="lg:hidden  bg-[#C4C4C4] tracking-[1px] hover:bg-gray-300 text-black text-[14px] xl:text-[15px] px-4 py-2 xl:px-8 xl:py-4 rounded-full transition-colors duration-200">
+                <button
+                  onClick={openForm}
+                  className="lg:hidden cursor-pointer bg-[#C4C4C4] tracking-[1px] hover:bg-gray-300 text-black text-[14px] xl:text-[15px] px-4 py-2 xl:px-8 xl:py-4 rounded-full transition-colors duration-200"
+                >
                   Enquire Now
                 </button>
               </div>
@@ -208,6 +219,7 @@ const Pricing = () => {
           ))}
         </div>
       </div>
+      <EnquiryForm isOpen={isOpen} onClose={closeForm} />
     </div>
   );
 };

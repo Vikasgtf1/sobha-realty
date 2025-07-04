@@ -1,7 +1,10 @@
 import React from "react";
 import CommonHeading from "../utils/CommonHeading";
-
+import EnquiryForm from "../common/EnquiryForm";
+import { useEnquiryForm } from "../hooks/useEnquiryForm";
 const Features = () => {
+  const { isOpen, openForm, closeForm } = useEnquiryForm();
+
   const highlights = [
     "Lush green landscaped promenade with exotic water bodies, sit-outs, and 350-metre wide frontage for maximum visibility.",
     "Catchment comprising of over a few lakh families which is increasing multifold every year.",
@@ -14,9 +17,9 @@ const Features = () => {
       id="features"
       className="relative  text-black overflow-hidden py-16 px-4 sm:px-6 lg:px-8"
     >
-      <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
+      <div className="overlay_gradient absolute top-[0]  z-[-9] w-[100%] left-[0]">
         <img
-          src="/assets/images/about_pattern.png"
+          src="assets/images/about_pattern.png"
           className="w-[100%] opacity-[0.2] z-[-1]"
           alt="pattern image"
         />
@@ -26,7 +29,7 @@ const Features = () => {
       </div>
       <div className="flex flex-col flex-wrap md:flex-row gap-[50px] md:gap-[70px] justify-center items-start">
         {/* Right - List and Button */}
-        <div className=" md:basis-[40%] pt-[50px] flex flex-col gap-[10px] h-full">
+        <div className=" md:basis-[40%] pt-[20px] xl:pt-[50px] flex flex-col gap-[10px] h-full">
           {/* List */}
           <ul className="space-y-4 mb-8">
             {highlights.map((item, index) => (
@@ -47,26 +50,30 @@ const Features = () => {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="flex-1 font-helvetica tracking-[1px]">
+                <span className="flex-1 leading-[24px] font-helvetica tracking-[1px]">
                   {item}
                 </span>
               </li>
             ))}
           </ul>
 
-          <button className="bg-black w-fit border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300">
+          <button
+            onClick={openForm}
+            className="bg-black cursor-pointer w-fit border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
+          >
             Enquire Now
           </button>
-        </div>{" "}
+        </div>
         {/* Left - Image */}
         <div className="md:basis-[38%]">
           <img
-            src="/features.webp"
+            src="features.webp"
             alt="Descriptive Alt"
             className="rounded-[10px] w-full h-[500px] object-cover"
           />
         </div>
       </div>
+      <EnquiryForm isOpen={isOpen} onClose={closeForm} />
     </section>
   );
 };

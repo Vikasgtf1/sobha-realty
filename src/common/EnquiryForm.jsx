@@ -160,17 +160,6 @@ const EnquiryForm = ({ isOpen, onClose }) => {
           // style={{ backgroundColor: "rgba(53, 84, 61, 0.93)" }}
           className="xl:!max-w-[40%] p-[30px] text-white relative text-center tracking-[1.5px] uppercase"
         >
-          <div className="text-center font-playfair">
-            <img
-              loading="lazy"
-              decoding="async"
-              src="/assets/home/logo-canary-white.png"
-              className="w-[150px] m-[auto] mb-[30px]"
-              alt="canary"
-            />
-            <h2>Have Questions ? Ask Away!</h2>
-          </div>
-
           {/* Display API response messages */}
           {response && (
             <div
@@ -190,7 +179,16 @@ const EnquiryForm = ({ isOpen, onClose }) => {
             </div>
           )}
 
-          <div className="bg-white border  bg-[url(assets/images/form-patter.png)] border-black rounded-[12px] p-8 shadow-sm">
+          <div className="bg-white border relative bg-[url(assets/images/form-patter.png)] border-black rounded-[12px] p-[20px] shadow-sm">
+            <div className="text-center mb-[20px]">
+              <img
+                loading="lazy"
+                decoding="async"
+                src="logo-header-black.png"
+                className="h-[49px]  m-[auto] mb-[0px]"
+                alt="group 108"
+              />
+            </div>{" "}
             <div className="space-y-6 z-[99] ">
               <div>
                 <input
@@ -199,7 +197,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                   placeholder="Name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
+                  className="w-full text-[14px] py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                 />
               </div>
 
@@ -210,7 +208,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
+                  className="w-full  text-[14px] py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                 />
               </div>
 
@@ -221,7 +219,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                   placeholder="Contact Number"
                   value={formData.contactNumber}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
+                  className="w-full text-[14px] py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                 />
               </div>
 
@@ -232,7 +230,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                   rows="1"
                   value={formData.comments}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors resize-none"
+                  className="w-full  text-[14px] py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors resize-none"
                 />
               </div>
 
@@ -244,9 +242,9 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                 />
                 <label
                   htmlFor="consent"
-                  className="text-xs text-[#333] font-helvetica leading-relaxed"
+                  className="text-[9px] text-[#333] font-helvetica leading-relaxed"
                 >
-                  I hereby consent to Grandthum & its authorized partners
+                  I hereby consent to Grooup 108 & its authorized partners
                   contacting me via Call/SMS/Email/WhatsApp. This will override
                   the DND/NDNC settings. T&C Apply.
                 </label>
@@ -254,12 +252,20 @@ const EnquiryForm = ({ isOpen, onClose }) => {
 
               <button
                 onClick={handleSubmit}
-                className="bg-black text-white px-4 py-2 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+                className="bg-black cursor-pointer text-white px-4 py-2 xl:px-6 xl:py-3 text-xs xl:text-[14px] xl:tracking-[2px] font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
                 // className=" bg-black rounded-[30px] max-w-fit tracking-[1px] text-white py-2 px-7 font-[300] hover:bg-gray-800 transition-colors duration-300"
               >
                 Submit Now
               </button>
             </div>
+            {/* Close Button */}
+            <button
+              onClick={handleClose}
+              disabled={loading}
+              className="absolute top-4 right-4 cursor-pointer !text-black text-xl hover:text-gray-300 disabled:cursor-not-allowed"
+            >
+              <RxCross1 />
+            </button>
           </div>
 
           {/* <form
@@ -388,15 +394,6 @@ const EnquiryForm = ({ isOpen, onClose }) => {
               </button>
             </div>
           </form> */}
-
-          {/* Close Button */}
-          <button
-            onClick={handleClose}
-            disabled={loading}
-            className="absolute top-4 right-4 cursor-pointer !text-white text-xl hover:text-gray-300 disabled:cursor-not-allowed"
-          >
-            <RxCross1 />
-          </button>
         </div>
       </div>
     )

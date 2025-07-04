@@ -1,28 +1,17 @@
-import Hero from "./component/Hero";
-import VisualJourney from "./component/VisualJourney";
 import "./App.css";
-import Aboutus from "./component/Aboutus";
-import OurHighlightsSection from "./component/Highlights";
-import Contact from "./component/Contact";
-import Footer from "./component/Footer";
-import FloorPlans from "./component/FloorPlans";
-import Pricing from "./component/Pricing";
-import LocationMap from "./component/LocationMap";
-import Features from "./component/Features";
+import Home from "./pages/Home";
+import Disclaimer from "./pages/Disclaimer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Hero />
-      <Aboutus />
-      <OurHighlightsSection />
-      <Features />
-
-      <Pricing />
-      <LocationMap />
-      <VisualJourney />
-      <Contact />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path={"/grandthum"} element={<Home />} />
+          <Route path={"/disclaimer"} element={<Disclaimer />} />
+        </Routes>
+      </Router>
     </>
   );
 }

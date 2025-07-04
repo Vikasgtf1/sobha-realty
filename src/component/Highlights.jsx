@@ -1,7 +1,11 @@
 import React from "react";
 import CommonHeading from "../utils/CommonHeading";
+import { useEnquiryForm } from "../hooks/useEnquiryForm";
+import EnquiryForm from "../common/EnquiryForm";
 
 const OurHighlightsSection = () => {
+  const { isOpen, openForm, closeForm } = useEnquiryForm();
+
   const highlights = [
     "Iconic twin tower with signature workspaces on floors G+34 and G+30, featuring a Sky Deck for your dream office space.",
     "High street retail with over 100 renowned brands and waterscape views for an unparalleled shopping experience.",
@@ -54,14 +58,14 @@ const OurHighlightsSection = () => {
         {/* Left - Image */}
         <div className="md:basis-[38%]">
           <img
-            src="/highlights.webp"
+            src="highlights.webp"
             alt="Descriptive Alt"
             className="rounded-[10px] w-full h-[500px] object-cover"
           />
         </div>
 
         {/* Right - List and Button */}
-        <div className=" md:basis-[40%] pt-[50px] flex flex-col gap-[10px] h-full">
+        <div className=" md:basis-[40%] pt-[20px] xl:pt-[50px] flex flex-col gap-[10px] h-full">
           {/* List */}
           <ul className="space-y-4 mb-8">
             {highlights.map((item, index) => (
@@ -82,14 +86,18 @@ const OurHighlightsSection = () => {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="flex-1 font-helvetica tracking-[1px]">
+                <span className="flex-1 leading-[24px] font-helvetica tracking-[1px]">
                   {item}
                 </span>
               </li>
             ))}
           </ul>
+          <EnquiryForm isOpen={isOpen} onClose={closeForm} />
 
-          <button className="bg-black w-fit border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300">
+          <button
+            onClick={openForm}
+            className="bg-black cursor-pointer w-fit border border-white text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
+          >
             Enquire Now
           </button>
         </div>

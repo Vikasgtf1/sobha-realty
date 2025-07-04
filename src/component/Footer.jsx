@@ -65,7 +65,7 @@ const Footer = () => {
         {/* Copyright Information */}
         <div className=" font-helvetica  pt-6">
           <p className="text-[12px] leading-[20px] xl:text-xs text-gray-400 text-center">
-            Disclaimer & Privacy Policy | Copyright © GRANDTHUM 2025. All Rights
+            Disclaimer & Privacy Policy | Copyright © GROUP 108 2025. All Rights
             Reserved | Crafted By GTF Technologies
           </p>
         </div>
