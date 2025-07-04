@@ -11,50 +11,49 @@ export const useFormSubmit = () => {
   const getProjectName = () => {
     const currentPath = location.pathname;
 
-    // Check which section we're in
     if (currentPath.includes("/branding")) {
-      return "Prateek Canary - Branding";
+      return "Sobha Reality - Branding";
     } else if (currentPath.includes("/remarketing")) {
-      return "Prateek Canary - Remarketing";
+      return "Sobha Reality - Remarketing";
     } else if (currentPath.includes("/demand-gen")) {
-      return "Prateek Canary - Demand-gen";
+      return "Sobha Reality - Demand-gen";
     } else {
-      // Default to base URL if no section is detected
-      return "Prateek Canary";
+      return "Sobha Reality";
     }
   };
 
   const handleSubmit = async (formDetails) => {
+    return;
     console.log("formsubmitted");
-    // const projectName = getProjectName();
-    // setLoading(true);
-    // setResponse(null);
-    // setError(null);
+    const projectName = getProjectName();
+    setLoading(true);
+    setResponse(null);
+    setError(null);
 
-    // const apiUrl = `https://api2.gtftech.com/AjaxHelper/AgentInstantQuerySetter.aspx?qAgentID=4907&qSenderName=${encodeURIComponent(
-    //   formDetails.name
-    // )}&qMobileNo=${encodeURIComponent(
-    //   formDetails.contact
-    // )}&qEmailID=${encodeURIComponent(
-    //   formDetails.email
-    // )}&qQueryMessage=${encodeURIComponent(
-    //   formDetails.message
-    // )}&qProjectName=${encodeURIComponent(projectName)}`;
+    const apiUrl = `https://api2.gtftech.com/AjaxHelper/AgentInstantQuerySetter.aspx?qAgentID=4907&qSenderName=${encodeURIComponent(
+      formDetails.name
+    )}&qMobileNo=${encodeURIComponent(
+      formDetails.contact
+    )}&qEmailID=${encodeURIComponent(
+      formDetails.email
+    )}&qQueryMessage=${encodeURIComponent(
+      formDetails.message
+    )}&qProjectName=${encodeURIComponent(projectName)}`;
 
-    // try {
-    //   const res = await fetch(apiUrl, { method: "GET" });
-    //   if (!res.ok) throw new Error("Failed to submit form");
-    //   setResponse({ success: true, message: "Form submitted successfully!" });
+    try {
+      const res = await fetch(apiUrl, { method: "GET" });
+      if (!res.ok) throw new Error("Failed to submit form");
+      setResponse({ success: true, message: "Form submitted successfully!" });
 
-    //   window.location.href = "/thank-you.html";
-    //   // navigate("/thank-you.htm");
-    // } catch (err) {
-    //   const message = err.message || "Something went wrong";
-    //   setError(message);
-    //   setResponse({ success: false, message });
-    // } finally {
-    //   setLoading(false);
-    // }
+      window.location.href = "/thank-you.html";
+      // navigate("/thank-you.htm");
+    } catch (err) {
+      const message = err.message || "Something went wrong";
+      setError(message);
+      setResponse({ success: false, message });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return {
