@@ -8,22 +8,25 @@ export const useFormSubmit = () => {
   const [error, setError] = useState(null);
   const location = useLocation();
 
-  const getProjectName = () => {
-    const currentPath = location.pathname;
+  // const getProjectName = () => {
+  //   const currentPath = location.pathname;
 
-    if (currentPath.includes("/branding")) {
-      return "Sobha Reality - Branding";
-    } else if (currentPath.includes("/remarketing")) {
-      return "Sobha Reality - Remarketing";
-    } else if (currentPath.includes("/demand-gen")) {
-      return "Sobha Reality - Demand-gen";
-    } else {
-      return "Sobha Reality";
-    }
-  };
+  //   if (currentPath.includes("/branding")) {
+  //     return "Sobha Reality - Branding";
+  //   } else if (currentPath.includes("/remarketing")) {
+  //     return "Sobha Reality - Remarketing";
+  //   } else if (currentPath.includes("/demand-gen")) {
+  //     return "Sobha Reality - Demand-gen";
+  //   } else {
+  //     return "Sobha Reality";
+  //   }
+  // };
+
+  const getProjectName = () => {
+  return "One FNG TECHZONE 4 Greater Noida West";
+};
 
   const handleSubmit = async (formDetails) => {
-    return;
     console.log("formsubmitted");
     const projectName = getProjectName();
     setLoading(true);
@@ -45,7 +48,7 @@ export const useFormSubmit = () => {
       if (!res.ok) throw new Error("Failed to submit form");
       setResponse({ success: true, message: "Form submitted successfully!" });
 
-      window.location.href = "/thank-you.html";
+      window.location.href = "/one-fng/thank-you";
       // navigate("/thank-you.htm");
     } catch (err) {
       const message = err.message || "Something went wrong";
