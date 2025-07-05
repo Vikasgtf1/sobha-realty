@@ -26,7 +26,7 @@ const Aboutus = () => {
 
         {/* Description */}
         <div className="text-center mb-12 xl:mb-16">
-          <p className="text-black my-[50px] font-merchant  font-light max-w-4xl mx-auto tracking-[1px] leading-relaxed text-lg">
+          <p className="text-black  my-[50px] font-merchant  font-light max-w-4xl mx-auto tracking-[1px] leading-relaxed text-lg">
             Project offers an interesting mix of work, leisure, fine dining,
             entertainment and interactive spaces with smooth connectivity,
             extravagant services, excellent framework, eco-friendly construction
@@ -64,7 +64,7 @@ const Aboutus = () => {
           {/* Right Side - Content Card */}
           <div className="lg:w-100  self-center ">
             <div className=" xl:p-6 space-y-8  tracking-[0.4px]">
-              <p className="text-[#202020] tracking-[1px] font-[100] font-helvetica  text-[12px] leading-relaxed">
+              <p className="text-[#202020] text-[15px] font-[400] tracking-[1px] xl:font-[100] font-helvetica  xl:text-[12px] leading-[24px]">
                 Grandthum continuously pursues to provide enlarged spaces
                 according to the lifestyle demand. We give commitment on our
                 project to make sure that you have an enhancing experience and

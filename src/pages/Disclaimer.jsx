@@ -6,22 +6,9 @@ import { NavLink } from "react-router-dom";
 const Disclaimer = () => {
   const [showMenu, setShowMenu] = useState(false);
 
-  //     const [isScrolled, setIsScrolled] = useState(false);
-  //  useEffect(() => {
-  //     const handleScroll = () => {
-  //       const scrollTop =
-  //         window.pageYOffset || document.documentElement.scrollTop;
-  //       setIsScrolled(scrollTop > 50);
-  //     };
-
-  //     // Add scroll event listener
-  //     window.addEventListener("scroll", handleScroll);
-
-  //     // Cleanup function to remove event listener
-  //     return () => {
-  //       window.removeEventListener("scroll", handleScroll);
-  //     };
-  //   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <SideMenu setShowMenu={setShowMenu} showMenu={showMenu} />
@@ -73,15 +60,15 @@ const Disclaimer = () => {
         )} */}
       </header>
       <section>
-        <div className="lg:p-[100px] p-[35px]">
-          <h1 className="font-merchant text-[30px] font-[600] text-[20px] text-center mb-[30px]">
+        <div className="lg:p-[100px] px-[15px] py-[35px]">
+          <h1 className="font-merchant xl:text-[20px] font-[200] tracking-[1.5px] text-[16px] text-center mb-[30px]">
             Disclaimer & Privacy Policy
           </h1>
 
-          <h3 className="font-merchant font-[600] text-[20px] font-[500] mb-[10px]">
+          <h3 className=" xl:text-[20px] font-[200] tracking-[1.5px] text-[16px] mb-[10px]">
             Disclaimer
           </h3>
-          <p className="mb-[30px]">
+          <p className="mb-[30px] font-helvetica font-[200] leading-[24px] text-[14px]">
             This website is only for the purpose of providing information
             regarding real estate projects in different regions. By accessing
             this website, the viewer confirms that the information including
@@ -104,29 +91,29 @@ const Disclaimer = () => {
             website.
           </p>
 
-          <h3 className="font-merchant font-[600] text-[20px] font-[500] mb-[10px]">
+          <h3 className=" xl:text-[20px] font-[200] tracking-[1.5px] text-[16px] mb-[10px]">
             Privacy Policy
           </h3>
-          <p className="mb-[30px]">
+          <p className="mb-[30px] font-helvetica font-[200] leading-[24px] text-[14px]">
             In our endeavor and commitment of protecting your personal
             information, we have designed this comprehensive privacy policy.
             This is to keep your interests and information safe on our website.
           </p>
 
-          <h3 className="font-merchant font-[600] text-[20px] font-[500] mb-[10px]">
+          <h3 className=" xl:text-[20px] font-[200] tracking-[1.5px] text-[16px] mb-[10px]">
             Updation of privacy policy
           </h3>
-          <p className="mb-[30px]">
+          <p className="mb-[30px] font-helvetica font-[200] leading-[24px] text-[14px]">
             This privacy policy is subject to undergo change and review without
             any prior notice or approval. So to keep yourself updated on the
             changes introduced, please keep visiting and reviewing the terms and
             conditions of this privacy policy.
           </p>
 
-          <h3 className="font-merchant font-[600] text-[20px] font-[500] mb-[10px]">
+          <h3 className=" xl:text-[20px] font-[200] tracking-[1.5px] text-[16px] mb-[10px]">
             User information
           </h3>
-          <p className="mb-[30px]">
+          <p className="mb-[30px] font-helvetica font-[200] leading-[24px] text-[14px]">
             By using our website, you agree to abide by the rules laid out by us
             and consent to collection and use of all such information that you
             may furnish to, or through, our website. In some cases, while you
@@ -141,11 +128,11 @@ const Disclaimer = () => {
             not give away your personal information to any third party.
           </p>
 
-          <h3 className="font-merchant font-[600] text-[20px] font-[500] mb-[10px]">
+          <h3 className=" xl:text-[20px] font-[200] tracking-[1.5px] text-[16px] mb-[10px]">
             {" "}
             Security
           </h3>
-          <p className="mb-[30px]">
+          <p className="mb-[30px] font-helvetica font-[200] leading-[24px] text-[14px]">
             To ensure security while transferring sensitive information, all the
             ongoing transmissions between client and server are encrypted using
             advanced and standard protocols. We also practice restricted access

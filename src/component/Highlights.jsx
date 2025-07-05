@@ -20,8 +20,8 @@ const OurHighlightsSection = () => {
     >
       <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
         <img
-          src="/assets/images/about_pattern.png"
-          className="w-[100%] opacity-[0.15] z-[-1]"
+          src="assets/images/about_pattern.png"
+          className="w-[100%] opacity-[0.11] z-[-1]"
           alt="pattern image"
         />
       </div>
@@ -86,7 +86,7 @@ const OurHighlightsSection = () => {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="flex-1 leading-[24px] font-helvetica tracking-[1px]">
+                <span className="flex-1 xl:text-[12px] xl:font-[100] text-[15px] font-[400] leading-[24px] font-helvetica tracking-[1px]">
                   {item}
                 </span>
               </li>
@@ -96,7 +96,7 @@ const OurHighlightsSection = () => {
 
           <button
             onClick={openForm}
-            className="bg-black cursor-pointer w-fit border border-white text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
+            className="bg-black z-[99] cursor-pointer w-fit border border-white text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
           >
             Enquire Now
           </button>

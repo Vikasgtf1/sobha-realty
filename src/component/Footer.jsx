@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-black xl:pb-12 text-white pb-[70px] pt-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* RERA Information */}
         <div className="text-center mb-4 xl:mb-8">

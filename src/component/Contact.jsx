@@ -181,7 +181,7 @@ const Contact = () => {
             One Of The Fastest-Growing Real Estate
           </h3>
 
-          <p className="leading-[24px] xl:leading-[30px] font-helvetica font-[500] text-[13.5px] max-w-4xl mx-auto  mb-8">
+          <p className="leading-[24px] text-[15px] font-[400] xl:leading-[30px] font-helvetica xl:font-[500] xl:text-[13.5px] max-w-4xl mx-auto  mb-8">
             Group 108 specializes in crafting real estate properties that cater
             to individuals who prioritize exquisite design, exceptional
             artistry, and the most luxurious features. At the heart of Group 108
@@ -285,7 +285,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <div className="flex mt-[50px] flex-col space-x-2">
+              {/* <div className="flex mt-[50px] flex-col space-x-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="421"
@@ -322,7 +322,7 @@ const Contact = () => {
                     7700-007-700
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -379,7 +379,7 @@ const Contact = () => {
                   <textarea
                     name="message"
                     placeholder="Your Message"
-                    rows="4"
+                    rows="2"
                     value={formData.comments}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors resize-none"

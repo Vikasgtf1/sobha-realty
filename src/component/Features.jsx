@@ -50,7 +50,7 @@ const Features = () => {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="flex-1 leading-[24px] font-helvetica tracking-[1px]">
+                <span className="flex-1  xl:text-[12px] xl:font-[100] text-[15px] font-[400] leading-[24px] font-helvetica tracking-[1px]">
                   {item}
                 </span>
               </li>

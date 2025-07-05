@@ -156,7 +156,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
         style={{ backgroundColor: "rgba(255, 255, 255, 0.83)" }}
         className="fixed inset-0 z-[999999999] bg-opacity-80 flex items-center justify-center p-4"
       >
-        <div className="xl:!max-w-[40%] p-[30px] text-white relative text-center tracking-[1.5px] uppercase">
+        <div className="xl:!max-w-[40%] xl:p-[30px] text-white relative text-center tracking-[1.5px] uppercase">
           {response && (
             <div
               className={`mb-4 p-3 rounded ${
@@ -185,7 +185,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                 alt="group 108"
               />
             </div>
-            <form onSubmit={onSubmit} className="space-y-6 z-[99]">
+            <form onSubmit={onSubmit} className="space-y-3 xl:space-y-6 z-[99]">
               <div>
                 <input
                   type="text"
@@ -241,7 +241,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                 <textarea
                   name="message"
                   placeholder="Your Message"
-                  rows="4"
+                  rows="2"
                   value={formData.message}
                   onChange={handleInputChange}
                   onBlur={handleInputBlur}

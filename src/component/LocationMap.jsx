@@ -16,13 +16,13 @@ const LocationMap = () => {
       id="map"
       className="relative  text-black overflow-hidden py-16 px-4 sm:px-6 lg:px-8"
     >
-      <div className="overlay_gradient absolute top-[0] z-[-99]  w-[100%] left-[0]">
+      {/* <div className="overlay_gradient absolute top-[0] z-[-99]  w-[100%] left-[0]">
         <img
-          src="assets/images/about_pattern.png"
+          src="/assets/images/about_pattern.png"
           className="w-[100%]  opacity-[0.64] z-[-99]"
           alt="pattern image"
         />
-      </div>
+      </div> */}
       <div className="mb-8 md:mb-16 ">
         <CommonHeading className="text-black" heading={"Location Map"} />
       </div>
@@ -61,7 +61,7 @@ const LocationMap = () => {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="flex-1 font-helvetica tracking-[1px]">
+                <span className="flex-1  xl:text-[12px] xl:font-[100] text-[15px] font-[400] font-helvetica tracking-[1px]">
                   {item}
                 </span>
               </li>
