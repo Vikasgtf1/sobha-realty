@@ -9,7 +9,7 @@ const Pricing = () => {
 
   const pricingData = [
     { bhk: "Retail Stores", price: "₹ 33,108/sqft " },
-    { bhk: "Office Spaces", price: "₹ 9,108/sqft " },
+    { bhk: "Office Spaces", price: "₹ 12,108/sqft " },
   ];
 
   return (

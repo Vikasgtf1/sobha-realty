@@ -6,11 +6,12 @@ const Features = () => {
   const { isOpen, openForm, closeForm } = useEnquiryForm();
 
   const highlights = [
-    "Lush green landscaped promenade with exotic water bodies, sit-outs, and 350-metre wide frontage for maximum visibility.",
-    "Catchment comprising of over a few lakh families which is increasing multifold every year.",
-    "Contemporary architecture with integrated world-class entertainment zone and intricate design features.",
-    "High-speed elevators, 24 hrs power backup, and multilevel car parking for convenience.",
-    "Wide boulevards with schematic lights, open landscaped areas, and 3-tier security system.",
+    "One of Noida’s Largest Floor Plates, offering expansive, flexible workspaces tailored for modern enterprises.",
+    "21 High-Speed Elevators ensure seamless vertical movement across the building.",
+    "Dedicated Access Points for office and retail zones, providing operational ease and privacy.",
+    "Steel Composite Structure for enhanced durability, safety, and architectural efficiency.",
+    "Multi-Level Car Parking with designated service floors to support large-scale operations.",
+    "Fully Equipped Lifestyle Zone including Gym, Yoga & Meditation Centers, Indoor Pool, Billiards, and Board Games for a perfect work-life balance."
   ];
   return (
     <section

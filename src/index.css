@@ -406,23 +406,15 @@ body {
 .banner-details .banner-plan:hover {
   background: rgb(50, 101, 166, 0.7);
 }
-/* .banner-details .banner-status:hover h5::after,
-.banner-details .banner-typology:hover h5::after,
-.banner-details .banner-price:hover h5::after,
-.banner-details .banner-plan:hover h5::after {
-  background: #181818;
+
+/* for banner */
+.bg-gradient-overlay {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, transparent 20%), url('/banner-mobile.webp');
 }
-.banner-details .banner-status:hover h5,
-.banner-details .banner-typology:hover h5,
-.banner-details .banner-price:hover h5,
-.banner-details .banner-plan:hover h5 {
-  color: #000;
-  font-weight: 500;
-} */
-/* .banner-details .banner-status:hover h4,
-.banner-details .banner-typology:hover h4,
-.banner-details .banner-price:hover h4,
-.banner-details .banner-plan:hover h4 {
-  color: #000;
-  font-weight: 500;
-} */
+
+@media (min-width: 1280px) {
+  .bg-gradient-overlay {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, transparent 20%), url('/banner.webp');
+  }
+}
+

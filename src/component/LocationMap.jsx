@@ -7,9 +7,10 @@ const LocationMap = () => {
   const { isOpen, openForm, closeForm } = useEnquiryForm();
 
   const highlights = [
-    "Proposed Metro Connectivity",
-    "Close to Upcoming Jewar International Airport",
-    "Close Proximity to Multinationals and Corporates",
+    "Unmatched Connectivity: Situated at the intersection of FNG and Noida–Greater Noida Expressways, with quick access to DND Flyway, Delhi, and Yamuna Expressway.",
+    "Seamless Commute: Direct metro access via Sector 142 Aqua Line station, with upcoming metro extensions enhancing regional mobility.",
+    "Air Travel Convenience: Close proximity to Jewar Airport and just 35 km from IGI Airport—perfect for business and international travel.",
+    "Thriving Business Neighborhood: Surrounded by leading global corporates like Microsoft, EY, KPMG, Infosys, and Genpact.",
   ];
   return (
     <section

@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/grandthum/", // Ensure correct base path for assets
+  base: "/one-fng/", // Ensure correct base path for assets
   assetsInclude: ["**/*.woff", "**/*.woff2", "**/*.ttf"], // Include font files in asset processing
   build: {
     assetsDir: "assets/fonts", // Output fonts to /assets/fonts/

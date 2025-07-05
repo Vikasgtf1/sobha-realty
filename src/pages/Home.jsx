@@ -32,7 +32,7 @@ const Home = () => {
           Query Now
         </button>
         <button
-          onClick={() => (window.location.href = "tel:+917700007700")}
+          onClick={() => (window.location.href = "tel:+919070108108")}
           className=" z-[99]  cursor-pointer text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
         >
           Tap to call

@@ -27,10 +27,9 @@ const Aboutus = () => {
         {/* Description */}
         <div className="text-center mb-12 xl:mb-16">
           <p className="text-black  my-[50px] font-merchant  font-light max-w-4xl mx-auto tracking-[1px] leading-relaxed text-lg">
-            Project offers an interesting mix of work, leisure, fine dining,
-            entertainment and interactive spaces with smooth connectivity,
-            extravagant services, excellent framework, eco-friendly construction
-            honored with Pre-Certified Platinum Rating by IGBC.
+              Unlock the gateway to your business's success by buying your dream space at ONE FNG.
+Our office and retail spaces (@one), ranging from approx. 1,000 to 1,500 square feet, are designed for functionality and flexibility. Tailor your workspace or retail area to fit your unique needs in these lockable, versatile units. Experience a setting where your business can flourish, customized to your exact specifications.
+         
           </p>
         </div>
 
@@ -65,13 +64,8 @@ const Aboutus = () => {
           <div className="lg:w-100  self-center ">
             <div className=" xl:p-6 space-y-8  tracking-[0.4px]">
               <p className="text-[#202020] text-[15px] font-[400] tracking-[1px] xl:font-[100] font-helvetica  xl:text-[12px] leading-[24px]">
-                Grandthum continuously pursues to provide enlarged spaces
-                according to the lifestyle demand. We give commitment on our
-                project to make sure that you have an enhancing experience and
-                to achieve that we have joined hands with leading experts in the
-                field of architecture, landscaping, design, solar energy,
-                construction and quality control.We strive to be your go-to name
-                for every CRE aspirations you nurture.
+                ONE FNG stands as an emblematic architectural marvel poised to reshape the cityscape and elevate Noida's essence to new heights. This remarkable endeavor seamlessly unites artistic creativity with state-of-the-art workspaces and contemporary retail, crafting an environment where work and leisure seamlessly converge in perfect harmony.
+             
               </p>
 
               {/* <p className="text-[#202020] font-helvetica text-[12px] leading-relaxed pb-4"> */}

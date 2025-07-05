@@ -182,16 +182,12 @@ const Contact = () => {
           </h3>
 
           <p className="leading-[24px] text-[15px] font-[400] xl:leading-[30px] font-helvetica xl:font-[500] xl:text-[13.5px] max-w-4xl mx-auto  mb-8">
-            Group 108 specializes in crafting real estate properties that cater
-            to individuals who prioritize exquisite design, exceptional
-            artistry, and the most luxurious features. At the heart of Group 108
-            is the belief that every project should embody principles of
-            wholeness, transparency, and trust. With a legacy spanning over
-            three decades in the real estate sector, our management team has
-            been the driving force behind some of the most notable projects. The
-            expertise is further exemplified in the ongoing development of Group
-            108 Sector 108 West, a testament to our unwavering commitment to
-            excellence.
+            Group 108 specializes in crafting real estate properties that cater to individuals who prioritize exquisite design, exceptional artistry, and the most luxurious features. At the heart of Group 108 is the belief that every project should embody principles of wholeness, transparency, and trust.
+
+With a legacy spanning over three decades in the real estate sector, our management team has been the driving force behind some of the most notable projects. They have successfully led the development of the Parmesh Complex, Ithum, World Square Mall & Hotel cumulatively encompassing an impressive 3.5 million sq ft. Their expertise is further exemplified in the ongoing Grandthum project in Greater Noida West, a testament to their unwavering commitment to excellence.
+
+Building upon this foundation of trust and credibility, the management is proud to introduce its new venture, “One FNG,” showcasing its enduring dedication to quality and innovation in the industry.
+          
           </p>
 
           <button
@@ -281,48 +277,10 @@ const Contact = () => {
                   Starting Price
                 </p>
                 <p className="text-xl xl:text-2xl  font-light text-black">
-                  ₹61.47 Lakhs* Onwards
+                  ₹ 3.87 Cr* Onwards
                 </p>
               </div>
 
-              {/* <div className="flex mt-[50px] flex-col space-x-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="421"
-                  height="2"
-                  viewBox="0 0 421 2"
-                  fill="none"
-                >
-                  <path
-                    d="M0.5 1H420.5"
-                    stroke="url(#paint0_linear_5024_337)"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_5024_337"
-                      x1="0.5"
-                      y1="1.5"
-                      x2="420.5"
-                      y2="1.5"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop />
-                      <stop offset="1" stop-color="white" stop-opacity="0" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div className="mt-[50px]">
-                  <p className="tracking-[1px]  text-[14px] xl:text-[17px]  mb-1">
-                    Call Now
-                  </p>
-                  <a
-                    href="tel:+91 7700-007-700"
-                    className="text-xl xl:text-2xl  font-light text-black"
-                  >
-                    7700-007-700
-                  </a>
-                </div>
-              </div> */}
             </div>
           </div>
 
@@ -405,7 +363,7 @@ const Contact = () => {
                     htmlFor="consent"
                     className="text-xs text-[#333] font-helvetica leading-relaxed"
                   >
-                    I hereby consent to Grandthum & its authorized partners
+                    I hereby consent to one-fng & its authorized partners
                     contacting me via Call/SMS/Email/WhatsApp. This will
                     override the DND/NDNC settings. T&C Apply.
                   </label>

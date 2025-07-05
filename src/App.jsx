@@ -8,8 +8,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path={"/grandthum"} element={<Home />} />
-          <Route path={"/grandthum/disclaimer"} element={<Disclaimer />} />
+          <Route path={"/one-fng"} element={<Home />} />
+          <Route path={"/one-fng/disclaimer"} element={<Disclaimer />} />
         </Routes>
       </Router>
     </>

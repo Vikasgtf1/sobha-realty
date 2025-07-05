@@ -7,11 +7,13 @@ const OurHighlightsSection = () => {
   const { isOpen, openForm, closeForm } = useEnquiryForm();
 
   const highlights = [
-    "Iconic twin tower with signature workspaces on floors G+34 and G+30, featuring a Sky Deck for your dream office space.",
-    "High street retail with over 100 renowned brands and waterscape views for an unparalleled shopping experience.",
-    "2 Acres water body with Yacht Garden: ultra-luxurious open-air fine dining experience surrounded by water.",
-    "Entertainment zones with 5-screen multiplex (900+ capacity) equipped with cutting-edge technology.",
-    "One of the tallest commercial complexes in Greater Noida West with anchor stores and spacious layouts.",
+    "IGBC Platinum Pre-Certified Design with Sustainable Materials for Eco-Friendly Development",
+    "EV Charging Pods, Cycle Tracks, and Dedicated Bus Services for Smart, Green Mobility",
+    "Enhanced Indoor Air Quality and Earthquake-Resistant Infrastructure for Safer Living",
+    "Green Sit-Out Zones and Inclusive Public Spaces for Community Wellbeing",
+    "Grade A Offices with Striking Glass Façade Elevate Corporate Presence",
+    "Barrier-Free, Accessible Design to Ensure Convenience for All",
+    "Thoughtfully Designed for Inclusivity, Sustainability, and Future-Ready Infrastructure"
   ];
   return (
     <section

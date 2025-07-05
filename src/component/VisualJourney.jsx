@@ -108,10 +108,9 @@ export default function VisualJourney() {
       </div>
 
       <p className="text-white my-[50px] font-merchant tracking-[1px] font-light max-w-4xl mx-auto leading-relaxed text-lg">
-        Step into a world where every frame captures the essence of beauty and
-        innovation. Each scene is thoughtfully designed to reflect elegance,
-        purpose, and style. Experience a visual journey where luxury meets
-        visionary design.
+        Step into the world of seamless retail and modern workspaces—where every
+        corner tells a story. From design to detail, explore the spaces built
+        for experience and excellence.
       </p>
 
       <main className="xl:w-4/5 xl:mx-auto">
@@ -130,16 +129,27 @@ export default function VisualJourney() {
         >
           {cardsData.map((card, index) => (
             <SwiperSlide key={card.id}>
-              <div className="card-item text-center">
-                <img
-                  src={"assets/images/journey/" + card.id + ".jpg"}
-                  alt={card.alt}
+              <div className="card-item text-center h-[400px] overflow-hidden relative">
+                <picture
                   onClick={() => {
                     setIndex(index);
                     setIsOpen(true);
                   }}
-                  className="object-top object-contain block m-auto w-full rounded-lg"
-                />
+                >
+                  <source
+                    media="(min-width: 769px)"
+                    srcSet={`assets/images/journey/${card.id}.jpg`}
+                  />
+                  <source
+                    media="(max-width: 768px)"
+                    srcSet={`assets/images/journey/mobile/${card.id}.webp`}
+                  />
+                  <img
+                    src={`assets/images/journey/${card.id}.jpg`} // fallback
+                    alt={card.alt}
+                    className="h-full w-full object-cover block rounded-lg"
+                  />
+                </picture>
               </div>
             </SwiperSlide>
           ))}
