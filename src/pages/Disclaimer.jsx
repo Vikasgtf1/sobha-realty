@@ -11,7 +11,7 @@ const Disclaimer = () => {
   }, []);
   return (
     <>
-      <SideMenu setShowMenu={setShowMenu} showMenu={showMenu} />
+      {/* <SideMenu setShowMenu={setShowMenu} showMenu={showMenu} /> */}
       <header
         className={`flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 bg-[#3265A6]`}
       >
@@ -38,13 +38,13 @@ const Disclaimer = () => {
               </span>
             </button>
           </a>
-          <button
+          {/* <button
             onClick={() => setShowMenu(true)}
             className="  header-element cursor-pointer text-white hover:text-gray-200 transition-colors"
           >
-            <Menu className="block md:hidden" size={18} /> {/* Mobile */}
+            <Menu className="block md:hidden" size={18} /> 
             <Menu className="hidden md:block sm:hidden" size={24} />
-          </button>
+          </button> */}
         </div>
         {/* {!isScrolled && (
           <svg

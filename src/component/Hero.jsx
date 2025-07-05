@@ -130,7 +130,7 @@ const Hero = () => {
             <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
           </h5>
           <h4 className="text-white text-lg font-normal tracking-[2px] text-center">
-            ₹ 61.47 CR* Lakhs* Onwards
+            ₹ 61.47 Lakhs* Onwards
           </h4>
         </div>
 
@@ -177,7 +177,7 @@ const Hero = () => {
               </div>
 
               <div className="text-black text-[16px] font-[300] tracking-wide">
-                ₹ 61.47 CR* Lakhs* Onwards
+                ₹ 61.47 Lakhs* Onwards
               </div>
             </div>
 

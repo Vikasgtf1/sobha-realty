@@ -27,20 +27,20 @@ const Home = () => {
       <div className="fixed z-[99] bg-[#3265A6] flex justify-center flex-wrap xl:hidden  bottom-0 w-full py-[7px] px-[10px]">
         <button
           onClick={openForm}
-          className=" z-[99] border-r-[1px]  border-solid border-white cursor-pointer text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+          className=" z-[99] border-r-[1px]  border-solid border-white cursor-pointer text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium tracking-[1.5px] "
         >
           Query Now
         </button>
         <button
           onClick={() => (window.location.href = "tel:+917700007700")}
-          className=" z-[99]  cursor-pointer text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+          className=" z-[99]  cursor-pointer text-white px-4 py-2 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium tracking-[1.5px] "
         >
           Tap to call
         </button>
       </div>
       {/* <button
         onClick={openForm}
-        className="bg-[#3265A6] z-[99] fixed bottom-[30px] right-[30px] cursor-pointer text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+        className="bg-[#3265A6] z-[99] fixed bottom-[30px] right-[30px] cursor-pointer text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] "
       >
         Enquire Now
       </button> */}

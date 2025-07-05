@@ -12,25 +12,23 @@ export const useFormSubmit = () => {
     const currentPath = location.pathname;
 
     if (currentPath.includes("/branding")) {
-      return "Sobha Reality - Branding";
+      return "Grandthum - Branding";
     } else if (currentPath.includes("/remarketing")) {
-      return "Sobha Reality - Remarketing";
+      return "Grandthum - Remarketing";
     } else if (currentPath.includes("/demand-gen")) {
-      return "Sobha Reality - Demand-gen";
+      return "Grandthum - Demand-gen";
     } else {
-      return "Sobha Reality";
+      return "Grandthum";
     }
   };
 
   const handleSubmit = async (formDetails) => {
-    return;
-    console.log("formsubmitted");
     const projectName = getProjectName();
     setLoading(true);
     setResponse(null);
     setError(null);
 
-    const apiUrl = `https://api2.gtftech.com/AjaxHelper/AgentInstantQuerySetter.aspx?qAgentID=4907&qSenderName=${encodeURIComponent(
+    const apiUrl = `https://api2.gtftech.com/AjaxHelper/AgentInstantQuerySetter.aspx?qAgentID=4559&qSenderName=${encodeURIComponent(
       formDetails.name
     )}&qMobileNo=${encodeURIComponent(
       formDetails.contact
@@ -45,7 +43,8 @@ export const useFormSubmit = () => {
       if (!res.ok) throw new Error("Failed to submit form");
       setResponse({ success: true, message: "Form submitted successfully!" });
 
-      window.location.href = "/thank-you.html";
+      window.location.href = "/grandthum/thankyou";
+      // alert("thank you, we will contact you soon");
       // navigate("/thank-you.htm");
     } catch (err) {
       const message = err.message || "Something went wrong";
