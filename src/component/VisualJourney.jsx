@@ -62,10 +62,10 @@ const cardsData = [
 export default function VisualJourney() {
   const [isOpen, setIsOpen] = useState(false);
   const [index, setIndex] = useState(0);
-
+const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
   // Prepare slides for yet-another-react-lightbox
   const lightboxSlides = cardsData.map((card) => ({
-    src: "assets/images/journey/" + card.id + ".jpg",
+    src: `assets/images/journey/${isMobile ? "mobile/" : ""}${card.id}.webp`,
     alt: card.alt,
     title: card.title,
   }));
@@ -137,15 +137,11 @@ export default function VisualJourney() {
                   }}
                 >
                   <source
-                    media="(min-width: 769px)"
-                    srcSet={`assets/images/journey/${card.id}.jpg`}
-                  />
-                  <source
                     media="(max-width: 768px)"
                     srcSet={`assets/images/journey/mobile/${card.id}.webp`}
                   />
                   <img
-                    src={`assets/images/journey/${card.id}.jpg`} // fallback
+                    src={`assets/images/journey/${card.id}.webp`} // fallback
                     alt={card.alt}
                     className="h-full w-full object-cover block rounded-lg"
                   />

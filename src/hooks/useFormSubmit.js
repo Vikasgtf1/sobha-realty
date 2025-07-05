@@ -1,26 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 export const useFormSubmit = () => {
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
-  const location = useLocation();
-
-  // const getProjectName = () => {
-  //   const currentPath = location.pathname;
-
-  //   if (currentPath.includes("/branding")) {
-  //     return "Sobha Reality - Branding";
-  //   } else if (currentPath.includes("/remarketing")) {
-  //     return "Sobha Reality - Remarketing";
-  //   } else if (currentPath.includes("/demand-gen")) {
-  //     return "Sobha Reality - Demand-gen";
-  //   } else {
-  //     return "Sobha Reality";
-  //   }
-  // };
+   const navigate = useNavigate();
 
   const getProjectName = () => {
   return "One FNG TECHZONE 4 Greater Noida West";
@@ -48,7 +33,7 @@ export const useFormSubmit = () => {
       if (!res.ok) throw new Error("Failed to submit form");
       setResponse({ success: true, message: "Form submitted successfully!" });
 
-      window.location.href = "/one-fng/thank-you";
+      navigate("/one-fng/thank-you");
       // navigate("/thank-you.htm");
     } catch (err) {
       const message = err.message || "Something went wrong";

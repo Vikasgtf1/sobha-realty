@@ -54,7 +54,7 @@ const Hero = () => {
             <img
               src="logo.webp"
               alt="logo"
-              className="h-[35px] object-contain xl:h-[46px] xl:w-full"
+              className="h-[45px] object-contain xl:h-[56px] xl:w-full"
             />
           </div>
         </NavLink>
@@ -147,7 +147,7 @@ const Hero = () => {
         <div className="bg-gradient-to-br  overflow-hidden w-full max-w-sm relative">
           <div className="flex justify-center flex-col items-center">
             <img
-              src="assets/images/logo-black.png"
+              src="assets/images/logo-black.webp"
               className="h-[100px] object-contain"
               alt="white logo"
             />

@@ -52,7 +52,7 @@ Our office and retail spaces (@one), ranging from approx. 1,000 to 1,500 square 
             <div className="lg:w-2/3  xl:h-[550px]">
               <div className="relative h-full overflow-hidden">
                 <img
-                  src="assets/images/aboutus.png"
+                  src="assets/images/aboutus.webp"
                   alt="Modern interior with stone wall and contemporary lighting"
                   className="w-full rounded-[20px] lg:h-full object-cover"
                 />

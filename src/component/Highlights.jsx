@@ -59,11 +59,21 @@ const OurHighlightsSection = () => {
       <div className="flex flex-col flex-wrap md:flex-row gap-[50px] md:gap-[70px] justify-center items-start">
         {/* Left - Image */}
         <div className="md:basis-[38%]">
-          <img
-            src="highlights.webp"
-            alt="Descriptive Alt"
-            className="rounded-[10px] w-full h-[500px] object-cover"
-          />
+          <picture>
+            {/* Mobile image (up to 768px) */}
+            <source
+              srcSet="highlights-mobile.webp"
+              media="(max-width: 768px)"
+              type="image/webp"
+            />
+
+            {/* Default image for larger screens */}
+            <img
+              src="highlights.webp"
+              alt="Descriptive Alt"
+              className="rounded-[10px] w-full h-[500px] object-cover"
+            />
+          </picture>
         </div>
 
         {/* Right - List and Button */}

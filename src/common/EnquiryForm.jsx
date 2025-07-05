@@ -175,12 +175,12 @@ const EnquiryForm = ({ isOpen, onClose }) => {
             </div>
           )}
 
-          <div className="bg-white border relative bg-[url(assets/images/form-patter.png)] border-black rounded-[12px] p-[20px] shadow-sm">
+          <div className="bg-white border relative bg-[url(/assets/images/form-patter.png)] border-black rounded-[12px] p-[20px] shadow-sm">
             <div className="text-center mb-[20px]">
               <img
                 loading="lazy"
                 decoding="async"
-                src="logo-header-black.png"
+                src="logo-black.webp"
                 className="h-[49px] m-[auto] mb-[0px]"
                 alt="group 108"
               />

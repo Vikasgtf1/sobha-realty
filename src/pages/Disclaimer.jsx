@@ -10,8 +10,36 @@ const Disclaimer = () => {
   }, []);
   return (
     <>
+      <header
+        className={`flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 bg-[#3265A6]`}
+      >
+        {" "}
+        <NavLink to="/one-fng/">
+          <div className="header-element">
+            <img
+              src="logo.webp"
+              alt="logo"
+              className="h-[45px] object-contain xl:h-[56px] xl:w-full"
+            />
+          </div>
+        </NavLink>
+        <div className="flex items-center  gap-6">
+          <a href="tel:+919070108108">
+            {" "}
+            <button className="header-element cursor-pointer flex items-center gap-2 text-white hover:text-gray-200 transition-colors">
+              <p className="border-[0.5px] border-solid rounded-[50%] p-[7px] border-[#fff]">
+                <Phone className="block md:hidden" size={12} /> {/* Mobile */}
+                <Phone className="hidden md:block sm:hidden" size={15} />
+              </p>
+              <span className="text-[14px] xl:text-sm font-light tracking-[2px]">
+                Call Now
+              </span>
+            </button>
+          </a>
+        </div>
+      </header>
       <section>
-        <div className="lg:p-[100px] px-[15px] py-[35px] lg:pt-[50px]">
+        <div className="lg:p-[100px] px-[15px] py-[35px]">
           <h1 className="font-merchant xl:text-[20px] font-[200] tracking-[1.5px] text-[16px] text-center mb-[30px]">
             Disclaimer & Privacy Policy
           </h1>

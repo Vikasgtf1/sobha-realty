@@ -30,11 +30,21 @@ const LocationMap = () => {
       <div className="flex flex-col  flex-wrap md:flex-row justify-between items-center">
         {/* Left - Image */}
         <div className="md:basis-[60%]">
-          <img
-            src="assets/images/location-map.png"
-            alt="location"
+          <picture>
+            {/* Mobile image (up to 768px) */}
+            <source
+              srcSet="assets/images/location-map-mobile.webp"
+              media="(max-width: 768px)"
+              type="image/webp"
+            />
+
+            {/* Default image for larger screens */}
+            <img
+              src="assets/images/location-map.webp"
+              alt="Descriptive Alt"
             className="rounded-[10px] w-full h-[200px] xl:mb-0 mb-[35px] xl:h-[450px] object-contain"
-          />
+            />
+          </picture>
         </div>
         {/* Right - List and Button */}
         <div className="md:basis-[36%] flex flex-col gap-[10px] h-full">

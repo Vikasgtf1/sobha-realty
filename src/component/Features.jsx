@@ -67,11 +67,21 @@ const Features = () => {
         </div>
         {/* Left - Image */}
         <div className="md:basis-[38%]">
-          <img
-            src="features.webp"
-            alt="Descriptive Alt"
-            className="rounded-[10px] w-full h-[500px] object-cover"
-          />
+           <picture>
+            {/* Mobile image (up to 768px) */}
+            <source
+              srcSet="features-mobile.webp"
+              media="(max-width: 768px)"
+              type="image/webp"
+            />
+
+            {/* Default image for larger screens */}
+            <img
+              src="features.webp"
+              alt="Descriptive Alt"
+              className="rounded-[10px] w-full h-[500px] object-cover"
+            />
+          </picture>
         </div>
       </div>
       <EnquiryForm isOpen={isOpen} onClose={closeForm} />
