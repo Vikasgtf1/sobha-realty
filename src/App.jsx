@@ -9,9 +9,9 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path={"/one-fng"} element={<Home />} />
-          <Route path={"/one-fng/disclaimer"} element={<Disclaimer />} />
-          <Route path={"/one-fng/thank-you"} element={<ThankYou />} />
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/disclaimer"} element={<Disclaimer />} />
+          <Route path={"/thank-you"} element={<ThankYou />} />
         </Routes>
       </Router>
     </>

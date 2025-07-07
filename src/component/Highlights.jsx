@@ -61,6 +61,7 @@ const OurHighlightsSection = () => {
         <div className="md:basis-[38%]">
           <picture>
             {/* Mobile image (up to 768px) */}
+           
             <source
               srcSet="highlights-mobile.webp"
               media="(max-width: 768px)"
@@ -71,7 +72,7 @@ const OurHighlightsSection = () => {
             <img
               src="highlights.webp"
               alt="Descriptive Alt"
-              className="rounded-[10px] w-full h-[500px] object-cover"
+              className="rounded-[10px] w-full h-auto sm:h-[500px] object-cover"
             />
           </picture>
         </div>

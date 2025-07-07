@@ -32,10 +32,11 @@ const Hero = () => {
       id="home"
       className="relative min-h-screen w-full xl:h-screen xl:overflow-hidden"
     >
+      <div className="hidden xl:block absolute bg-[#0000005e] w-full h-full left-0 top-0 z-1"></div>
       <SideMenu setShowMenu={setShowMenu} showMenu={showMenu} />
       {/* Background Image */}
       <div
-        className="bg-image absolute w-full bg-top xl:h-screen h-[55vh] bg-cover bg-no-repeat bg-gradient-overlay"
+        className="bg-image  absolute w-full bg-top xl:h-screen h-[55vh] bg-cover bg-no-repeat bg-gradient-overlay"
       >
         {/* Overlay */}
         <div className="absolute inset-0  bg-opacity-20"></div>
@@ -44,17 +45,18 @@ const Hero = () => {
       {/* Header */}
       <header
         className={`flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 ${
-          isScrolled ? "bg-[#3265A6] shadow-lg" : "bg-transparent"
+          isScrolled ? "bg-[#3265A6] shadow-lg xl:py-[5px] " : "bg-transparent"
         }`}
       >
         {" "}
-        <NavLink to="/one-fng/">
+        <NavLink to="/">
           {" "}
           <div className="header-element">
             <img
-              src="logo.webp"
+              src={isScrolled ? "logo.webp" : "logo-header.png"}
               alt="logo"
-              className="h-[45px] object-contain xl:h-[56px] xl:w-full"
+              className={`h-[45px] object-contain ${isScrolled ? "xl:h-[60px]" : "xl:h-[56px]"} xl:w-full`}
+
             />
           </div>
         </NavLink>
@@ -67,10 +69,12 @@ const Hero = () => {
               <Phone className="block md:hidden" size={12} /> {/* Mobile */}
               <Phone className="hidden md:block sm:hidden" size={15} />
             </p>
-            <span className="text-[14px] xl:text-sm font-light tracking-[2px]">
+            <span className="hidden sm:inline-block text-[14px] xl:text-sm font-light tracking-[2px]">
               Call Now
             </span>
           </button>
+          <button onClick={openForm}
+            className="header-element cursor-pointer text-[12px] sm:text-[14px] xl:text-sm flex items-center gap-2 text-white hover:text-gray-200 transition-colors" >Enquire Now</button>
           <button
             onClick={() => setShowMenu(true)}
             className="header-element cursor-pointer text-white hover:text-gray-200 transition-colors"
@@ -108,9 +112,9 @@ const Hero = () => {
         </div>
       </div>
       {/* desktop */}
-      <div className="relative hidden xl:flex justify-between p-2.5 mt-[-50px] w-[80%] border border-white absolute bottom-24 left-1/2 transform -translate-x-1/2 z-[99]">
+      <div className="relative z-2 hidden xl:flex justify-between p-2.5 mt-[-50px] w-[90%] 2xl:w-[80%] border border-white absolute bottom-24 left-1/2 transform -translate-x-1/2 z-[99]">
         {/* Typology */}
-        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white hover:bg-[rgba(50,101,166,0.7)] group">
+        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white bg-[rgba(50,101,166,0.7)] group">
           <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
             TYPOLOGY
             <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
@@ -121,7 +125,7 @@ const Hero = () => {
         </div>
 
         {/* Starting Price */}
-        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white hover:bg-[rgba(50,101,166,0.7)] group">
+        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white bg-[rgba(50,101,166,0.7)] group">
           <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
             STARTING PRICE
             <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
@@ -132,13 +136,13 @@ const Hero = () => {
         </div>
 
         {/* Payment Plan */}
-        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in hover:bg-[rgba(50,101,166,0.7)] group">
+        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in bg-[rgba(50,101,166,0.7)] group">
           <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
             PAYMENT PLAN
             <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
           </h5>
           <h4 className="text-white text-lg font-normal tracking-[2px] text-center">
-            50:50
+            Tower A - 50:25:25 ||  Tower B- 70:30
           </h4>
         </div>
       </div>
@@ -184,7 +188,8 @@ const Hero = () => {
                 PAYMENT PLAN
               </div>
 
-              <div className=" text-xl font-bold tracking-wider">50:50</div>
+              <div className=" text-xl font-bold tracking-wider">Tower A - 50:25:25 </div>
+              <div className=" text-xl font-bold tracking-wider"> Tower B- 70:30</div>
             </div>
           </div>
         </div>

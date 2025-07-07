@@ -66,7 +66,7 @@ const Footer = () => {
         {/* Copyright Information */}
         <div className=" font-helvetica  pt-6">
           <p className="text-[12px] leading-[20px] xl:text-xs text-gray-400 text-center">
-            <NavLink to="/one-fng/disclaimer">
+            <NavLink to="/disclaimer">
               Disclaimer & Privacy Policy
             </NavLink>{" "}
             | Copyright © GROUP 108 2025. All Rights Reserved | Crafted By GTF

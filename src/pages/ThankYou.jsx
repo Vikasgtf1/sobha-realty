@@ -18,7 +18,7 @@ const ThankYou = ({BackUrl}) => {
           </p>
           <Link
             className="bg-[#000] cursor-pointer text-[14px] md:text-[20px] text-white py-[12px] px-[20px] sm:px-[55px] tracking-[1px] mt-[30px] xxl:mt-[50px]"
-            to={BackUrl || "/one-fng/"}
+            to={BackUrl || "/"}
           >
             Back to home
           </Link>

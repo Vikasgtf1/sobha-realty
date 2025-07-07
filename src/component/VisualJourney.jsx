@@ -75,7 +75,7 @@ const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
       className="py-16 px-6 xl:py-[100px] text-center bg-[#000] relative no-repeat bg-contain"
     >
       <img
-        src="/assets/images/pattern.png"
+        src="assets/images/pattern.png"
         className="absolute top-0 h-full w-full object-cover opacity-20 left-0"
         alt="pattern"
       />

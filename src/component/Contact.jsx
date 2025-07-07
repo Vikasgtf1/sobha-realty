@@ -162,11 +162,11 @@ const Contact = () => {
             <CommonHeading heading={"About Group 108"} />
           </div>
 
-          <img
+          {/* <img
             src="/assets/images/about-developer-patter.svg"
             className="text-center z-[-9] left-[35%] object-cover scale-[2.5] w-[250px] absolute top-[-71px] h-[200px]"
             alt="pattern"
-          />
+          /> */}
           {/* </div> */}
 
           <div className="flex justify-center items-center">
@@ -295,7 +295,7 @@ Building upon this foundation of trust and credibility, the management is proud 
                     placeholder="Name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
+                    className="w-full px-4 py-3 placeholder-black border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                   />
                   {errors.name && touched.name && (
                     <p className="text-red-600 text-xs mt-1">{errors.name}</p>
@@ -309,7 +309,7 @@ Building upon this foundation of trust and credibility, the management is proud 
                     placeholder="Email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
+                    className="w-full px-4 py-3 placeholder-black border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                   />
                   {errors.email && touched.email && (
                     <p className="text-red-600 text-xs mt-1">{errors.email}</p>
@@ -324,7 +324,7 @@ Building upon this foundation of trust and credibility, the management is proud 
                     value={formData.contact}
                     onChange={handleInputChange}
                     onBlur={handleInputBlur}
-                    className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
+                    className="w-full px-4 py-3 placeholder-black border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                   />
                   {errors.contact && touched.contact && (
                     <p className="text-red-600 text-xs mt-1">
@@ -340,7 +340,7 @@ Building upon this foundation of trust and credibility, the management is proud 
                     rows="2"
                     value={formData.comments}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 placeholder-black border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors resize-none"
                   />
                   {errors.message && touched.message && (
                     <p className="text-red-600 text-xs mt-1">
@@ -357,7 +357,7 @@ Building upon this foundation of trust and credibility, the management is proud 
                     checked={formData.authorize}
                     onChange={handleInputChange}
                     onBlur={handleInputBlur}
-                    className="mt-1 w-4 h-4 text-black border-black rounded-[8px] focus:ring-black"
+                    className="mt-1 w-4 h-4 placeholder-black text-black border-black rounded-[8px] focus:ring-black"
                   />
                   <label
                     htmlFor="consent"

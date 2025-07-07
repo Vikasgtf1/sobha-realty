@@ -33,7 +33,7 @@ export const useFormSubmit = () => {
       if (!res.ok) throw new Error("Failed to submit form");
       setResponse({ success: true, message: "Form submitted successfully!" });
 
-      navigate("/one-fng/thank-you");
+      navigate("/thank-you");
       // navigate("/thank-you.htm");
     } catch (err) {
       const message = err.message || "Something went wrong";

@@ -174,14 +174,14 @@ const EnquiryForm = ({ isOpen, onClose }) => {
               {error}
             </div>
           )}
-
-          <div className="bg-white border relative bg-[url(/assets/images/form-patter.png)] border-black rounded-[12px] p-[20px] shadow-sm">
+{/* bg-[url(/assets/images/form-patter.png)] */}
+          <div className="bg-white border relative  border-black rounded-[12px] p-[20px] shadow-sm">
             <div className="text-center mb-[20px]">
               <img
                 loading="lazy"
                 decoding="async"
                 src="logo-black.webp"
-                className="h-[49px] m-[auto] mb-[0px]"
+                className="h-[60px] m-[auto] mb-[0px]"
                 alt="group 108"
               />
             </div>
@@ -194,7 +194,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                   value={formData.name}
                   onChange={handleInputChange}
                   onBlur={handleInputBlur}
-                  className="w-full text-[14px] py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
+                  className="w-full text-[14px] placeholder-black py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                 />
                 {errors.name && touched.name && (
                   <p className="text-start mt-[4px] text-red-600 text-xs mt-1">
@@ -211,7 +211,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                   value={formData.email}
                   onChange={handleInputChange}
                   onBlur={handleInputBlur}
-                  className="w-full text-[14px] py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
+                  className="w-full text-[14px] placeholder-black py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                 />
                 {errors.email && touched.email && (
                   <p className="text-start mt-[4px] text-red-600 text-xs mt-1">
@@ -228,7 +228,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                   value={formData.contact}
                   onChange={handleInputChange}
                   onBlur={handleInputBlur}
-                  className="w-full text-[14px] py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
+                  className="w-full text-[14px] placeholder-black py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors"
                 />
                 {errors.contact && touched.contact && (
                   <p className="text-start mt-[4px] text-red-600 text-xs mt-1">
@@ -245,7 +245,7 @@ const EnquiryForm = ({ isOpen, onClose }) => {
                   value={formData.message}
                   onChange={handleInputChange}
                   onBlur={handleInputBlur}
-                  className="w-full text-[14px] py-[12px] px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors resize-none"
+                  className="w-full text-[14px] py-[12px] placeholder-black px-[14px] xl:px-4 xl:py-[8px] border border-black rounded-[8px] text-black bg-white focus:outline-none focus:border-gray-500 transition-colors resize-none"
                 />
                 {errors.message && touched.message && (
                   <p className="text-start mt-[4px] text-red-600 text-xs mt-1">
