@@ -38,7 +38,7 @@ const Features = () => {
                 className="flex items-start gap-2  text-[#202020] font-[100] font-helvetica text-[12px] leading-relaxed"
               >
                 <svg
-                  className="w-[20px] h-[20px] text-white-500 flex-shrink-0 mt-[1px]"
+                  className="w-[20px] h-[20px] text-[#eca414] flex-shrink-0 mt-[1px]"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -59,7 +59,7 @@ const Features = () => {
 
           <button
             onClick={openForm}
-            className="bg-black cursor-pointer w-fit border border-white text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
+            className="bg-[#eca414] cursor-pointer w-fit border border-white text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
           >
             Enquire Now
           </button>
@@ -67,7 +67,7 @@ const Features = () => {
         {/* Left - Image */}
         <div className="md:basis-[38%]">
           <img
-            src="features.webp"
+            src="hero2.webp"
             alt="Descriptive Alt"
             className="rounded-[10px] w-full h-[500px] object-cover"
           />

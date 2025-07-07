@@ -180,8 +180,8 @@ const EnquiryForm = ({ isOpen, onClose }) => {
               <img
                 loading="lazy"
                 decoding="async"
-                src="logo-header-black.png"
-                className="h-[49px] m-[auto] mb-[0px]"
+                src="assets/images/grandthum-black.png"
+                className="h-[80px] m-[auto] mb-[0px]"
                 alt="group 108"
               />
             </div>

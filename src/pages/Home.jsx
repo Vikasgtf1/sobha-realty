@@ -38,12 +38,12 @@ const Home = () => {
           Tap to call
         </button>
       </div>
-      {/* <button
+      <button
         onClick={openForm}
-        className="bg-[#3265A6] z-[99] fixed bottom-[30px] right-[30px] cursor-pointer text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] "
+        className="bg-[#eca414] xl:block hidden z-[99] fixed bottom-[30px] right-[30px] cursor-pointer text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] "
       >
         Enquire Now
-      </button> */}
+      </button>
       <EnquiryForm isOpen={isOpen} onClose={closeForm} />
     </div>
   );

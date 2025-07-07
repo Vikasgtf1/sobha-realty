@@ -16,18 +16,23 @@ const OurHighlightsSection = () => {
   return (
     <section
       id="highlights"
-      className="relative bg-black text-white overflow-hidden py-16 px-4 sm:px-6 lg:px-8"
+      className="relative bg-[#3265A6] text-white overflow-hidden py-16 px-4 sm:px-6 lg:px-8"
     >
-      <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
+      {/* <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
         <img
           src="assets/images/about_pattern.png"
           className="w-[100%] opacity-[0.11] z-[-1]"
           alt="pattern image"
         />
-      </div>
+      </div> */}
       <div className="mb-8 md:mb-16">
-        <CommonHeading className="text-white" heading={"Our Highlights"} />
-
+        <div className={`mb-4 flex justify-center flex-col ${"items-center"}`}>
+          <h2
+            className={`tracking-[2px] mb-[12px] text-[17px] font-[200] font-merchant text-[white] relative inline-block`}
+          >
+            Our Highlights
+          </h2>
+        </div>
         <div className="flex mt-[-20px] justify-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +79,7 @@ const OurHighlightsSection = () => {
                 className="flex items-start gap-2 text-white text-[#202020] font-[100] font-helvetica text-[12px] leading-relaxed"
               >
                 <svg
-                  className="w-[20px] h-[20px] text-white-500 flex-shrink-0 mt-[1px]"
+                  className="w-[20px] h-[20px] text-[#eca414] flex-shrink-0 mt-[1px]"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -96,7 +101,7 @@ const OurHighlightsSection = () => {
 
           <button
             onClick={openForm}
-            className="bg-black z-[99] cursor-pointer w-fit border border-white text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
+            className="bg-[#eca414] z-[99] cursor-pointer w-fit  text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
           >
             Enquire Now
           </button>

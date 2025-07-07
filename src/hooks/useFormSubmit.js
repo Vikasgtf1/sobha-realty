@@ -12,11 +12,11 @@ export const useFormSubmit = () => {
     const currentPath = location.pathname;
 
     if (currentPath.includes("/branding")) {
-      return "Grandthum - Branding";
+      return "Grandthum Techzone 4 Greater Noida - Branding";
     } else if (currentPath.includes("/remarketing")) {
-      return "Grandthum - Remarketing";
+      return "Grandthum Techzone 4 Greater Noida - Remarketing";
     } else if (currentPath.includes("/demand-gen")) {
-      return "Grandthum - Demand-gen";
+      return "Grandthum Techzone 4 Greater Noida - Demand-gen";
     } else {
       return "Grandthum";
     }
@@ -43,9 +43,7 @@ export const useFormSubmit = () => {
       if (!res.ok) throw new Error("Failed to submit form");
       setResponse({ success: true, message: "Form submitted successfully!" });
 
-      window.location.href = "/grandthum/thankyou";
-      // alert("thank you, we will contact you soon");
-      // navigate("/thank-you.htm");
+      window.location.href = "/thankyou.html";
     } catch (err) {
       const message = err.message || "Something went wrong";
       setError(message);

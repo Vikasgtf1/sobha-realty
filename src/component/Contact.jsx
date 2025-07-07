@@ -196,7 +196,7 @@ const Contact = () => {
 
           <button
             onClick={openForm}
-            className="z-[9999] cursor-pointer bg-black text-white px-4 py-3 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+            className="z-[9999] cursor-pointer bg-[#eca414] text-white px-4 py-3 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
           >
             View Details
           </button>
@@ -276,15 +276,6 @@ const Contact = () => {
             </div>
 
             <div className="space-y-6 !text-[#333] mt-[60px]">
-              <div>
-                <p className="tracking-[1px] text-[14px] xl:text-[17px] mb-1 ">
-                  Starting Price
-                </p>
-                <p className="text-xl xl:text-2xl  font-light text-black">
-                  ₹61.47 Lakhs* Onwards
-                </p>
-              </div>
-
               {/* <div className="flex mt-[50px] flex-col space-x-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -419,7 +410,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="bg-black cursor-pointer text-white px-4 py-2 xl:px-6 xl:py-3 text-xs xl:text-[14px] xl:tracking-[2px] font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-[#eca414] cursor-pointer text-white px-4 py-2 xl:px-6 xl:py-3 text-xs xl:text-[14px] xl:tracking-[2px] font-medium rounded-[30px] tracking-[1.5px]  transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? "Submitting..." : "Submit Now"}
                 </button>

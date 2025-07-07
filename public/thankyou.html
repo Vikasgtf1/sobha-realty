@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      .py-80 {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+
+      .max-w-2xl {
+        max-width: 672px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .mb-6 {
+        margin-bottom: 24px;
+      }
+
+      .text-2xl {
+        font-size: 24px;
+      }
+
+      .logo-img {
+        width: 200px;
+      }
+
+      .heading {
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        font-family: "Times New Roman", serif;
+        margin-bottom: 16px;
+      }
+
+      .description {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        line-height: 1.625;
+        margin-bottom: 24px;
+        font-family: "Helvetica", Arial, sans-serif;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      .back-link {
+        display: inline-block;
+        background-color: #3265a6;
+        color: #fff;
+        position: relative;
+        padding: 8px 20px;
+        text-decoration: none;
+      }
+
+      .back-link:hover {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      @media (max-width: 1279px) {
+        .heading {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-light-green flex items-center justify-center py-80">
+      <div class="w-full max-w-2xl text-center">
+        <div class="mx-auto mb-6 flex items-center justify-center text-2xl">
+          <img
+            loading="lazy"
+            decoding="async"
+            src="assets/images/grandthum-black.png"
+            class="logo-img"
+            alt="grandthum logo"
+          />
+        </div>
+        <h1 class="heading">Thank you!</h1>
+        <p class="description">
+          Thank you for submitting your details.
+          <br />
+          Our professional shall get in touch with you within two working hours.
+          Stay with us.
+        </p>
+        <a href="/" class="back-link"> Back to home </a>
+      </div>
+    </div>
+
+    <!-- Footer would go here -->
+    <!-- You can add your Footer component content here -->
+  </body>
+</html>

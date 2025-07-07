@@ -10,8 +10,12 @@ function App() {
       <Router>
         <Routes>
           <Route path={"/grandthum"} element={<Home />} />
-          <Route path={"/grandthum/disclaimer"} element={<Disclaimer />} />
-          <Route path={"/grandthum/thankyou"} element={<ThankYou />} />
+          <Route path={"/remarketing"} element={<Home />} />
+          <Route path={"/discovery"} element={<Home />} />
+          <Route path={"/branding"} element={<Home />} />
+          <Route path={"/demand-gen"} element={<Home />} />
+          <Route path={"/disclaimer"} element={<Disclaimer />} />
+          {/* <Route path={"/thank-you.html"} element={<ThankYou />} /> */}
         </Routes>
       </Router>
     </>

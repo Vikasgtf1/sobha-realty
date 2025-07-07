@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-black xl:pb-12 text-white pb-[70px] pt-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#3265A6] xl:pb-12 text-white pb-[70px] pt-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* RERA Information */}
         <div className="text-center mb-4 xl:mb-8">
@@ -45,7 +45,7 @@ const Footer = () => {
 
         {/* Disclaimer Text */}
         <div className="mb-2">
-          <p className="text-[12px] xl:text-xs font-helvetica leading-[20px] font-[200] text-gray-400 leading-relaxed text-center max-w-6xl mx-auto">
+          <p className="text-[12px] xl:text-xs font-helvetica leading-[20px] font-[200] text-[white] leading-relaxed text-center max-w-6xl mx-auto">
             This is only for information purposes and does not constitute any
             offer or contract, customers are advised to have their independent
             evaluation, artistic impression as shown is a pictorial
@@ -65,7 +65,7 @@ const Footer = () => {
 
         {/* Copyright Information */}
         <div className=" font-helvetica  pt-6">
-          <p className="text-[12px] leading-[20px] xl:text-xs text-gray-400 text-center">
+          <p className="text-[12px] leading-[20px] xl:text-xs text-white text-center">
             <NavLink to="/grandthum/disclaimer">
               Disclaimer & Privacy Policy
             </NavLink>{" "}

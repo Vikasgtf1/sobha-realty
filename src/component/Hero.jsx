@@ -10,6 +10,7 @@ const Hero = () => {
   const [showMenu, setShowMenu] = useState(false);
   const { isOpen, openForm, closeForm } = useEnquiryForm();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,17 +28,49 @@ const Hero = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Check initial screen size
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    // Set initial value
+    checkScreenSize();
+
+    // Handle window resize
+    const handleResize = () => {
+      checkScreenSize();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div
       id="home"
       className="relative min-h-screen w-full xl:h-screen xl:overflow-hidden"
     >
+      <img
+        src="loan-approved.svg"
+        className="absolute  z-[9999]
+    top-[359px] right-[35px] xl:bottom-[190px]
+    h-[40px] xl:h-[65px]
+    xl:right-[150px]"
+        alt="loan"
+      />{" "}
       <SideMenu setShowMenu={setShowMenu} showMenu={showMenu} />
       {/* Background Image */}
       <div
         className="bg-image absolute w-full bg-top xl:h-screen h-[55vh] bg-cover bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 20%), url('hero2.webp')`,
+          background: `linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, transparent 229%), url(${
+            isMobile ? "hero-mb.png" : "new-hero.webp"
+          })`,
         }}
       >
         {/* Overlay */}
@@ -55,9 +88,9 @@ const Hero = () => {
           {" "}
           <div className="header-element">
             <img
-              src="grandthum-logo.png"
+              src="logo-header.png"
               alt="logo"
-              className="h-[35px] object-contain xl:h-[46px] xl:w-full"
+              className=" object-contain h-[45px] xl:w-full"
             />
           </div>
         </NavLink>
@@ -105,42 +138,42 @@ const Hero = () => {
             alt="grandthum-logo"
           />
 
-          <p className="location-text text-white text-2xl font-[300] tracking-[0.15em] mt-[25px] opacity-90">
+          <p className="location-text text-[white] text-2xl font-[300] tracking-[0.15em] mt-[25px] opacity-90">
             Greater Noida West
           </p>
         </div>
       </div>
       {/* desktop */}
-      <div className="relative hidden xl:flex justify-between p-2.5 mt-[-50px] w-[80%] border border-white absolute bottom-24 left-1/2 transform -translate-x-1/2 z-[99]">
+      <div className="relative backdrop-blur-[1.4px] hidden xl:flex justify-between p-2.5 mt-[-50px] w-[80%] border border-[#eca414] absolute bottom-24 left-1/2 transform -translate-x-1/2 z-[99]">
         {/* Typology */}
-        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white hover:bg-[rgba(50,101,166,0.7)] group">
-          <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
+        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-[#eca414]  group">
+          <h5 className="text-[#eca414] tracking-[2px] font-light text-base pb-2.5 relative">
             TYPOLOGY
-            <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
+            <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-[#eca414]"></span>
           </h5>
-          <h4 className="text-white text-lg font-normal tracking-[2px] text-center">
+          <h4 className="text-[#eca414] text-lg font-normal tracking-[2px] text-center">
             Office Spaces , Retail Stores
           </h4>
         </div>
 
         {/* Starting Price */}
-        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white hover:bg-[rgba(50,101,166,0.7)] group">
-          <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
+        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-[#eca414]  group">
+          <h5 className="text-[#eca414] tracking-[2px] font-light text-base pb-2.5 relative">
             STARTING PRICE
-            <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
+            <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-[#eca414]"></span>
           </h5>
-          <h4 className="text-white text-lg font-normal tracking-[2px] text-center">
+          <h4 className="text-[#eca414] text-lg font-normal tracking-[2px] text-center">
             ₹ 61.47 Lakhs* Onwards
           </h4>
         </div>
 
         {/* Payment Plan */}
-        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in hover:bg-[rgba(50,101,166,0.7)] group">
-          <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
+        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in  group">
+          <h5 className="text-[#eca414] tracking-[2px] font-light text-base pb-2.5 relative">
             PAYMENT PLAN
-            <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
+            <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-[#eca414]"></span>
           </h5>
-          <h4 className="text-white text-lg font-normal tracking-[2px] text-center">
+          <h4 className="text-[#eca414] text-lg font-normal tracking-[2px] text-center">
             90:10
           </h4>
         </div>
@@ -276,7 +309,7 @@ const Hero = () => {
     //   {/* desktop */}
     //   <div className="relative hidden mx-5 -mt-[105px] z-[99] xl:flex justify-between p-2.5 w-[80%] mx-auto border border-white ">
     //     {/* Typology */}
-    //     <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white hover:bg-[rgba(50,101,166,0.7)] group">
+    //     <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white  group">
     //       <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
     //         TYPOLOGY
     //         <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
@@ -287,7 +320,7 @@ const Hero = () => {
     //     </div>
 
     //     {/* Starting Price */}
-    //     <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white hover:bg-[rgba(50,101,166,0.7)] group">
+    //     <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white  group">
     //       <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
     //         STARTING PRICE
     //         <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
@@ -298,7 +331,7 @@ const Hero = () => {
     //     </div>
 
     //     {/* Payment Plan */}
-    //     <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in hover:bg-[rgba(50,101,166,0.7)] group">
+    //     <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in  group">
     //       <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
     //         PAYMENT PLAN
     //         <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>

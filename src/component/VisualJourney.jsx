@@ -72,15 +72,21 @@ export default function VisualJourney() {
   return (
     <section
       id="gallery"
-      className="py-16 px-6 xl:py-[100px] text-center bg-[#000] relative no-repeat bg-contain"
+      className="py-16 px-6 xl:py-[100px] text-center bg-[#3265A6] relative no-repeat bg-contain"
     >
       <img
-        src="/assets/images/pattern.png"
+        src="assets/images/pattern.png"
         className="absolute top-0 h-full w-full object-cover opacity-20 left-0"
         alt="pattern"
       />
 
-      <CommonHeading heading="Visual Journey" className="text-white" />
+      <div className={`mb-4 flex justify-center flex-col ${"items-center"}`}>
+        <h2
+          className={`tracking-[2px] mb-[12px] text-[17px] font-[200] font-merchant text-[white] relative inline-block `}
+        >
+          Visual Journey
+        </h2>
+      </div>
       <div className="flex mt-[-20px] justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"

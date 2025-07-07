@@ -8,63 +8,29 @@ const Pricing = () => {
   const { isOpen, openForm, closeForm } = useEnquiryForm();
 
   const pricingData = [
-    { bhk: "Retail Stores", price: "₹ 33,108/sqft " },
-    { bhk: "Office Spaces", price: "₹ 9,108/sqft " },
+    { bhk: "Retail Stores", price: "₹ 1.80 CR* " },
+    { bhk: "Office Spaces", price: "₹ 61.47 Lakhs " },
   ];
 
   return (
     <div
       id="pricelist"
-      className=" bg-black text-white relative overflow-hidden"
+      className=" bg-[#3265A6] text-white relative overflow-hidden"
     >
-      <img
-        className="absolute z-[-1] top-0 left-[2%] w-[100%] h-[1300px]"
-        src="assets/images/pricing-bg.png"
-        alt="bg-pattern"
-      />
-
       {/* Background geometric lines */}
-      <div className="absolute inset-0 opacity-20 ">
-        <svg
-          className="w-full h-full"
-          viewBox="0 0 800 600"
-          preserveAspectRatio="none"
-        >
-          <defs>
-            <linearGradient
-              id="lineGradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="100%"
-            >
-              <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#f59e0b" stopOpacity="0.1" />
-            </linearGradient>
-          </defs>
-          {/* Diagonal lines */}
-          {Array.from({ length: 15 }, (_, i) => (
-            <line
-              key={i}
-              x1={i * 60 - 100}
-              y1="0"
-              x2={i * 60 + 400}
-              y2="600"
-              stroke="url(#lineGradient)"
-              strokeWidth="1"
-            />
-          ))}
-        </svg>
-      </div>
 
       <div className="py-16 xl:px-[32px] px-6 max-w-7xl mx-auto my-0 relative z-10 flex justify-between flex-wrap">
         {/* Header */}
         <div className="flex justify-center items-center mb-[30px]  flex-col basis-[100%]">
-          <CommonHeading
-            className=""
-            headingInCenter={true}
-            heading={"Our Pricing"}
-          />
+          <div
+            className={`mb-4 flex justify-center flex-col ${"items-center"}`}
+          >
+            <h2
+              className={`tracking-[2px] mb-[12px] text-[17px] font-[200] font-merchant text-[white] relative inline-block `}
+            >
+              Visual Journey
+            </h2>
+          </div>
           <div className="flex mt-[-20px] justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -102,133 +68,63 @@ const Pricing = () => {
         </div>
 
         {/* Right side - Pricing */}
+        {/* Right side - Pricing */}
         <div className="basis-[100%] xl:basis-[60%] flex flex-col justify-center space-y-2 xl:space-y-8 xl:px-0  xl:ml-[60px]">
           {pricingData.map((item, index) => (
             <div key={index} className="flex items-center py-6 flex-wrap">
-              {/* Original Desktop Layout - Exactly as before */}
-              <div className="  items-center flex-wrap hidden  lg:flex">
-                <div className="text-2xl font-light tracking-[1px] text-[#C4C4C4]">
+              {/* Original Desktop Layout - With CSS borders */}
+              <div className="items-center hidden lg:flex w-full">
+                <div className="text-2xl font-light tracking-[1px] text-[white] flex-shrink-0 w-[180px] text-left">
                   {item.bhk}
                 </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="2"
-                  height="136"
-                  className="mx-[35px]"
-                  viewBox="0 0 2 136"
-                  fill="none"
-                >
-                  <path
-                    d="M1 0.75L1 135.25"
-                    stroke="url(#paint0_linear_5024_219)"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_5024_219"
-                      x1="1.5"
-                      y1="1.1503"
-                      x2="1.5"
-                      y2="135.25"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-opacity="0" />
-                      <stop offset="0.504808" stop-color="white" />
-                      <stop offset="1" stop-opacity="0" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div className="flex flex-col items-center">
-                  <div className="text-[28px] tracking-[1px] flex flex-col items-center font-light text-[#C4C4C4]">
+
+                {/* Left vertical border */}
+                <div className="mx-[20px] h-[136px] w-[2px] bg-gradient-to-b from-transparent via-white to-transparent flex-shrink-0"></div>
+
+                <div className="flex flex-col items-center flex-shrink-0 w-[160px]">
+                  <div className="text-[24px] tracking-[1px] flex flex-col items-center font-light text-[white]">
                     {item.price}
-                    <span className="text-[17px] text-[#C4C4C4]">Onwards</span>
+                    <span className="text-[17px] text-[white]">Onwards</span>
                   </div>
                 </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="2"
-                  className="mx-[35px]"
-                  height="136"
-                  viewBox="0 0 2 136"
-                  fill="none"
+
+                {/* Right vertical border */}
+                <div className="mx-[20px] h-[136px] w-[2px] bg-gradient-to-b from-transparent via-white to-transparent flex-shrink-0"></div>
+
+                {/* Original Desktop Button */}
+                <button
+                  onClick={openForm}
+                  className="bg-[#eca414] cursor-pointer tracking-[1px] text-white px-8 py-3 rounded-full transition-colors duration-200 flex-shrink-0"
                 >
-                  <path
-                    d="M1 0.75L1 135.25"
-                    stroke="url(#paint0_linear_5024_219)"
-                  />
-                  <defs>
-                    <linearGradient
-                      id="paint0_linear_5024_219"
-                      x1="1.5"
-                      y1="1.1503"
-                      x2="1.5"
-                      y2="135.25"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop stop-opacity="0" />
-                      <stop offset="0.504808" stop-color="white" />
-                      <stop offset="1" stop-opacity="0" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+                  Enquire Now
+                </button>
               </div>
 
               {/* Mobile Layout */}
               <div className="lg:hidden w-full">
-                <div className="bg-gray-900/20 border border-gray-700 rounded-lg p-6 mb-4">
+                <div className=" border border-white rounded-lg p-6 mb-4">
                   <div className="text-center">
-                    <div className="text-2xl font-light tracking-[1px] text-[#C4C4C4]">
+                    <div className="text-2xl font-light tracking-[1px] text-[white]">
                       {item.bhk}
                     </div>
                     <div className="flex my-[20px] justify-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="250"
-                        height="2"
-                        viewBox="0 0 439 2"
-                        fill="none"
-                      >
-                        <path
-                          d="M0 1H439"
-                          stroke="url(#paint0_linear_3627_1103)"
-                        />
-                        <defs>
-                          <linearGradient
-                            id="paint0_linear_3627_1103"
-                            x1="0"
-                            y1="1.5"
-                            x2="439"
-                            y2="1.5"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            <stop stopOpacity="0" />
-                            <stop offset="0.485577" stopColor="white" />
-                            <stop offset="1" stopOpacity="0" />
-                          </linearGradient>
-                        </defs>
-                      </svg>
+                      {/* Horizontal border for mobile */}
+                      <div className="w-[250px] h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"></div>
                     </div>
-                    <div className="text-xl tracking-[1px] font-light text-[#C4C4C4]">
+                    <div className="text-xl tracking-[1px] font-light text-[white]">
                       {item.price}
-                      <span className="text-sm text-[#C4C4C4] ml-1">
-                        Onwards
-                      </span>
+                      <span className="text-sm text-[white] ml-1">Onwards</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Original Desktop Button */}
-              <button
-                onClick={openForm}
-                className="bg-[#C4C4C4] cursor-pointer tracking-[1px]  hover:bg-gray-300 text-black px-10 py-3 rounded-full transition-colors duration-200 hidden lg:block"
-              >
-                Enquire Now
-              </button>
+              {/* Remove the separate button since it's now inside the flex container */}
               <div className="flex justify-center w-full">
                 {/* Mobile Button */}
                 <button
                   onClick={openForm}
-                  className="lg:hidden cursor-pointer bg-[#C4C4C4] tracking-[1px] hover:bg-gray-300 text-black text-[14px] xl:text-[15px] px-4 py-3 xl:px-8 xl:py-4 rounded-full transition-colors duration-200"
+                  className="lg:hidden cursor-pointer bg-[#eca414] tracking-[1px] text-white text-[14px] xl:text-[15px] px-4 py-3 xl:px-8 xl:py-4 rounded-full transition-colors duration-200"
                 >
                   Enquire Now
                 </button>
@@ -238,7 +134,7 @@ const Pricing = () => {
               <div
                 style={{
                   background:
-                    "linear-gradient(90deg, #000 0%, #FFF 0.01%, #000 100%)",
+                    "linear-gradient(90deg, transparent 0%, rgb(255, 255, 255) 50%, transparent 100%)",
                 }}
                 className="h-[1px] basis-[100%] w-[200px] hidden lg:block"
               ></div>
