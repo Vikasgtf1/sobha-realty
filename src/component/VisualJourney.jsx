@@ -72,7 +72,7 @@ const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
   return (
     <section
       id="gallery"
-      className="py-16 px-6 xl:py-[100px] text-center bg-[#000] relative no-repeat bg-contain"
+      className="py-16 px-6 xl:py-[100px] text-center bg-[var(--secondary-bg)] relative no-repeat bg-contain"
     >
       <img
         src="assets/images/pattern.png"

@@ -1,8 +1,39 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { Helmet } from 'react-helmet';
 const ThankYou = ({BackUrl}) => {
   return (
+    <>
+      <Helmet>
+        {/* Google Ads Global Site Tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17299787626"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17299787626');
+          `}
+        </script>
+
+        {/* Google Ads Conversion Tracking */}
+        <script>
+          {`
+            gtag('event', 'conversion', {'send_to': 'AW-17299787626/4gCsCNqAyesaEOqel7lA'});
+          `}
+        </script>
+
+        {/* Google Analytics (GA4) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX6B7WRMBX"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BX6B7WRMBX');
+          `}
+        </script>
+      </Helmet>
     <div>
        <div className="h-[100vh] flex items-center justify-center">
         <div className="thank_you_sec  flex-col  flex place-items-center justify-center text-center h-[calc(100vh-300px)]">
@@ -25,6 +56,7 @@ const ThankYou = ({BackUrl}) => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -192,7 +192,7 @@ Building upon this foundation of trust and credibility, the management is proud 
 
           <button
             onClick={openForm}
-            className="z-[9999] cursor-pointer bg-black text-white px-4 py-3 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
+            className="z-[9999] cursor-pointer bg-[var(--button-bg)] text-white px-4 py-3 xl:px-8 xl:py-4 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300"
           >
             View Details
           </button>
@@ -284,9 +284,9 @@ Building upon this foundation of trust and credibility, the management is proud 
             </div>
           </div>
 
-          {/* Right Side - Contact Form */}
+          {/* Right Side - Contact Form bg-[url(/assets/images/form-patter.png)] */}
           <div className="flex-1 lg:max-w-lg ">
-            <div className="bg-white border  bg-[url(assets/images/form-patter.png)] border-black rounded-[12px] p-8 shadow-sm">
+            <div className="bg-white border   border-black rounded-[12px] p-8 shadow-sm">
               <form onSubmit={onSubmit} className="space-y-6 z-[99]">
                 <div>
                   <input
@@ -377,7 +377,7 @@ Building upon this foundation of trust and credibility, the management is proud 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="bg-black cursor-pointer text-white px-4 py-2 xl:px-6 xl:py-3 text-xs xl:text-[14px] xl:tracking-[2px] font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="bg-[var(--button-bg)] cursor-pointer text-white px-4 py-2 xl:px-6 xl:py-3 text-xs xl:text-[14px] xl:tracking-[2px] font-medium rounded-[30px] tracking-[1.5px] hover:bg-gray-800 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? "Submitting..." : "Submit Now"}
                 </button>

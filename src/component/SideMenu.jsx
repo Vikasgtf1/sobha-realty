@@ -4,15 +4,12 @@ import { NavLink } from "react-router-dom";
 const SideMenu = ({ setShowMenu, showMenu }) => {
   return (
     <aside
-      style={{
-        backgroundColor: "rgba(50, 101, 166, 0.9)",
-      }}
-      className={`h-screen z-[999999]
+      className={`h-screen z-[999999] bg-[var(--primary-bg)]
      py-[150px]
     items-center
     flex-col
      flex
-poppins-regular !font-[200] tracking-[1.2px]
+     poppins-regular !font-[200] tracking-[1.2px]
       right-0 fixed uppercase  px-[10px] w-[300px] text-white transform transition-transform duration-700 ease-in-out ${
         showMenu ? "translate-x-0" : "translate-x-full"
       }`}

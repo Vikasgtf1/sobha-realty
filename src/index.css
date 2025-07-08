@@ -258,6 +258,12 @@
   font-style: normal;
   font-display: swap;
 }
+
+:root {
+  --button-bg: #D68032;
+  --primary-bg: #1A667A;
+  --secondary-bg:#266b7e;
+}
 body {
   font-family: "Merchant", sans-serif;
 }

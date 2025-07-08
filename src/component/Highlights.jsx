@@ -18,7 +18,7 @@ const OurHighlightsSection = () => {
   return (
     <section
       id="highlights"
-      className="relative bg-black text-white overflow-hidden py-16 px-4 sm:px-6 lg:px-8"
+      className="relative bg-[var(--secondary-bg)] text-white overflow-hidden py-16 px-4 sm:px-6 lg:px-8"
     >
       <div className="overlay_gradient absolute top-[0]   w-[100%] left-[0]">
         <img
@@ -109,7 +109,7 @@ const OurHighlightsSection = () => {
 
           <button
             onClick={openForm}
-            className="bg-black z-[99] cursor-pointer w-fit border border-white text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
+            className="bg-[var(--button-bg)] z-[99] cursor-pointer w-fit border border-white text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
           >
             Enquire Now
           </button>

@@ -11,7 +11,7 @@ const Disclaimer = () => {
   return (
     <>
       <header
-        className={`flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 bg-[#3265A6]`}
+        className={`flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 bg-[#1A667A]`}
       >
         {" "}
         <NavLink to="/">

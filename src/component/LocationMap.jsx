@@ -81,7 +81,7 @@ const LocationMap = () => {
 
           <button
             onClick={openForm}
-            className="bg-black cursor-pointer w-fit border border-white text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
+            className="bg-[var(--button-bg)] cursor-pointer w-fit border border-white text-white px-4 py-3 xl:px-8 xl:py-3 text-xs xl:text-sm font-medium rounded-[30px] tracking-[1.5px] transition-colors duration-300"
           >
             View Location Map
           </button>

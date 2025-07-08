@@ -45,31 +45,42 @@ const Hero = () => {
       {/* Header */}
       <header
         className={`flex-wrap flex fixed w-full top-[0] left-[0] z-[99999] justify-between items-center px-[15px] xl:px-[40px] pt-[10px] pb-[14px] transition-all duration-300 ${
-          isScrolled ? "bg-[#3265A6] shadow-lg xl:py-[5px] " : "bg-transparent"
+          isScrolled ? "bg-[#1A667A] shadow-lg xl:py-[5px] " : "bg-transparent"
         }`}
       >
         {" "}
         <NavLink to="/">
           {" "}
-          <div className="header-element">
+          <div className={`header-element ${isScrolled ? "flex items-center gap-[2px]" : ""}`}>
             <img
               src={isScrolled ? "logo.webp" : "logo-header.png"}
               alt="logo"
               className={`h-[45px] object-contain ${isScrolled ? "xl:h-[60px]" : "xl:h-[56px]"} xl:w-full`}
 
             />
+             {isScrolled &&
+             <>
+            <div className="w-[1px] h-[50px] bg-[#fff] ml-[5px] mr-[10px]"></div>
+            <img
+              src="logo-header.png"
+              alt="logo"
+              className={`h-[35px] object-contain xl:h-[40px] xl:w-full`}
+
+            />
+            </>
+            }
           </div>
         </NavLink>
         <div className="flex items-center  gap-6">
           <button
             onClick={() => (window.location.href = "tel:+919070108108")}
-            className="header-element cursor-pointer flex items-center gap-2 text-white hover:text-gray-200 transition-colors"
+            className="header-element hidden md:flex cursor-pointer  items-center gap-2 text-white hover:text-gray-200 transition-colors"
           >
             <p className="border-[0.5px] border-solid rounded-[50%] p-[7px] border-[#fff]">
               <Phone className="block md:hidden" size={12} /> {/* Mobile */}
               <Phone className="hidden md:block sm:hidden" size={15} />
             </p>
-            <span className="hidden sm:inline-block text-[14px] xl:text-sm font-light tracking-[2px]">
+            <span className=" text-[14px] xl:text-sm font-light tracking-[2px]">
               Call Now
             </span>
           </button>
@@ -114,7 +125,7 @@ const Hero = () => {
       {/* desktop */}
       <div className="relative z-2 hidden xl:flex justify-between p-2.5 mt-[-50px] w-[90%] 2xl:w-[80%] border border-white absolute bottom-24 left-1/2 transform -translate-x-1/2 z-[99]">
         {/* Typology */}
-        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white bg-[rgba(50,101,166,0.7)] group">
+        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white bg-[#1a667a94] group">
           <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
             TYPOLOGY
             <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
@@ -125,7 +136,7 @@ const Hero = () => {
         </div>
 
         {/* Starting Price */}
-        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white bg-[rgba(50,101,166,0.7)] group">
+        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in border-r border-white bg-[#1a667a94] group">
           <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
             STARTING PRICE
             <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
@@ -136,7 +147,7 @@ const Hero = () => {
         </div>
 
         {/* Payment Plan */}
-        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in bg-[rgba(50,101,166,0.7)] group">
+        <div className="flex-[0.9] flex flex-col justify-center items-center gap-5 py-[10px] px-1.5 relative transition-all duration-[400ms] ease-in bg-[#1a667a94] group">
           <h5 className="text-white tracking-[2px] font-light text-base pb-2.5 relative">
             PAYMENT PLAN
             <span className="absolute top-[105%] left-1/2 transform -translate-x-1/2 w-[170px] h-[0.5px] bg-white"></span>
@@ -161,7 +172,7 @@ const Hero = () => {
           {/* Content Section */}
           <div className="pt-[10px] space-y-6 relative z-10">
             {/* Typology */}
-            <div className="bg-[#3265A6]  text-white p-6 text-center">
+            <div className="bg-[#1A667A]  text-white p-6 text-center">
               <div className="text-xs  pb-[15px] border-b-[1px] tracking-widest mb-3 font-medium">
                 TYPOLOGY
               </div>
@@ -183,7 +194,7 @@ const Hero = () => {
             </div>
 
             {/* Payment Plan */}
-            <div className="bg-[#3265A6]  text-white p-6 text-center">
+            <div className="bg-[#1A667A]  text-white p-6 text-center">
               <div className="text-xs pb-[15px] border-b-[1px] text-white tracking-widest mb-3 font-medium">
                 PAYMENT PLAN
               </div>

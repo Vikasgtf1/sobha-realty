@@ -15,7 +15,7 @@ const Pricing = () => {
   return (
     <div
       id="pricelist"
-      className=" bg-black text-white relative overflow-hidden"
+      className=" bg-[var(--secondary-bg)] text-white relative overflow-hidden"
     >
       <img
         className="absolute z-[-1] top-0 left-[2%] w-[100%] h-[1300px]"
@@ -107,7 +107,7 @@ const Pricing = () => {
             <div key={index} className="flex items-center py-6 flex-wrap">
               {/* Original Desktop Layout - Exactly as before */}
               <div className="  items-center flex-wrap hidden  lg:flex">
-                <div className="text-2xl font-light tracking-[1px] text-[#C4C4C4]">
+                <div className="text-2xl font-light tracking-[1px] text-white">
                   {item.bhk}
                 </div>
                 <svg
@@ -138,9 +138,9 @@ const Pricing = () => {
                   </defs>
                 </svg>
                 <div className="flex flex-col items-center">
-                  <div className="text-[28px] tracking-[1px] flex flex-col items-center font-light text-[#C4C4C4]">
-                    {item.price}
-                    <span className="text-[17px] text-[#C4C4C4]">Onwards</span>
+                  <div className="text-[28px] tracking-[1px] flex flex-col items-center font-light text-white">
+                    On Request.
+                    {/* <span className="text-[17px] text-[#C4C4C4]">Onwards</span> */}
                   </div>
                 </div>
                 <svg
@@ -176,7 +176,7 @@ const Pricing = () => {
               <div className="lg:hidden w-full">
                 <div className="bg-gray-900/20 border border-gray-700 rounded-lg p-6 mb-4">
                   <div className="text-center">
-                    <div className="text-2xl font-light tracking-[1px] text-[#C4C4C4]">
+                    <div className="text-2xl font-light tracking-[1px] text-white">
                       {item.bhk}
                     </div>
                     <div className="flex my-[20px] justify-center">
@@ -207,11 +207,11 @@ const Pricing = () => {
                         </defs>
                       </svg>
                     </div>
-                    <div className="text-xl tracking-[1px] font-light text-[#C4C4C4]">
-                      {item.price}
-                      <span className="text-sm text-[#C4C4C4] ml-1">
+                    <div className="text-xl tracking-[1px] font-light text-white">
+                      On Request.
+                      {/* <span className="text-sm text-[#C4C4C4] ml-1">
                         Onwards
-                      </span>
+                      </span> */}
                     </div>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ const Pricing = () => {
               {/* Original Desktop Button */}
               <button
                 onClick={openForm}
-                className="bg-[#C4C4C4] cursor-pointer tracking-[1px]  hover:bg-gray-300 text-black px-10 py-3 rounded-full transition-colors duration-200 hidden lg:block"
+                className="bg-[var(--button-bg)] cursor-pointer tracking-[1px]  hover:bg-gray-300 text-white px-10 py-3 rounded-full transition-colors duration-200 hidden lg:block"
               >
                 Enquire Now
               </button>
@@ -228,7 +228,7 @@ const Pricing = () => {
                 {/* Mobile Button */}
                 <button
                   onClick={openForm}
-                  className="lg:hidden cursor-pointer bg-[#C4C4C4] tracking-[1px] hover:bg-gray-300 text-black text-[14px] xl:text-[15px] px-4 py-3 xl:px-8 xl:py-4 rounded-full transition-colors duration-200"
+                  className="lg:hidden cursor-pointer bg-[var(--button-bg)] tracking-[1px] hover:bg-gray-300 text-white text-[14px] xl:text-[15px] px-4 py-3 xl:px-8 xl:py-4 rounded-full transition-colors duration-200"
                 >
                   Enquire Now
                 </button>
